@@ -1,0 +1,55 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Utente
+ * Date: 18/01/2019
+ * Time: 11:45
+ */
+
+class AgAttributeTemp
+{
+
+    public static function create($idProduct,$idAttributeTemp,$idAttribute,$value,$type){
+
+        $query = "INSERT INTO " . _DB_PREFIX_ . "ag_attribute_temp (id_product,id_attribute_temp,id_attribute,valore,tipologia) VALUES ('$idProduct','$idAttributeTemp','$idAttribute','$value','$type') ";
+        $result = Db::getInstance()->execute($query);
+        if ($result) {
+            return Db::getInstance()->Insert_ID();
+        }
+
+        return false;
+
+    }
+
+    public static function getAll($idProduct){
+
+        $query = "SELECT * FROM " . _DB_PREFIX_ . "ag_attribute_temp WHERE id_product = '$idProduct'";
+        $result = Db::getInstance()->executeS($query);
+        if ($result) {
+            return $result;
+        }
+
+        return false;
+
+    }
+
+
+    public static function getAttributeTemp($idAttribute,$idProduct,$idAttributeTemp){
+
+        $query = "SELECT * FROM " . _DB_PREFIX_ . "ag_attribute_temp WHERE id_product = '$idProduct' and id_attribute_temp = '$idAttributeTemp' and id_attribute IN ($idAttribute)";
+        $result = Db::getInstance()->executeS($query);
+        if ($result) {
+            return $result;
+        }
+
+        return false;
+
+    }
+
+    public static function delete($idProduct,$idAttributeTemp,$idsAttribute){
+
+        return Db::getInstance()->delete('ag_attribute_temp', "id_product = $idProduct AND id_attribute_temp = $idAttributeTemp AND id_attribute IN ($idsAttribute)");
+
+    }
+
+}

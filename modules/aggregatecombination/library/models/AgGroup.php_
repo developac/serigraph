@@ -1,0 +1,125 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Utente
+ * Date: 15/01/2019
+ * Time: 16:57
+ */
+
+class AgGroup
+{
+
+    public static function create($nome){
+
+        $query = "INSERT INTO " . _DB_PREFIX_ . "ag_group (nome) VALUES ('$nome') ";
+        $result = Db::getInstance()->execute($query);
+        if ($result) {
+            return Db::getInstance()->Insert_ID();
+        }
+
+        return false;
+
+    }
+
+    public static function createRule($idGroupProduct, $name){
+
+        $query = "INSERT INTO " . _DB_PREFIX_ . "ag_group_products_rule (name,id_group_products) VALUES ('$name','$idGroupProduct') ";
+        $result = Db::getInstance()->execute($query);
+        if ($result) {
+            return Db::getInstance()->Insert_ID();
+        }
+
+        return false;
+
+    }
+
+    public static function update(){
+
+    }
+
+    public static function getAttributes($id){
+
+        $query = "SELECT * FROM " . _DB_PREFIX_ . "ag_group_attribute WHERE id_group = '$id'";
+        return Db::getInstance()->executeS($query);
+
+    }
+
+    public static function createAttributes($id,$array){
+
+        foreach ($array as $idAttribute => $arrValue){
+            foreach($arrValue as $value){
+                $query = "INSERT INTO " . _DB_PREFIX_ . "ag_group_attribute (id_group,id_attribute,id_value) VALUES ('$id','$idAttribute','$value') ";
+                Db::getInstance()->execute($query);
+            }
+        }
+
+        return true;
+
+    }
+
+    public static function linkProduct($idGroup,$idProduct){
+
+        $query = "INSERT INTO " . _DB_PREFIX_ . "ag_group_products (id_group,id_product) VALUES ('$idGroup','$idProduct') ";
+        $result = Db::getInstance()->execute($query);
+        if ($result) {
+            return Db::getInstance()->Insert_ID();
+        }
+
+        return true;
+
+    }
+
+    public static function getLinkProduct($idGroup,$idProduct){
+
+        $query = "SELECT * FROM " . _DB_PREFIX_ . "ag_group_products WHERE id_group = '$idGroup' and id_product = '$idProduct'";
+        return Db::getInstance()->executeS($query);
+
+    }
+
+    public static function linkRuleAttributes($idRule,$idAttribute,$idValue,$value,$type){
+
+        $query = "INSERT INTO " . _DB_PREFIX_ . "ag_group_products_rule_attribute (id_group_products_rule,id_attribute,id_attribute_value,valore,tipologia) VALUES ('$idRule','$idAttribute','$idValue','$value','$type') ";
+        return Db::getInstance()->execute($query);
+
+    }
+
+    public static function deleteLinkProduct($id, $idProduct){
+
+        $groupProduct = self::getLinkProduct($id,$idProduct);
+
+        if($groupProduct) {
+
+            if(self::deleteRule($groupProduct[0]["id_group_products"])){
+                return Db::getInstance()->delete('ag_group_products', "id_product = $idProduct AND id_group = $id");
+            }
+
+        }
+
+        return false;
+
+    }
+
+    public static function getAttributesForRules($idProduct){
+
+        $query = "SELECT * FROM ps_ag_group_products_rule_attribute pra 
+                  LEFT JOIN ps_ag_group_products_rule pr on pr.id_group_rule = pra.id_group_products_rule
+                  LEFT JOIN ps_ag_group_products gp ON gp.id_group_products = pr.id_group_products 
+                  LEFT JOIN ps_ag_group g ON gp.id_group = g.id_group 
+                  WHERE  gp.id_product = '$idProduct'
+        ";
+
+        return Db::getInstance()->executeS($query);
+
+    }
+
+    public static function deleteRule($idRule){
+
+        if(Db::getInstance()->delete('ag_group_products_rule_attribute', "id_group_products_rule = $idRule")){
+            return Db::getInstance()->delete('ag_group_products_rule', "id_group_rule = $idRule");
+        }
+
+        return false;
+
+    }
+
+}

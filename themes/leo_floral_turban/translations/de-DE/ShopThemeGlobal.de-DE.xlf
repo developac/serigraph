@@ -1,0 +1,896 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\info\paneltool.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="2522c683186ee0dd472658e0f5a4e308">
+        <source>Panel Tool</source>
+        <target>Bedienfeld-Werkzeug</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\info\paneltool.tpl:15</note>
+      </trans-unit>
+      <trans-unit id="671fcb3ca53cbc54cde7bcf4ebf01a38">
+        <source>Layout Mod</source>
+        <target>Layout Mod</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\info\paneltool.tpl:19</note>
+      </trans-unit>
+      <trans-unit id="fdb2c741397cac29e9a68164925b0dd6">
+        <source>Float Header</source>
+        <target>Schwimmerkopf</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\info\paneltool.tpl:31</note>
+      </trans-unit>
+      <trans-unit id="93cba07454f06a4a960172bbd6e2a435">
+        <source>Yes</source>
+        <target>ja</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\info\paneltool.tpl:35</note>
+      </trans-unit>
+      <trans-unit id="bafd7322c6e97d25b6299b5d6fe8920b">
+        <source>No</source>
+        <target>Nein</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\info\paneltool.tpl:38</note>
+      </trans-unit>
+      <trans-unit id="739abe09ca70c329d652a629fe1b3c9b">
+        <source>Live Theme Editor</source>
+        <target>Live-Theme-Editor</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\info\paneltool.tpl:59</note>
+      </trans-unit>
+      <trans-unit id="2d09eb77e92cfef7f76b2aabf984ea2f">
+        <source>Those Images in folder YOURTHEME/assets/img/patterns/</source>
+        <target>Diese Bilder im Ordner YOURTHEME / assets / img / patterns /</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\info\paneltool.tpl:90</note>
+      </trans-unit>
+      <trans-unit id="e9cb217697088a98b1937d111d936281">
+        <source>Attachment</source>
+        <target>Befestigung</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\info\paneltool.tpl:98</note>
+      </trans-unit>
+      <trans-unit id="9ba66a9f92056682b7d86a38b4bc18c0">
+        <source>Not set</source>
+        <target>Nicht eingestellt</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\info\paneltool.tpl:118</note>
+      </trans-unit>
+      <trans-unit id="52f5e0bc3859bc5f5e25130b6c7e8881">
+        <source>Position</source>
+        <target>Stellung</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\info\paneltool.tpl:107</note>
+      </trans-unit>
+      <trans-unit id="7020426cfb0a204051be4b3053d2acc8">
+        <source>Repeat</source>
+        <target>Wiederholen</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\info\paneltool.tpl:116</note>
+      </trans-unit>
+      <trans-unit id="c49484faf79e2388b580e49444d6ac11">
+        <source>Inherit</source>
+        <target>Erben</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\info\paneltool.tpl:130</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\appagebuilder\views\templates\hook\ApCategoryImage.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="0b4db271fc4624853e634ef6882ea8be">
+        <source>View all</source>
+        <target>Alle anzeigen</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\appagebuilder\views\templates\hook\ApCategoryImage.tpl:62</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\appagebuilder\views\templates\hook\ApInstagram.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="e928646f031c1da65ac1189b2fccc903">
+        <source>View all in instagram</source>
+        <target>Alle in instagram</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\appagebuilder\views\templates\hook\ApInstagram.tpl:61</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\appagebuilder\views\templates\hook\ApManuFacturersCarousel.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="d7b8b49b993e63aff117e97d35227572">
+        <source>No manufacturer at this time.</source>
+        <target>Kein Hersteller zu diesem Zeitpunkt.</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\appagebuilder\views\templates\hook\ApManuFacturersCarousel.tpl:34</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\appagebuilder\views\templates\hook\cdown.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="545f6c2f382c04810103b3e5e6f7d841">
+        <source>Unlimited</source>
+        <target>Unbegrenzt</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\appagebuilder\views\templates\hook\cdown.tpl:11</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\appagebuilder\views\templates\hook\countdown-form\ApCountdown.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="44fdec47036f482b68b748f9d786801b">
+        <source>days</source>
+        <target>Tage</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\appagebuilder\views\templates\hook\countdown-form\ApCountdown.tpl:45</note>
+      </trans-unit>
+      <trans-unit id="73cdddd7730abfc13a55efb9f5685a3b">
+        <source>hours</source>
+        <target>Std.</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\appagebuilder\views\templates\hook\countdown-form\ApCountdown.tpl:46</note>
+      </trans-unit>
+      <trans-unit id="d8bd79cc131920d5de426f914d17405a">
+        <source>min</source>
+        <target>min</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\appagebuilder\views\templates\hook\countdown-form\ApCountdown.tpl:47</note>
+      </trans-unit>
+      <trans-unit id="74459ca3cf85a81df90da95ff6e7a207">
+        <source>sec</source>
+        <target>Sek</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\appagebuilder\views\templates\hook\countdown-form\ApCountdown.tpl:48</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leofeature\views\templates\hook\leo_cart_button.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="0a18f0aa51f30f1107495bf639caf16c">
+        <source>Shop Now</source>
+        <target>Jetzt kaufen</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leofeature\views\templates\hook\leo_cart_button.tpl:39</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\appagebuilder\views\templates\hook\letter-blog\ApBlog.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="44cb5634317a9970412537154d8b98b2">
+        <source>No blog at this time.</source>
+        <target>Kein Blog zu diesem Zeitpunkt.</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\appagebuilder\views\templates\hook\letter-blog\ApBlog.tpl:35</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_newproducts\views\templates\hook\ps_newproducts.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="d8d7ad6abfd08c27baa8bedb78c72ddb">
+        <source>View All</source>
+        <target>Alle anzeigen</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_newproducts\views\templates\hook\ps_newproducts.tpl:35</note>
+      </trans-unit>
+      <trans-unit id="9ff0635f5737513b1a6f559ac2bff745">
+        <source>New products</source>
+        <target>Neue Produkte</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_newproducts\views\templates\hook\ps_newproducts.tpl:28</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\appagebuilder\views\templates\hook\letter-blog\BlogItem.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="ab958d763282a449a60afcb1d4f72d05">
+        <source><![CDATA[smarty_modifier_date_format(strtotime($_smarty_tpl->tpl_vars['blog']->value['date_add']),"%e")]]></source>
+        <target><![CDATA[smarty_modifier_date_format(strtotime($_smarty_tpl->tpl_vars['blog']->value['date_add']),"%e")]]></target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\appagebuilder\views\templates\hook\letter-blog\BlogItem.tpl:33</note>
+      </trans-unit>
+      <trans-unit id="ae39d6bac43c3601f714a15b1526a4f4">
+        <source><![CDATA[smarty_modifier_date_format(strtotime($_smarty_tpl->tpl_vars['blog']->value['date_add']),"%b")]]></source>
+        <target><![CDATA[smarty_modifier_date_format(strtotime($_smarty_tpl->tpl_vars['blog']->value['date_add']),"%b")]]></target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\appagebuilder\views\templates\hook\letter-blog\BlogItem.tpl:34</note>
+      </trans-unit>
+      <trans-unit id="c0cb5f0fcf239ab3d9c1fcd31fff1efc">
+        <source>,</source>
+        <target>,</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\appagebuilder\views\templates\hook\letter-blog\BlogItem.tpl:34</note>
+      </trans-unit>
+      <trans-unit id="694e9135a09cae801a6516d456e05ed2">
+        <source><![CDATA[smarty_modifier_date_format(strtotime($_smarty_tpl->tpl_vars['blog']->value['date_add']),"%Y")]]></source>
+        <target><![CDATA[smarty_modifier_date_format(strtotime($_smarty_tpl->tpl_vars['blog']->value['date_add']),"%Y")]]></target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\appagebuilder\views\templates\hook\letter-blog\BlogItem.tpl:35</note>
+      </trans-unit>
+      <trans-unit id="df3f079de6961496f0460dcfdbf9bca3">
+        <source>by</source>
+        <target>durch</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\appagebuilder\views\templates\hook\letter-blog\BlogItem.tpl:41</note>
+      </trans-unit>
+      <trans-unit id="b69df945ae986e6b1882cdc87ad19617">
+        <source>Hits</source>
+        <target>Schlägt</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\appagebuilder\views\templates\hook\letter-blog\BlogItem.tpl:58</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leoblog\views\templates\front\default\_listing_blog.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="efeb369cccbd560588a756610865664c">
+        <source>In</source>
+        <target>Im</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leoblog\views\templates\front\default\_listing_blog.tpl:29</note>
+      </trans-unit>
+      <trans-unit id="94936ad65bdf649c16b14b27794effb6">
+        <source>Posted By</source>
+        <target>Geschrieben von</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leoblog\views\templates\front\default\_listing_blog.tpl:22</note>
+      </trans-unit>
+      <trans-unit id="521c36a31c2762741cf0f8890cbe05e3">
+        <source>On</source>
+        <target>Auf</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leoblog\views\templates\front\default\_listing_blog.tpl:36</note>
+      </trans-unit>
+      <trans-unit id="0be8406951cdfda82f00f79328cf4efc">
+        <source>Comment</source>
+        <target>Kommentar</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leoblog\views\templates\front\default\_listing_blog.tpl:48</note>
+      </trans-unit>
+      <trans-unit id="ebfe5e1791db03c4cd6ab95801e0977d">
+        <source>Hit</source>
+        <target>Treffer</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leoblog\views\templates\front\default\_listing_blog.tpl:55</note>
+      </trans-unit>
+      <trans-unit id="1530058f00daee16609c38c1a5a1c344">
+        <source><![CDATA[htmlspecialchars(smarty_modifier_date_format(strtotime($_smarty_tpl->tpl_vars['blog']->value['date_add']),"%A"), ENT_QUOTES, 'UTF-8', true)]]></source>
+        <target><![CDATA[htmlspecialchars(smarty_modifier_date_format(strtotime($_smarty_tpl->tpl_vars['blog']->value['date_add']),"%A"), ENT_QUOTES, 'UTF-8', true)]]></target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leoblog\views\templates\front\default\_listing_blog.tpl:38</note>
+      </trans-unit>
+      <trans-unit id="2ac9fe11d0eae22df18d82b56ed33d5c">
+        <source><![CDATA[htmlspecialchars(smarty_modifier_date_format(strtotime($_smarty_tpl->tpl_vars['blog']->value['date_add']),"%B"), ENT_QUOTES, 'UTF-8', true)]]></source>
+        <target><![CDATA[htmlspecialchars(smarty_modifier_date_format(strtotime($_smarty_tpl->tpl_vars['blog']->value['date_add']),"%B"), ENT_QUOTES, 'UTF-8', true)]]></target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leoblog\views\templates\front\default\_listing_blog.tpl:39</note>
+      </trans-unit>
+      <trans-unit id="3eb85e3688e201f11da5145f80a605a9">
+        <source><![CDATA[htmlspecialchars(smarty_modifier_date_format(strtotime($_smarty_tpl->tpl_vars['blog']->value['date_add']),"%e"), ENT_QUOTES, 'UTF-8', true)]]></source>
+        <target><![CDATA[htmlspecialchars(smarty_modifier_date_format(strtotime($_smarty_tpl->tpl_vars['blog']->value['date_add']),"%e"), ENT_QUOTES, 'UTF-8', true)]]></target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leoblog\views\templates\front\default\_listing_blog.tpl:40</note>
+      </trans-unit>
+      <trans-unit id="5e7d5cee7997e9e705cdae8351841284">
+        <source><![CDATA[htmlspecialchars(smarty_modifier_date_format(strtotime($_smarty_tpl->tpl_vars['blog']->value['date_add']),"%Y"), ENT_QUOTES, 'UTF-8', true)]]></source>
+        <target><![CDATA[htmlspecialchars(smarty_modifier_date_format(strtotime($_smarty_tpl->tpl_vars['blog']->value['date_add']),"%Y"), ENT_QUOTES, 'UTF-8', true)]]></target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leoblog\views\templates\front\default\_listing_blog.tpl:41</note>
+      </trans-unit>
+      <trans-unit id="43340e6cc4e88197d57f8d6d5ea50a46">
+        <source>Read more</source>
+        <target>Weiterlesen</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leoblog\views\templates\front\default\_listing_blog.tpl:74</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\appagebuilder\views\templates\hook\manufacturers_owl_carousel.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="1c481aa99d081c32182011a758f73d33">
+        <source>%s</source>
+        <target>%s</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\appagebuilder\views\templates\hook\manufacturers_owl_carousel.tpl:42</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\appagebuilder\views\templates\hook\product.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="9981d2af851e4b4a4ea612d59f08ab9c">
+        <source>Other views</source>
+        <target>Weitere Ansichten</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\appagebuilder\views\templates\hook\product.tpl:30</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\blockgrouptop\views\templates\hook\blockgrouptop.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="51ac4bf63a0c6a9cefa7ba69b4154ef1">
+        <source>Setting</source>
+        <target>Rahmen</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\blockgrouptop\views\templates\hook\blockgrouptop.tpl:17</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_languageselector\ps_languageselector.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="0885f0c211f74834f0109c5abaf4cdc4">
+        <source>Language:</source>
+        <target>Sprache:</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_languageselector\ps_languageselector.tpl:28</note>
+      </trans-unit>
+      <trans-unit id="4994a8ffeba4ac3140beb89e8d41f174">
+        <source>Language</source>
+        <target>Sprache</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_languageselector\ps_languageselector.tpl:27</note>
+      </trans-unit>
+      <trans-unit id="217148b9c333b63a3fb1883670f5bff2">
+        <source>Language dropdown</source>
+        <target>Sprache Dropdown</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_languageselector\ps_languageselector.tpl:27</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_currencyselector\ps_currencyselector.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="77295c7d814e7397c55f64ec06313984">
+        <source>Currency:</source>
+        <target>Währung:</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_currencyselector\ps_currencyselector.tpl:28</note>
+      </trans-unit>
+      <trans-unit id="386c339d37e737a436499d423a77df0c">
+        <source>Currency</source>
+        <target>Währung</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_currencyselector\ps_currencyselector.tpl:27</note>
+      </trans-unit>
+      <trans-unit id="72d43a6525ac95e552ca4eaf1dc0ad1a">
+        <source>Currency dropdown</source>
+        <target>Währung Dropdown</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_currencyselector\ps_currencyselector.tpl:27</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_customersignin\ps_customersignin.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="8b1a9953c4611296a827abf8c47804d7">
+        <source>Hello</source>
+        <target>Hallo</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_customersignin\ps_customersignin.tpl:40</note>
+      </trans-unit>
+      <trans-unit id="d95cf4ab2cbf1dfb63f066b50558b07d">
+        <source>My account</source>
+        <target>Mein Konto</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_customersignin\ps_customersignin.tpl:71</note>
+      </trans-unit>
+      <trans-unit id="6ff063fbc860a79759a7369ac32cee22">
+        <source>Checkout</source>
+        <target>Auschecken</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_customersignin\ps_customersignin.tpl:100</note>
+      </trans-unit>
+      <trans-unit id="641254d77e7a473aa5910574f3f9453c">
+        <source>Wishlist</source>
+        <target>Wunschliste</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_customersignin\ps_customersignin.tpl:81</note>
+      </trans-unit>
+      <trans-unit id="7eece51cf3938103677db7a5051ef8f5">
+        <source>Compare</source>
+        <target>Vergleichen</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_customersignin\ps_customersignin.tpl:92</note>
+      </trans-unit>
+      <trans-unit id="08bd40c7543007ad06e4fce31618f6ec">
+        <source>Account</source>
+        <target>Konto</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_customersignin\ps_customersignin.tpl:28</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_contactinfo\nav.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="02d4482d332e1aef3437cd61c9bcc624">
+        <source>Contact us</source>
+        <target>Kontaktiere uns</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_contactinfo\nav.tpl:39</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leoblog\views\templates\front\default\blog.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="8971af49a12a5e4a7dbe9d31f0e56ae1">
+        <source>Sorry, We are updating data, please come back later!!!!</source>
+        <target>Es tut uns leid, wir aktualisieren die Daten, bitte kommen Sie später zurück !!!!</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leoblog\views\templates\front\default\blog.tpl:19</note>
+      </trans-unit>
+      <trans-unit id="21beb51dad4fc24a64d34a9fe3596405">
+        <source><![CDATA[htmlspecialchars(smarty_modifier_date_format(strtotime($_smarty_tpl->tpl_vars['blog']->value->date_add),"%A"), ENT_QUOTES, 'UTF-8', true)]]></source>
+        <target><![CDATA[htmlspecialchars(smarty_modifier_date_format(strtotime($_smarty_tpl->tpl_vars['blog']->value->date_add),"%A"), ENT_QUOTES, 'UTF-8', true)]]></target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leoblog\views\templates\front\default\blog.tpl:46</note>
+      </trans-unit>
+      <trans-unit id="06d480519eb23701c6455590ef09d8cb">
+        <source><![CDATA[htmlspecialchars(smarty_modifier_date_format(strtotime($_smarty_tpl->tpl_vars['blog']->value->date_add),"%B"), ENT_QUOTES, 'UTF-8', true)]]></source>
+        <target><![CDATA[htmlspecialchars(smarty_modifier_date_format(strtotime($_smarty_tpl->tpl_vars['blog']->value->date_add),"%B"), ENT_QUOTES, 'UTF-8', true)]]></target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leoblog\views\templates\front\default\blog.tpl:47</note>
+      </trans-unit>
+      <trans-unit id="d084ffb5fd6f386f11d739bb877ebf2c">
+        <source><![CDATA[htmlspecialchars(smarty_modifier_date_format(strtotime($_smarty_tpl->tpl_vars['blog']->value->date_add),"%e"), ENT_QUOTES, 'UTF-8', true)]]></source>
+        <target><![CDATA[htmlspecialchars(smarty_modifier_date_format(strtotime($_smarty_tpl->tpl_vars['blog']->value->date_add),"%e"), ENT_QUOTES, 'UTF-8', true)]]></target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leoblog\views\templates\front\default\blog.tpl:48</note>
+      </trans-unit>
+      <trans-unit id="afef84110b986fb05d3c347dbae57381">
+        <source><![CDATA[htmlspecialchars(smarty_modifier_date_format(strtotime($_smarty_tpl->tpl_vars['blog']->value->date_add),"%Y"), ENT_QUOTES, 'UTF-8', true)]]></source>
+        <target><![CDATA[htmlspecialchars(smarty_modifier_date_format(strtotime($_smarty_tpl->tpl_vars['blog']->value->date_add),"%Y"), ENT_QUOTES, 'UTF-8', true)]]></target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leoblog\views\templates\front\default\blog.tpl:49</note>
+      </trans-unit>
+      <trans-unit id="32b502f33a535f75dcbf63f6753c631e">
+        <source>Tags:</source>
+        <target>Tags:</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leoblog\views\templates\front\default\blog.tpl:96</note>
+      </trans-unit>
+      <trans-unit id="2d8bb0220c9fd05edb0178050e8c76cc">
+        <source>In Same Category</source>
+        <target>In der gleichen Kategorie</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leoblog\views\templates\front\default\blog.tpl:109</note>
+      </trans-unit>
+      <trans-unit id="ce7c9dd6bcaf9d54b2501ed1c8e6d5d1">
+        <source>Related by Tags</source>
+        <target>Verwandte von Tags</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leoblog\views\templates\front\default\blog.tpl:117</note>
+      </trans-unit>
+      <trans-unit id="bfad8746759ef359ed37bae63f368ac1">
+        <source>Sorry, This blog is not avariable. May be this was unpublished or deleted.</source>
+        <target>Sorry, Dieser Blog ist nicht avariabel. Möglicherweise wurde dies unveröffentlicht oder gelöscht.</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leoblog\views\templates\front\default\blog.tpl:148</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leoblog\views\templates\front\default\listing.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="a3799f5441906704db5ec1706bec2473">
+        <source>Filter Blogs By Tag</source>
+        <target>Filtern von Blogs nach Tag</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leoblog\views\templates\front\default\listing.tpl:22</note>
+      </trans-unit>
+      <trans-unit id="427629e1d4324184acec51fbb44bd903">
+        <source>Filter Blogs By Blogger</source>
+        <target>Blogs durchsuchen</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leoblog\views\templates\front\default\listing.tpl:27</note>
+      </trans-unit>
+      <trans-unit id="e5a8e4b3939f0cf0a47b8e5cc0aad0a4">
+        <source>Lastest Blogs</source>
+        <target>Letzte Blogs</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leoblog\views\templates\front\default\listing.tpl:32</note>
+      </trans-unit>
+      <trans-unit id="bf1981220040a8ac147698c85d55334f">
+        <source>RSS</source>
+        <target>RSS</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leoblog\views\templates\front\default\listing.tpl:34</note>
+      </trans-unit>
+      <trans-unit id="883606d2ba4f82eaea29050775f38f80">
+        <source>Sorry, We are update data, please come back later!!!!</source>
+        <target>Entschuldigen Sie bitte, wir sind Updatedaten, kommen bitte später zurück !!!!</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leoblog\views\templates\front\default\listing.tpl:88</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leoblog\views\templates\front\default\_social.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="8ebb3e0f09899fb8aac0a325ada5b7ce">
+        <source>Like This</source>
+        <target>So was</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leoblog\views\templates\front\default\_social.tpl:13</note>
+      </trans-unit>
+      <trans-unit id="2491bc9c7d8731e1ae33124093bc7026">
+        <source>Twitter</source>
+        <target>Twitter</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leoblog\views\templates\front\default\_social.tpl:20</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leofeature\views\templates\front\leo_products_compare.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="7af832e9c71671de0323487c86b6b702">
+        <source>Products Comparison</source>
+        <target>Produkte Vergleich</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leofeature\views\templates\front\leo_products_compare.tpl:13</note>
+      </trans-unit>
+      <trans-unit id="d6295c05503596b3ed3528aee83e3ef7">
+        <source>Features:</source>
+        <target>Eigenschaften:</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leofeature\views\templates\front\leo_products_compare.tpl:20</note>
+      </trans-unit>
+      <trans-unit id="f5e15309ff0396474b8421ef48871d0b">
+        <source>No features to compare</source>
+        <target>Keine Features vergleichen</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leofeature\views\templates\front\leo_products_compare.tpl:107</note>
+      </trans-unit>
+      <trans-unit id="234a9674e80b9c04a685075ad3ea6950">
+        <source>There are no products selected for comparison.</source>
+        <target>Es gibt keine Produkte zum Vergleich ausgewählt.</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leofeature\views\templates\front\leo_products_compare.tpl:115</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leofeature\views\templates\hook\leo_compare_button.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="201f644e542b0230551936ae7af3169e">
+        <source>Remove from Compare</source>
+        <target>Entfernen von Vergleichen</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leofeature\views\templates\hook\leo_compare_button.tpl:9</note>
+      </trans-unit>
+      <trans-unit id="7f5508c884f40e3378895c83d99cbbd3">
+        <source>Add to Compare</source>
+        <target>Auf die Vergleichsliste</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leofeature\views\templates\hook\leo_compare_button.tpl:9</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leofeature\views\templates\hook\leo_wishlist_button.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="d7e2d3dbf5daf266a0877428e0e1b8fb">
+        <source>Remove from Wishlist</source>
+        <target>Aus Wunschliste entfernen</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leofeature\views\templates\hook\leo_wishlist_button.tpl:26</note>
+      </trans-unit>
+      <trans-unit id="6a5373df703ab2827a4ba7facdfcf779">
+        <source>Add to Wishlist</source>
+        <target>Auf den Wunschzettel</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\leofeature\views\templates\hook\leo_wishlist_button.tpl:26</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_categoryproducts\views\templates\hook\ps_categoryproducts.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="f55e0a28b86c2ab66ac632ab9ddf1833">
+        <source>%s other product in the same category:</source>
+        <target>%s anderes Produkt in der gleichen Kategorie:
+</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_categoryproducts\views\templates\hook\ps_categoryproducts.tpl:28</note>
+      </trans-unit>
+      <trans-unit id="bebb44f38b03407098d48198c1d0aaa5">
+        <source>%s other products in the same category:</source>
+        <target>%s andere Produkte der gleichen Kategorie:
+</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_categoryproducts\views\templates\hook\ps_categoryproducts.tpl:30</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_contactinfo\ps_contactinfo.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="c6359db4a43cb7267a84b389229fd073">
+        <source>Call us: [1]%phone%[/1]</source>
+        <target>Rufen Sie: [1]%phone%[/ 1]
+</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_contactinfo\ps_contactinfo.tpl:43</note>
+      </trans-unit>
+      <trans-unit id="3aea774cdcd8f2c45549f10758a71323">
+        <source>Store information</source>
+        <target>Information speichern</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_contactinfo\ps_contactinfo.tpl:29</note>
+      </trans-unit>
+      <trans-unit id="da6eb684bd77243a780629a180c9d19b">
+        <source>Fax: [1]%fax%[/1]</source>
+        <target>Fax: [1]%fax%[/1]</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_contactinfo\ps_contactinfo.tpl:57</note>
+      </trans-unit>
+      <trans-unit id="077d21d48dae9586405c0d264f6d32e7">
+        <source>Email us: [1]%email%[/1]</source>
+        <target>Email us: [1]%email%[/1]</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_contactinfo\ps_contactinfo.tpl:72</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_contactinfo\ps_contactinfo-rich.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="1300caaefd15b839f37952dc7cc75d82">
+        <source>Call us:</source>
+        <target>Rufen Sie:</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_contactinfo\ps_contactinfo-rich.tpl:37</note>
+      </trans-unit>
+      <trans-unit id="0e2fb5b02182fd28b9b96e86ed27838f">
+        <source>Fax:</source>
+        <target>Fax:</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_contactinfo\ps_contactinfo-rich.tpl:47</note>
+      </trans-unit>
+      <trans-unit id="a0bfe0853cf82bdf5dcb9b0bac76c357">
+        <source>Email us:</source>
+        <target>Mailen Sie uns:</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_contactinfo\ps_contactinfo-rich.tpl:57</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_emailsubscription\views\templates\hook\ps_emailsubscription.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="ffb7e666a70151215b4c55c6268d7d72">
+        <source>Newsletter</source>
+        <target>Rundschreiben</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_emailsubscription\views\templates\hook\ps_emailsubscription.tpl:27</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_imageslider\views\templates\hook\slider.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="6dbac206aa2d7e374277ae9ff8ec1987">
+        <source>Carousel buttons</source>
+        <target>Karussellknöpfe</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_imageslider\views\templates\hook\slider.tpl:45</note>
+      </trans-unit>
+      <trans-unit id="dd1f775e443ff3b9a89270713580a51b">
+        <source>Previous</source>
+        <target>Zurück</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_imageslider\views\templates\hook\slider.tpl:50</note>
+      </trans-unit>
+      <trans-unit id="10ac3d04253ef7e1ddc73e6091c0cd55">
+        <source>Next</source>
+        <target>Nächster</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_imageslider\views\templates\hook\slider.tpl:56</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_searchbar\ps_searchbar.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="13348442cc6a27032d2b4aa28b75a5d3">
+        <source>Search</source>
+        <target>Suche</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_searchbar\ps_searchbar.tpl:28</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_shoppingcart\ps_shoppingcart.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="9408f5e33576ebe4937339939e667545">
+        <source>Item(s)</source>
+        <target>Artikel (s)</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_shoppingcart\ps_shoppingcart.tpl:34</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_specials\views\templates\hook\ps_specials.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="f95ceb82c51c99dc9b9e5678b291c44b">
+        <source>All sale products</source>
+        <target>Alle Verkaufsprodukte</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_specials\views\templates\hook\ps_specials.tpl:33</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_viewedproduct\views\template\hook\ps_viewedproduct.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="43560641f91e63dc83682bc598892fa1">
+        <source>Viewed products</source>
+        <target>Angezeigte Produkte</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\modules\ps_viewedproduct\views\template\hook\ps_viewedproduct.tpl:28</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\templates\catalog\_partials\active_filters.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="2143f8cb66482342b35208bdc3fd949c">
+        <source>Active filters</source>
+        <target>Aktive Filter</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\templates\catalog\_partials\active_filters.tpl:27</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\templates\catalog\_partials\facets.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="7a1c5301da6b1ce9e4345bd501397045">
+        <source>(no filter)</source>
+        <target>(kein Filter)</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\templates\catalog\_partials\facets.tpl:122</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\templates\catalog\_partials\products-top.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="5174d1309f275ba6f275db3af9eb3e18">
+        <source>Grid</source>
+        <target>Gitter</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\templates\catalog\_partials\products-top.tpl:30</note>
+      </trans-unit>
+      <trans-unit id="4ee29ca12c7d126654bd0e5275de6135">
+        <source>List</source>
+        <target>Liste</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\templates\catalog\_partials\products-top.tpl:31</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\templates\catalog\_partials\sort-orders.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="6f9d01a14011f05fffe48559583fc609">
+        <source>Sort by:</source>
+        <target>Sortiere nach:</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\templates\catalog\_partials\sort-orders.tpl:25</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\templates\checkout\_partials\steps\checkout-step.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="de95b43bceeb4b998aed4aed5cef1ae7">
+        <source>edit</source>
+        <target>bearbeiten</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\templates\checkout\_partials\steps\checkout-step.tpl:39</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\templates\checkout\_partials\steps\payment.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="d3d2e617335f08df83599665eef8a418">
+        <source>Close</source>
+        <target>Schließen</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\templates\checkout\_partials\steps\payment.tpl:151</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\templates\cms\category.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="6c5c05a5b907385c60c3baa4087ea1a1">
+        <source>List of sub categories in %name%:</source>
+        <target>Liste der Unterkategorien in %name%:</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\templates\cms\category.tpl:34</note>
+      </trans-unit>
+      <trans-unit id="51af726259b3283f6b53613165f95697">
+        <source>List of pages in %name%:</source>
+        <target>Liste der Seiten in %name%:</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\templates\cms\category.tpl:45</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\templates\cms\sitemap.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="5813ce0ec7196c492c97596718f71969">
+        <source>Sitemap</source>
+        <target>Sitemap</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\templates\cms\sitemap.tpl:28</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\templates\cms\stores.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="34c869c542dee932ef8cd96d2f91cae6">
+        <source>Our stores</source>
+        <target>unsere Läden</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\templates\cms\stores.tpl:28</note>
+      </trans-unit>
+      <trans-unit id="adc4f9f9cccaa450c10977d50da58d8d">
+        <source>About and Contact</source>
+        <target>Über und Kontakt</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\templates\cms\stores.tpl:44</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\templates\customer\order-detail.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="44749712dbec183e983dcd78a7736c41">
+        <source>Date</source>
+        <target>Datum</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\templates\customer\order-detail.tpl:188</note>
+      </trans-unit>
+      <trans-unit id="ec53a8c4f07baed5d8825072c89799be">
+        <source>Status</source>
+        <target>Status</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\templates\customer\order-detail.tpl:89</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\templates\customer\_partials\my-account-links.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="8cf04a9734132302f96da8e113e80ce5">
+        <source>Home</source>
+        <target>Zuhause</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\templates\customer\_partials\my-account-links.tpl:32</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\templates\errors\maintenance.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="27b4383b976d6be981598d457cc7e62d">
+        <source>We'll be back soon.</source>
+        <target>Wir werden bald zurück sein.</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\templates\errors\maintenance.tpl:42</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\templates\errors\not-found.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="7e74146e0ff2e289abfc8bec1d2b2a18">
+        <source>Sorry for the inconvenience.</source>
+        <target>Entschuldigen Sie die Unannehmlichkeiten.</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\templates\errors\not-found.tpl:28</note>
+      </trans-unit>
+      <trans-unit id="519ee4cd58a2b719f7113965cc949d24">
+        <source>Search again what you are looking for</source>
+        <target>Suchen Sie wieder, was Sie suchen</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\templates\errors\not-found.tpl:29</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\templates\errors\restricted-country.tpl" source-language="de-DE" target-language="de-DE" datatype="plaintext">
+    <body>
+      <trans-unit id="6351030f724f6f42fd11ec9aa6ee8c76">
+        <source>403 Forbidden</source>
+        <target>403 Verboten</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\templates\errors\restricted-country.tpl:43</note>
+      </trans-unit>
+      <trans-unit id="cf8092a0be7b972d6cee3db90bfaf923">
+        <source>You cannot access this store from your country. We apologize for the inconvenience.</source>
+        <target>Sie können nicht auf diesen Speicher aus Ihrem Land zugreifen. Wir entschuldigen uns für die Unannehmlichkeiten.</target>
+        <note>Context:
+File: D:\xampp\htdocs\prestashop_17\dev\leo_siviri\themes\leo_siviri\templates\errors\restricted-country.tpl:44</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

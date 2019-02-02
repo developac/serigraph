@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xml:base="https://www.prestashop.com/it/blog/feed.xml" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:og="http://ogp.me/ns#" xmlns:article="http://ogp.me/ns/article#" xmlns:book="http://ogp.me/ns/book#" xmlns:profile="http://ogp.me/ns/profile#" xmlns:video="http://ogp.me/ns/video#" xmlns:product="http://ogp.me/ns/product#" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <channel>
+    <title>Blog Feed</title>
+    <link>https://www.prestashop.com/it/blog/feed.xml</link>
+    <description></description>
+    <language>it</language>
+     <atom:link href="https://www.prestashop.com/it/blog/feed.xml" rel="self" type="application/rss+xml" />
+      <item>
+    <title>Chatbot per e-commerce, consigli utili su come integrarli al proprio e-commerce</title>
+    <link>https://www.prestashop.com/it/blog/Chatbot-per-negozi-on-line</link>
+    <description>Un chatbot è un software di intelligenza artificiale che può consentire, a chi gestisce un sito e-commerce, di offrire ai propri clienti assistenza continuativa dando la sensazione all’utente di pa</description>
+     <pubDate>Thu, 06 Sep 2018 14:51:35 +0200</pubDate>
+ <dc:creator>SeoChef@prestashop.com</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/it/blog/Chatbot-per-negozi-on-line</guid>
+  </item>
+  <item>
+    <title>L&amp;#039;importanza di avere un motore di ricerca interno per migliorare il tasso di conversione</title>
+    <link>https://www.prestashop.com/it/blog/tasso-di-conversione</link>
+    <description>Ogni ricerca effettuata dall&#039;utente deve avere una risposta. Se non possiedi l’articolo che sta cercando, sei in grado di fornirgli un&#039;alternativa?</description>
+     <pubDate>Mon, 06 Aug 2018 00:00:00 +0200</pubDate>
+ <dc:creator>doofinder_it</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/it/blog/tasso-di-conversione</guid>
+  </item>
+  <item>
+    <title>I trend dello shopping globale e del turismo offrono nuove opportunità di fatturato per i commercianti</title>
+    <link>https://www.prestashop.com/it/blog/i-trend-dello-shopping-globale-e-del-turismo-offrono-nuove-opportunita-di-fatturato-per-i-commercianti</link>
+    <description>Il mercato mondiale è sempre più alla portata degli esercenti europei: ciò comporta enormi opportunità, a condizione di tenere il passo di tutti gli ultimi sviluppi.</description>
+     <pubDate>Tue, 31 Jul 2018 11:24:11 +0200</pubDate>
+ <dc:creator>wirecard_en</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/it/blog/i-trend-dello-shopping-globale-e-del-turismo-offrono-nuove-opportunita-di-fatturato-per-i-commercianti</guid>
+  </item>
+  <item>
+    <title>Come dare il proprio contributo al progetto PrestaShop?</title>
+    <link>https://www.prestashop.com/it/blog/come-dare-il-proprio-contributo-al-progetto-prestashop</link>
+    <description>Come annunciato nel titolo di questo post, ti abbiamo preparato una guida con tutte le informazioni necessarie per contribuire al progetto PrestaShop.</description>
+     <pubDate>Tue, 24 Jul 2018 18:16:56 +0200</pubDate>
+ <dc:creator>camille.teissier</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/it/blog/come-dare-il-proprio-contributo-al-progetto-prestashop</guid>
+  </item>
+  <item>
+    <title>Consigli su come aumentare le vendite durante i saldi</title>
+    <link>https://www.prestashop.com/it/blog/come-aumentare-vendite-saldi</link>
+    <description>Tra poco in Italia partirà la stagione dei saldi per i negozi fisici, mentre online alcuni e-commerce hanno anticipato gli sconti offrendo la possibilità agli utenti di acquistare a prezzo ridotto </description>
+     <pubDate>Wed, 11 Jul 2018 17:27:25 +0200</pubDate>
+ <dc:creator>SeoChef@prestashop.com</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/it/blog/come-aumentare-vendite-saldi</guid>
+  </item>
+  <item>
+    <title>Prepara il tuo negozio alle prossime operazioni commerciali con il Calendario e-commerce 2018.</title>
+    <link>https://www.prestashop.com/it/blog/calendarioe-commerce-2018</link>
+    <description>Mondiali di calcio, Saldi, Tornei del Grande Slam, Super Bowl, Festa nazionale, Giornata del Cioccolato… Approfitta dei prossimi eventi per fare pubblicità al tuo negozio, rinforzarne la reputazion</description>
+     <pubDate>Mon, 02 Jul 2018 11:52:55 +0200</pubDate>
+ <dc:creator>camille.teissier</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/it/blog/calendarioe-commerce-2018</guid>
+  </item>
+  <item>
+    <title>PrestaShop Day Milano 2018, l&amp;#039;evento dell&amp;#039;anno, da non perdere</title>
+    <link>https://www.prestashop.com/it/blog/prestashop-day-milano-2018-levento-dellanno-da-non-perdere</link>
+    <description>Per la terza edizione, il PrestaShop Day Milano ritorna al TAG Calabiana di Milano.</description>
+     <pubDate>Wed, 27 Jun 2018 17:13:11 +0200</pubDate>
+ <dc:creator>JJourdin</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/it/blog/prestashop-day-milano-2018-levento-dellanno-da-non-perdere</guid>
+  </item>
+  <item>
+    <title>Web Developer</title>
+    <link>https://www.prestashop.com/it/blog/web-developer</link>
+    <description>Cippest  Località dell’aziendaAvellino Area, Italy</description>
+     <pubDate>Wed, 27 Jun 2018 16:19:06 +0200</pubDate>
+ <dc:creator>Anonymous</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/it/blog/web-developer</guid>
+  </item>
+  <item>
+    <title>E-commerce come usare instagram per aumentare le vendite nel settore fashion</title>
+    <link>https://www.prestashop.com/it/blog/e-commerce-come-usare-instagram</link>
+    <description>Il settore fashion è uno di quelli che traina l’e-commerce, ma per avere uno store online di successo è importante seguire una programmazione social scrupolosa soprattutto per Instagram, dato che o</description>
+     <pubDate>Tue, 26 Jun 2018 17:23:35 +0200</pubDate>
+ <dc:creator>SeoChef@prestashop.com</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/it/blog/e-commerce-come-usare-instagram</guid>
+  </item>
+  <item>
+    <title>Tariffe in aumento per Google Maps dal 16 luglio 2018</title>
+    <link>https://www.prestashop.com/it/blog/google-maps-a-pagamento</link>
+    <description>La notizia è passata in sordina nel mondo del web e dell’e-commerce.</description>
+     <pubDate>Mon, 18 Jun 2018 15:46:29 +0200</pubDate>
+ <dc:creator>camille.teissier</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/it/blog/google-maps-a-pagamento</guid>
+  </item>
+  </channel>
+</rss>

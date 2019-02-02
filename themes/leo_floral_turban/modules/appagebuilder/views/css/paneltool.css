@@ -1,0 +1,630 @@
+/***************************************************
+  Mixins Themes 
+/***************************************************/
+/* Mixin Normal*/
+/* Mixin Clear */
+/* Mixin Border */
+/*background RGBA
+============================================*/
+/***************************************************
+  Mixins RTL Themes 
+/***************************************************/
+/************************************ 
+	Override Bootstrap 
+*************************************/
+/**
+ * Web Application Prefix Apply For Making Owner Styles
+ */
+/**
+ *   Blocks Layout Selectors 
+ */
+/***********************************************************************/
+/* PANELTOOL */
+/**********************************/
+.fancybox-skin .leo-paneltool {
+  display: none; }
+
+.paneltool {
+  position: fixed;
+  top: 5px;
+  width: 235px;
+  z-index: 9999;
+  text-align: left;
+  -webkit-transition: all 0.6s ease 0s;
+  -o-transition: all 0.6s ease 0s;
+  transition: all 0.6s ease 0s;
+  right: -235px; }
+  .rtl .paneltool {
+    text-align: right; }
+  .rtl .paneltool {
+    left: -235px;
+    right: auto; }
+  .paneltool .leo-dynamic-update-side {
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 10px;
+    border: 1px solid;
+    padding: 5px;
+    font-size: 11px; }
+    .paneltool .leo-dynamic-update-side.current-sidebar {
+      color: #ff8fe5; }
+  .paneltool.themetool {
+    top: 70px; }
+    .paneltool.themetool.active {
+      z-index: 999999; }
+    .paneltool.themetool .panelbutton {
+      width: 50px;
+      height: 50px;
+      left: -50px; }
+      .rtl .paneltool.themetool .panelbutton {
+        right: -50px;
+        left: auto; }
+    .paneltool.themetool .panelcontent {
+      min-height: 130px;
+      height: 100%;
+      overflow-y: auto; }
+    .paneltool.themetool .group-input {
+      margin-bottom: 20px; }
+      .paneltool.themetool .group-input.layout .leo-dynamic-update-layout {
+        display: block;
+        float: left;
+        width: 100%;
+        padding: 10px 0 10px 10px;
+        position: relative;
+        font-size: 14px;
+        text-align: left; }
+        .rtl .paneltool.themetool .group-input.layout .leo-dynamic-update-layout {
+          text-align: right; }
+        .paneltool.themetool .group-input.layout .leo-dynamic-update-layout:before {
+          content: "+"; }
+      .paneltool.themetool .group-input span {
+        cursor: pointer; }
+    .paneltool.themetool .panelinner .group-input:last-child {
+      margin-bottom: 0px; }
+    .paneltool.themetool label {
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: bold;
+      text-align: left; }
+      .rtl .paneltool.themetool label {
+        text-align: right; }
+      .paneltool.themetool label span {
+        margin-right: 10px;
+        vertical-align: middle; }
+        .rtl .paneltool.themetool label span {
+          margin-left: 10px;
+          margin-right: inherit; }
+    .paneltool.themetool .leo-dynamic-update-header {
+      display: block;
+      padding: 10px;
+      font-size: 11px;
+      text-transform: uppercase; }
+      .paneltool.themetool .leo-dynamic-update-header.current-header {
+        color: #ff8fe5; }
+  .paneltool.active {
+    right: 0;
+    -webkit-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    transition: all 0.6s;
+    z-index: 9999; }
+    .rtl .paneltool.active {
+      left: 0;
+      right: auto; }
+    .paneltool.active .panelbutton {
+      color: #ff8fe5; }
+  .paneltool .panelcontent {
+    background: #FFFFFF;
+    border-width: 1px 0 1px 1px;
+    border-color: #ddd;
+    border-style: solid;
+    width: 235px;
+    min-height: 340px; }
+    .rtl .paneltool .panelcontent {
+      border-width: 1px 1px 1px 0; }
+    .paneltool .panelcontent > div {
+      padding: 15px; }
+  .paneltool.editortool .panelbutton {
+    top: 290px; }
+  .paneltool.multiproductdetailtool {
+    top: 0;
+    margin: auto;
+    width: 400px;
+    height: 100%;
+    background: #FFFFFF;
+    border-width: 1px 0 1px 1px;
+    border-color: #ddd;
+    border-style: solid;
+    right: -400px; }
+    .rtl .paneltool.multiproductdetailtool {
+      border-width: 1px 1px 1px 0; }
+    .rtl .paneltool.multiproductdetailtool {
+      left: -400px;
+      right: auto; }
+    .paneltool.multiproductdetailtool.active {
+      z-index: 999999;
+      right: 0;
+      -moz-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+      -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+      -o-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+      -ms-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); }
+      .rtl .paneltool.multiproductdetailtool.active {
+        left: 0;
+        right: auto; }
+    .paneltool.multiproductdetailtool .panelbutton {
+      top: 174px; }
+      .paneltool.multiproductdetailtool .panelbutton:before {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: -20px;
+        z-index: 9;
+        margin: auto;
+        background: url(../../../../assets/img/modules/appagebuilder/img/label-new.png) no-repeat;
+        background-size: 100%;
+        right: auto;
+        left: -15px;
+        -webkit-animation: heartbeat 1s infinite;
+        -moz-animation: heartbeat 1s infinite;
+        animation: heartbeat 1s infinite; }
+        .rtl .paneltool.multiproductdetailtool .panelbutton:before {
+          right: -15px;
+          left: auto; }
+    .paneltool.multiproductdetailtool .panelcontent {
+      width: 400px;
+      min-height: 130px;
+      height: 100%;
+      border: none;
+      padding: 60px 0 30px;
+      background: #333333; }
+      .paneltool.multiproductdetailtool .panelcontent > div {
+        height: 100%;
+        overflow-y: auto;
+        padding: 0 15px;
+        margin-right: 15px; }
+        .rtl .paneltool.multiproductdetailtool .panelcontent > div {
+          margin-left: 15px;
+          margin-right: inherit; }
+    .paneltool.multiproductdetailtool .group-input.layout .box-detail {
+      display: inline-block;
+      width: 100%;
+      background: #FFFFFF;
+      padding: 0 10px; }
+    .paneltool.multiproductdetailtool .group-input.layout .layout-detail {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      margin: 15px 0; }
+      .paneltool.multiproductdetailtool .group-input.layout .layout-detail:hover .product-detail-demo {
+        color: #ff8fe5;
+        -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        -o-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        -ms-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+        .paneltool.multiproductdetailtool .group-input.layout .layout-detail:hover .product-detail-demo:before {
+          visibility: visible;
+          opacity: 1;
+          filter: alpha(opacity=100);
+          -webkit-transform: scaleX(1);
+          -moz-transform: scaleX(1);
+          -ms-transform: scaleX(1);
+          -o-transform: scaleX(1);
+          transform: scaleX(1); }
+      .paneltool.multiproductdetailtool .group-input.layout .layout-detail:hover .detail_view {
+        visibility: visible;
+        opacity: 1;
+        filter: alpha(opacity=100);
+        -webkit-transform: translate(-50%, 50%);
+        -moz-transform: translate(-50%, 50%);
+        -ms-transform: translate(-50%, 50%);
+        -o-transform: translate(-50%, 50%);
+        transform: translate(-50%, 50%); }
+      .paneltool.multiproductdetailtool .group-input.layout .layout-detail.active .detail_title {
+        background-color: #ff8fe5; }
+      .paneltool.multiproductdetailtool .group-input.layout .layout-detail.active .product-detail-demo {
+        border-color: #ff8fe5; }
+    .paneltool.multiproductdetailtool .group-input.layout .detail_title {
+      text-transform: uppercase;
+      font-weight: 600;
+      background: #30bec6;
+      color: #FFFFFF;
+      text-align: center;
+      padding: 5px;
+      display: inline-block;
+      width: 100%;
+      position: relative;
+      z-index: 55;
+      margin-bottom: -2px;
+      border-radius: 5px 5px 0 0; }
+    .paneltool.multiproductdetailtool .group-input.layout .product-detail-demo {
+      display: block;
+      float: left;
+      width: 100%;
+      position: relative;
+      font-size: 14px;
+      color: #333;
+      border: 1px solid #ddd;
+      -webkit-transition: all 0.3s ease-out;
+      -o-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out; }
+      .paneltool.multiproductdetailtool .group-input.layout .product-detail-demo:before {
+        content: "";
+        background: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        z-index: 9;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        visibility: hidden;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        -webkit-transition: all 0.5s ease 0s;
+        -o-transition: all 0.5s ease 0s;
+        transition: all 0.5s ease 0s;
+        -webkit-transform: scaleX(0);
+        -moz-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+        -o-transform: scaleX(0);
+        transform: scaleX(0); }
+      .paneltool.multiproductdetailtool .group-input.layout .product-detail-demo .detail_view {
+        position: absolute;
+        z-index: 88;
+        left: 50%;
+        bottom: 50%;
+        right: auto;
+        top: auto;
+        color: #FFFFFF;
+        visibility: hidden;
+        -webkit-transform: translate(-50%, 50%);
+        -moz-transform: translate(-50%, 50%);
+        -ms-transform: translate(-50%, 50%);
+        -o-transform: translate(-50%, 50%);
+        transform: translate(-50%, 50%);
+        opacity: 0;
+        filter: alpha(opacity=0);
+        -webkit-transition: all 0.5s ease 0s;
+        -o-transition: all 0.5s ease 0s;
+        transition: all 0.5s ease 0s; }
+        .paneltool.multiproductdetailtool .group-input.layout .product-detail-demo .detail_view .fa {
+          font-size: 50px; }
+    .paneltool.multiproductdetailtool .group-input span {
+      cursor: pointer; }
+    .paneltool.multiproductdetailtool label {
+      position: absolute;
+      top: 0;
+      z-index: 9;
+      margin: 0;
+      padding: 20px 15px;
+      font-size: 16px;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      font-weight: 700;
+      line-height: 1.4;
+      text-align: left; }
+      .rtl .paneltool.multiproductdetailtool label {
+        text-align: right; }
+      .paneltool.multiproductdetailtool label span {
+        vertical-align: middle;
+        margin-right: 10px; }
+        .rtl .paneltool.multiproductdetailtool label span {
+          margin-left: 10px;
+          margin-right: inherit; }
+
+.panelbutton {
+  background: #FFFFFF;
+  position: absolute;
+  top: 165px;
+  cursor: pointer;
+  line-height: 50px;
+  text-align: center;
+  color: #333333;
+  font-size: 26px;
+  border-width: 1px 0 1px 1px;
+  border-color: #ddd;
+  border-style: solid;
+  left: -50px;
+  width: 50px;
+  height: 50px;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
+  -ms-box-shadow: none;
+  box-shadow: none; }
+  .rtl .panelbutton {
+    border-width: 1px 1px 1px 0; }
+  .rtl .panelbutton {
+    right: -50px;
+    left: auto; }
+  .panelbutton.label-customize {
+    display: none; }
+
+#leo-paneltool {
+  background: #F5F5F5;
+  width: 300px;
+  height: 100%;
+  top: 0;
+  z-index: 9999;
+  left: -320px;
+  -moz-box-shadow: 0 1px 3px #999;
+  -webkit-box-shadow: 0 1px 3px #999;
+  -o-box-shadow: 0 1px 3px #999;
+  -ms-box-shadow: 0 1px 3px #999;
+  box-shadow: 0 1px 3px #999;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-property: left, right, top, bottom, width, margin;
+  -moz-transition-property: left, right, top, bottom, width, margin;
+  transition-property: left, right, top, bottom, width, margin;
+  border-right: 1px solid rgba(0, 0, 0, 0.2); }
+  .rtl #leo-paneltool {
+    right: -320px;
+    left: auto; }
+  .rtl #leo-paneltool {
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    border-right: inherit; }
+  #leo-paneltool h4 {
+    margin-bottom: 20px;
+    margin-top: 0;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left; }
+    .rtl #leo-paneltool h4 {
+      text-align: right; }
+  #leo-paneltool .accordion-group {
+    margin-bottom: 5px; }
+  #leo-paneltool .panel-body {
+    max-height: 500px;
+    overflow-y: auto; }
+  #leo-paneltool .block-panelcontent {
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 600px;
+    color: #333333; }
+  #leo-paneltool form .group-input {
+    margin-bottom: 10px; }
+  #leo-paneltool select {
+    padding: 5px; }
+  #leo-paneltool .nav-tabs > li:after, #leo-paneltool .nav-tabs > li:before {
+    display: none; }
+
+/* Select Skin */
+.leo-dynamic-theme-skin {
+  float: left;
+  margin-left: 5px;
+  width: 24px;
+  height: 24px;
+  margin-top: 10px;
+  cursor: pointer;
+  border: 2px solid transparent; }
+  .rtl .leo-dynamic-theme-skin {
+    float: right; }
+  .rtl .leo-dynamic-theme-skin {
+    margin-right: 5px;
+    margin-left: inherit; }
+  .leo-dynamic-theme-skin.skin-default {
+    background-color: #ff8fe5;
+    text-indent: -99999px;
+    border: 2px solid #ff8fe5; }
+  .leo-dynamic-theme-skin.current-theme-skin {
+    border-color: #000000; }
+
+/* Select Layout*/
+.leo-dynamic-update-layout:hover {
+  color: #ff8fe5; }
+.leo-dynamic-update-layout.current-layout-mod {
+  color: #ff8fe5; }
+
+/* Enable Float Header */
+.btn_enable_fheader {
+  background-color: #25292C;
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 100px;
+  height: 36px;
+  position: relative;
+  border-radius: 18px; }
+
+.enable_fheader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #504C4C;
+  margin-top: 3px;
+  border-radius: 50%; }
+  .enable_fheader span {
+    position: relative;
+    z-index: 9; }
+  .enable_fheader:first-child {
+    float: left;
+    margin-left: 3px; }
+  .enable_fheader:last-child {
+    float: right;
+    margin-right: 3px; }
+  .enable_fheader.btn_no:before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 3px;
+    left: 4px;
+    border-radius: 18px;
+    background-color: #ff8fe5;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    visibility: hidden; }
+  .enable_fheader.btn_yes:after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 3px;
+    right: 4px;
+    border-radius: 18px;
+    background-color: #ff8fe5;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    visibility: hidden; }
+  .enable_fheader.current.btn_no:before {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    visibility: visible;
+    left: 67px;
+    -webkit-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s; }
+  .enable_fheader.current.btn_yes:after {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    visibility: visible;
+    right: 67px;
+    -webkit-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s; }
+
+/* Box Patterns */
+.box-patterns div {
+  display: block;
+  width: 38px;
+  height: 38px;
+  float: left;
+  cursor: pointer;
+  margin: 6px;
+  border: 1px solid #ccc; }
+  .rtl .box-patterns div {
+    float: right; }
+  .box-patterns div.active {
+    border-color: red; }
+
+.colorpicker {
+  z-index: 99999; }
+
+/* Customize body */
+#customize-body input[type="text"], #customize-body select {
+  border: 1px solid #E2E2E2;
+  color: #FFFFFF;
+  font-size: 11px;
+  margin: 0 5px 0 0;
+  padding: 2px 3px;
+  width: 65px;
+  height: auto;
+  display: inline-block;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px; }
+#customize-body select {
+  color: #666666; }
+#customize-body .accordion-group label {
+  color: #666666;
+  font-size: 11px;
+  font-weight: normal; }
+  #customize-body .accordion-group label.subtitle {
+    font-weight: bold;
+    font-size: 12px;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 4px;
+    margin-top: 10px;
+    display: inline-block;
+    width: 100%;
+    text-transform: uppercase; }
+#customize-body .accordion-group .input-group .input-group-addon {
+  padding: 0;
+  background: transparent;
+  border: none;
+  float: right;
+  margin-top: 2px;
+  width: 20px; }
+  .rtl #customize-body .accordion-group .input-group .input-group-addon {
+    float: left; }
+#customize-body .panel-heading {
+  padding: 5px 6px;
+  font-weight: bold;
+  font-size: 11px; }
+  #customize-body .panel-heading a {
+    display: block; }
+#customize-body .nav-tabs > li:nth-child(2) {
+  border: 1px solid #ddd; }
+#customize-body .nav-tabs a {
+  border: none;
+  font-weight: bold;
+  font-size: 11px;
+  padding: 6px 12px;
+  color: #000000; }
+  #customize-body .nav-tabs a.active {
+    color: #FFFFFF; }
+#customize-body .form-group {
+  margin-bottom: 10px; }
+#customize-body .accordion-inner .form-group .input-group {
+  display: inline-block;
+  width: 92px;
+  float: left; }
+  .rtl #customize-body .accordion-inner .form-group .input-group {
+    float: right; }
+
+/* wrapper */
+.bi-wrapper > div {
+  float: left;
+  width: 25px;
+  height: 25px;
+  margin: 3px 4px;
+  border: solid 1px #999;
+  cursor: pointer; }
+  .rtl .bi-wrapper > div {
+    float: right; }
+  .bi-wrapper > div.active {
+    border-color: red; }
+
+/* Accordion */
+.accordion-group label,
+.form-group label {
+  display: inline-block;
+  text-align: left; }
+  .rtl .accordion-group label, .rtl
+  .form-group label {
+    text-align: right; }
+
+.accordion-group label {
+  min-width: 100px; }
+
+.clear-bg {
+  padding: 3px 6px;
+  font-size: 12px;
+  color: #FFFFFF;
+  margin-left: 5px;
+  display: inline-block !important; }
+  .rtl .clear-bg {
+    margin-right: 5px;
+    margin-left: inherit; }
+  .clear-bg:hover {
+    background: #ff8fe5; }
+
+/* Home page version */
+.group-input a.apconfig {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 25px;
+  color: #333; }
+  .group-input a.apconfig:before {
+    content: "\f067";
+    font-family: "FontAwesome";
+    padding-right: 5px;
+    font-size: 10px; }
+    .rtl .group-input a.apconfig:before {
+      padding-left: 5px;
+      padding-right: inherit; }
+  .group-input a.apconfig:hover, .group-input a.apconfig.active {
+    color: #ff8fe5; }
+
+.group-input a.apconfig {
+  width: 100%; }
+
+/*# sourceMappingURL=paneltool.css.map */

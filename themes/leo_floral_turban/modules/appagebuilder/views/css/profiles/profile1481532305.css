@@ -1,0 +1,149 @@
+/***************************************************
+  Mixins Themes 
+/***************************************************/
+/* Mixin Normal*/
+/* Mixin Clear */
+/* Mixin Border */
+/*background RGBA
+============================================*/
+/***************************************************
+  Mixins RTL Themes 
+/***************************************************/
+/************************************ 
+	Override Bootstrap 
+*************************************/
+/**
+ * Web Application Prefix Apply For Making Owner Styles
+ */
+/**
+ *   Blocks Layout Selectors 
+ */
+/***********************************************************************/
+/** box-info-support **/
+.page-home .box-info-support {
+  padding: 50px 0 70px;
+  border: none; }
+  @media (max-width: 480px) {
+    .page-home .box-info-support {
+      padding: 30px 0; } }
+  .page-home .box-info-support .block h4 {
+    color: #333333; }
+  .page-home .box-info-support .block p {
+    color: #666; }
+
+.box-images {
+  position: relative; }
+  .box-images .box-images-bottom {
+    position: absolute;
+    right: 0;
+    bottom: 0; }
+    .rtl .box-images .box-images-bottom {
+      left: 0;
+      right: auto; }
+    @media (min-width: 481px) {
+      .box-images .box-images-bottom {
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex; } }
+    @media (max-width: 767px) {
+      .box-images .box-images-bottom {
+        position: relative; } }
+  @media (max-width: 767px) {
+    .box-images .ApImage a {
+      width: 100%; } }
+  @media (max-width: 480px) {
+    .box-images .block-image {
+      padding: 0; } }
+
+@media (min-width: 1400px) {
+  .iview-directionNav a.iview-prevNav {
+    right: 144px;
+    left: inherit; }
+    .rtl .iview-directionNav a.iview-prevNav {
+      left: 144px;
+      right: auto; }
+    .iview-directionNav a.iview-prevNav:before {
+      content: "\f177 "; }
+  .iview-directionNav a.iview-nextNav {
+    right: 93px; }
+    .rtl .iview-directionNav a.iview-nextNav {
+      left: 93px;
+      right: auto; }
+    .iview-directionNav a.iview-nextNav:before {
+      content: "\f178 "; }
+
+  .iview.iview-hover .iview-directionNav a.iview-prevNav {
+    right: 144px;
+    left: inherit; }
+    .rtl .iview.iview-hover .iview-directionNav a.iview-prevNav {
+      left: 144px;
+      right: auto; }
+  .iview.iview-hover .iview-directionNav a.iview-nextNav {
+    right: 93px; }
+    .rtl .iview.iview-hover .iview-directionNav a.iview-nextNav {
+      left: 93px;
+      right: auto; } }
+@media (max-width: 1400px) and (min-width: 1200px) {
+  .iview-directionNav a.iview-prevNav {
+    right: 129px;
+    left: inherit; }
+    .rtl .iview-directionNav a.iview-prevNav {
+      left: 129px;
+      right: auto; }
+    .iview-directionNav a.iview-prevNav:before {
+      content: "\f177 "; }
+  .iview-directionNav a.iview-nextNav {
+    right: 77px; }
+    .rtl .iview-directionNav a.iview-nextNav {
+      left: 77px;
+      right: auto; }
+    .iview-directionNav a.iview-nextNav:before {
+      content: "\f178 "; }
+
+  .iview.iview-hover .iview-directionNav a.iview-prevNav {
+    right: 129px;
+    left: inherit; }
+    .rtl .iview.iview-hover .iview-directionNav a.iview-prevNav {
+      left: 129px;
+      right: auto; }
+  .iview.iview-hover .iview-directionNav a.iview-nextNav {
+    right: 77px; }
+    .rtl .iview.iview-hover .iview-directionNav a.iview-nextNav {
+      left: 77px;
+      right: auto; } }
+@media (min-width: 1200px) {
+  /** Slide show **/
+  .iview-directionNav a {
+    bottom: 0;
+    top: inherit;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.75);
+    color: #333333; }
+    .iview-directionNav a:before {
+      content: "";
+      font-family: "FontAwesome";
+      font-size: 16px;
+      line-height: 55px;
+      color: #333333; }
+    .iview-directionNav a:hover:before {
+      color: #FFFFFF; }
+
+  /* Control nav styles (e.g. 1,2,3...) */
+  .iview-controlNav div.iview-items {
+    bottom: 50%;
+    text-align: right;
+    right: 3%; }
+    .iview-controlNav div.iview-items ul li {
+      display: block;
+      height: auto; }
+      .iview-controlNav div.iview-items ul li a.iview-control {
+        font-size: 0; }
+        .iview-controlNav div.iview-items ul li a.iview-control.active {
+          background-color: #333333; } }
+
+/*# sourceMappingURL=profile1481532305.css.map */

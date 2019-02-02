@@ -1,0 +1,70 @@
+/***************************************************
+  Mixins Themes 
+/***************************************************/
+/* Mixin Normal*/
+/* Mixin Clear */
+/* Mixin Border */
+/*background RGBA
+============================================*/
+/***************************************************
+  Mixins RTL Themes 
+/***************************************************/
+/************************************ 
+	Override Bootstrap 
+*************************************/
+/**
+ * Web Application Prefix Apply For Making Owner Styles
+ */
+/**
+ *   Blocks Layout Selectors 
+ */
+/***********************************************************************/
+.col-xl-1 {
+  float: left;
+  width: 8.33333%; }
+
+.col-xl-2 {
+  float: left;
+  width: 16.66667%; }
+
+.col-xl-3 {
+  float: left;
+  width: 25%; }
+
+.col-xl-4 {
+  float: left;
+  width: 33.33333%; }
+
+.col-xl-5 {
+  float: left;
+  width: 41.66667%; }
+
+.col-xl-6 {
+  float: left;
+  width: 50%; }
+
+.col-xl-7 {
+  float: left;
+  width: 58.33333%; }
+
+.col-xl-8 {
+  float: left;
+  width: 66.66667%; }
+
+.col-xl-9 {
+  float: left;
+  width: 75%; }
+
+.col-xl-10 {
+  float: left;
+  width: 83.33333%; }
+
+.col-xl-11 {
+  float: left;
+  width: 91.66667%; }
+
+.col-xl-12 {
+  float: left;
+  width: 100%; }
+
+/*# sourceMappingURL=non-responsive.css.map */

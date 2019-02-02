@@ -1,0 +1,57 @@
+/***************************************************
+  Mixins Themes 
+/***************************************************/
+/* Mixin Normal*/
+/* Mixin Clear */
+/* Mixin Border */
+/*background RGBA
+============================================*/
+/***************************************************
+  Mixins RTL Themes 
+/***************************************************/
+/************************************ 
+	Override Bootstrap 
+*************************************/
+/**
+ * Web Application Prefix Apply For Making Owner Styles
+ */
+/**
+ *   Blocks Layout Selectors 
+ */
+/***********************************************************************/
+.footer-container {
+  background: #FFFFFF;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 60px; }
+  .footer-container .container {
+    color: #666; }
+  @media (max-width: 767px) {
+    .footer-container .block {
+      margin: 0; } }
+  .footer-container .block ul li a {
+    color: #666; }
+    .footer-container .block ul li a:hover {
+      color: #ff8fe5; }
+
+.footer-left .ApRawHtml.block {
+  margin: 30px 0 50px; }
+  .footer-left .ApRawHtml.block p {
+    line-height: 23px; }
+    .footer-left .ApRawHtml.block p .fa {
+      color: #999999; }
+@media (max-width: 991px) {
+  .footer-left {
+    text-align: center; } }
+
+.footer-copyright {
+  text-align: center;
+  font-family: "Merriweather", serif; }
+  .footer-copyright .block {
+    margin-bottom: 0;
+    border-top: 1px solid #ccc;
+    padding: 30px 0; }
+  .footer-copyright span {
+    font-weight: 700;
+    color: #333333; }
+
+/*# sourceMappingURL=footerposition1481492740.css.map */

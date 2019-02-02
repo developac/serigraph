@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fb2ba47c-d412-44f1-826e-db8f5008ba94" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/config.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/assets/scss/custom.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="203" column="18" selection-start-line="203" selection-start-column="18" selection-end-line="203" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/assets/css/custom.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/classes/module/Module.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2481">
+              <caret line="1259" column="33" selection-start-line="1259" selection-start-column="28" selection-end-line="1259" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/assets/css/theme.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18234">
+              <caret line="1013" column="26" selection-start-line="1013" selection-start-column="26" selection-end-line="1013" selection-end-column="26" />
+              <folding>
+                <element signature="e#12916#13161#2" expanded="true" />
+                <element signature="e#13682#14000#2" expanded="true" />
+                <element signature="e#14511#14798#2" expanded="true" />
+                <element signature="e#45221#45419#2" expanded="true" />
+                <element signature="e#45555#45702#2" expanded="true" />
+                <element signature="e#45867#46011#2" expanded="true" />
+                <element signature="e#46406#46567#1" expanded="true" />
+                <element signature="e#185709#185898#1" expanded="true" />
+                <element signature="e#236478#236721#2" expanded="true" />
+                <element signature="e#236733#236976#2" expanded="true" />
+                <element signature="e#237396#237597#2" expanded="true" />
+                <element signature="e#237609#237810#2" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/config/theme.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="666">
+              <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>css</find>
+      <find>&quot;Merriweather&quot;</find>
+      <find>-5</find>
+      <find>} elseif ($cartRule-&gt;reduction_product == 0) {</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>&quot;Montserrat&quot;</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/themes/leo_floral_turban/config.rb" />
+        <option value="$PROJECT_DIR$/themes/leo_floral_turban/config/theme.yml" />
+        <option value="$PROJECT_DIR$/themes/leo_floral_turban/assets/css/theme.css" />
+        <option value="$PROJECT_DIR$/themes/leo_floral_turban/assets/scss/custom.scss" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="25" />
+    <option name="width" value="960" />
+    <option name="height" value="990" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>AngularJS</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <autoscrollFromSource ProjectPane="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
+              <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
+              <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
+              <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="module" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
+              <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
+              <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="leo_floral_turban" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
+              <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="leo_floral_turban" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
+              <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="leo_floral_turban" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
+              <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="leo_floral_turban" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="custom.css" type="620a8d5e:NestingTreeNode" />
+            </path>
+            <path>
+              <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
+              <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="leo_floral_turban" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="scss" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fb2ba47c-d412-44f1-826e-db8f5008ba94" name="Default Changelist" comment="" />
+      <created>1536871248122</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1536871248122</updated>
+      <workItem from="1536871249366" duration="13656000" />
+      <workItem from="1537562835516" duration="3126000" />
+      <workItem from="1537730513197" duration="12000" />
+      <workItem from="1538230059818" duration="1343000" />
+      <workItem from="1538770011797" duration="599000" />
+      <workItem from="1538904550175" duration="617000" />
+      <workItem from="1538942563518" duration="1209000" />
+      <workItem from="1547915301795" duration="971000" />
+      <workItem from="1548011288135" duration="3076000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="24609000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="25" width="1920" height="990" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26307365" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="NativeScript" order="9" />
+      <window_info anchor="bottom" id="File Transfer" order="10" visible="true" weight="0.32908458" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.32908458" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Remote Host" order="3" weight="0.27481323" />
+      <window_info anchor="right" id="Nativescript Palette" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/config.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="109" column="2" selection-start-line="109" selection-start-column="2" selection-end-line="109" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/config.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/assets/css/theme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18234">
+          <caret line="1013" column="26" selection-start-line="1013" selection-start-column="26" selection-end-line="1013" selection-end-column="26" />
+          <folding>
+            <element signature="e#12916#13161#2" expanded="true" />
+            <element signature="e#13682#14000#2" expanded="true" />
+            <element signature="e#14511#14798#2" expanded="true" />
+            <element signature="e#45221#45419#2" expanded="true" />
+            <element signature="e#45555#45702#2" expanded="true" />
+            <element signature="e#45867#46011#2" expanded="true" />
+            <element signature="e#46406#46567#1" expanded="true" />
+            <element signature="e#185709#185898#1" expanded="true" />
+            <element signature="e#236478#236721#2" expanded="true" />
+            <element signature="e#236733#236976#2" expanded="true" />
+            <element signature="e#237396#237597#2" expanded="true" />
+            <element signature="e#237609#237810#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/config/theme.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/assets/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/assets/scss/custom.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="203" column="18" selection-start-line="203" selection-start-column="18" selection-end-line="203" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/module/Module.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2481">
+          <caret line="1259" column="33" selection-start-line="1259" selection-start-column="28" selection-end-line="1259" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

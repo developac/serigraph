@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataSample>
+  <configurations>
+    <config><name><![CDATA[BTMEGAMENU_ADD_HOOK]]></name><value><![CDATA[1]]></value></config>
+    <config><name><![CDATA[BTMEGAMENU_CLEARCACHE_HOOK]]></name><value><![CDATA[all]]></value></config>
+    <config><name><![CDATA[BTMEGAMENU_GROUP_AUTO_CORRECT]]></name><value><![CDATA[1]]></value></config>
+    <config><name><![CDATA[BTMEGAMENU_GROUP_AUTO_CORRECT_TITLE_FO]]></name><value><![CDATA[1]]></value></config>
+    <config><name><![CDATA[BTMEGAMENU_GROUP_DE]]></name><value><![CDATA[]]></value></config>
+</configurations>
+
+<fields objectName="BtmegamenuGroup" objectFile="BtmegamenuGroup.php" searchField="id_shop">
+  <field><id>7</id><active>1</active><hook><![CDATA[]]></hook><position>0</position><params><![CDATA[eyJncm91cF90eXBlIjoiaG9yaXpvbnRhbCIsInNob3dfY2F2YXMiOiIxIiwidHlwZV9zdWIiOiJhdXRvIiwiZ3JvdXBfY2xhc3MiOiIifQ==]]></params><active_ap>1</active_ap><randkey><![CDATA[58d5487e19da62153cadcfbaa4b9ef89]]></randkey><form_id><![CDATA[8127889324965072]]></form_id><title><en><![CDATA[Sample Megamenu]]></en><fr><![CDATA[Sample Megamenu]]></fr><de><![CDATA[Sample Megamenu]]></de><it><![CDATA[Sample Megamenu]]></it><es><![CDATA[Sample Megamenu]]></es><ar><![CDATA[Sample Megamenu]]></ar></title><title_fo><en><![CDATA[Categories]]></en><fr><![CDATA[Catégories]]></fr><de><![CDATA[Kategorien]]></de><it><![CDATA[Categorie]]></it><es><![CDATA[Categorías]]></es><ar><![CDATA[ال�?ئات]]></ar></title_fo>
+  <fields objectName="Btmegamenu" objectFile="Btmegamenu.php" searchField="id_group">
+  <field><id>60</id><id_group>7</id_group><image><![CDATA[]]></image><id_parent>0</id_parent><is_group>0</is_group><width><![CDATA[]]></width><submenu_width><![CDATA[]]></submenu_width><submenu_colum_width><![CDATA[]]></submenu_colum_width><item><![CDATA[index]]></item><item_parameter><![CDATA[]]></item_parameter><colums>1</colums><type><![CDATA[url]]></type><is_content>0</is_content><show_title>1</show_title><is_cattree>1</is_cattree><level_depth>1</level_depth><active>1</active><position>0</position><show_sub>0</show_sub><url><en><![CDATA[index.php]]></en><fr><![CDATA[index.php]]></fr><de><![CDATA[index.php]]></de><it><![CDATA[index.php]]></it><es><![CDATA[index.php]]></es><ar><![CDATA[index.php]]></ar></url><target><![CDATA[_self]]></target><privacy>0</privacy><position_type><![CDATA[]]></position_type><menu_class><![CDATA[]]></menu_class><icon_class><![CDATA[]]></icon_class><content><![CDATA[]]></content><submenu_content><![CDATA[]]></submenu_content><level>0</level><left>0</left><right>0</right><date_add><![CDATA[2017-04-21 05:38:46]]></date_add><date_upd><![CDATA[2017-04-21 05:38:46]]></date_upd><sub_with><![CDATA[submenu]]></sub_with><groupBox><![CDATA[all]]></groupBox><params_widget><![CDATA[eyJzdWJ3aXRoIjoic3VibWVudSIsInN1Ym1lbnUiOjEsImNvbHMiOjEsImdyb3VwIjowLCJyb3dzIjpbXX0=]]></params_widget><title><en><![CDATA[Home]]></en><fr><![CDATA[Accueil]]></fr><de><![CDATA[Haus]]></de><it><![CDATA[Casa]]></it><es><![CDATA[Hogar]]></es><ar><![CDATA[منزل]]></ar></title><text><en><![CDATA[]]></en><fr><![CDATA[]]></fr><de><![CDATA[]]></de><it><![CDATA[]]></it><es><![CDATA[]]></es><ar><![CDATA[]]></ar></text><description><en><![CDATA[]]></en><fr><![CDATA[]]></fr><de><![CDATA[]]></de><it><![CDATA[]]></it><es><![CDATA[]]></es><ar><![CDATA[]]></ar></description><content_text><en><![CDATA[]]></en><fr><![CDATA[]]></fr><de><![CDATA[]]></de><it><![CDATA[]]></it><es><![CDATA[]]></es><ar><![CDATA[]]></ar></content_text><submenu_catids><![CDATA[]]></submenu_catids></field>
+  <field><id>64</id><id_group>7</id_group><image><![CDATA[]]></image><id_parent>0</id_parent><is_group>0</is_group><width><![CDATA[]]></width><submenu_width><![CDATA[]]></submenu_width><submenu_colum_width><![CDATA[]]></submenu_colum_width><item><![CDATA[3]]></item><item_parameter><![CDATA[]]></item_parameter><colums>1</colums><type><![CDATA[category]]></type><is_content>0</is_content><show_title>1</show_title><is_cattree>1</is_cattree><level_depth>1</level_depth><active>1</active><position>1</position><show_sub>0</show_sub><url><en><![CDATA[]]></en><fr><![CDATA[]]></fr><de><![CDATA[]]></de><it><![CDATA[]]></it><es><![CDATA[]]></es><ar><![CDATA[]]></ar></url><target><![CDATA[_self]]></target><privacy>0</privacy><position_type><![CDATA[]]></position_type><menu_class><![CDATA[]]></menu_class><icon_class><![CDATA[]]></icon_class><content><![CDATA[]]></content><submenu_content><![CDATA[]]></submenu_content><level>0</level><left>0</left><right>0</right><date_add><![CDATA[2017-04-21 05:38:47]]></date_add><date_upd><![CDATA[2017-04-21 05:38:47]]></date_upd><sub_with><![CDATA[widget]]></sub_with><groupBox><![CDATA[all]]></groupBox><params_widget><![CDATA[eyJzdWJ3aXRoIjoid2lkZ2V0Iiwic3VibWVudSI6MSwiYWxpZ24iOiJhbGlnbmVkLWZ1bGx3aWR0aCIsInN1YndpZHRoIjo3NjksImNvbHMiOjEsImdyb3VwIjowLCJyb3dzIjpbeyJjb2xzIjpbeyJ3aWRnZXRzIjoid2lkLTE0ODEwNDAwMjN8d2lkLTE0ODEwNDAwNjQiLCJjb2x3aWR0aCI6NH0seyJ3aWRnZXRzIjoid2lkLTE0ODEwMzk4MDkiLCJjb2x3aWR0aCI6NH0seyJ3aWRnZXRzIjoid2lkLTE0ODEwMzk4MDkiLCJjb2x3aWR0aCI6NH1dfV19]]></params_widget><title><en><![CDATA[Category]]></en><fr><![CDATA[Catégorie]]></fr><de><![CDATA[Kategorie]]></de><it><![CDATA[Categoria]]></it><es><![CDATA[Categoría]]></es><ar><![CDATA[الفئة]]></ar></title><text><en><![CDATA[]]></en><fr><![CDATA[]]></fr><de><![CDATA[]]></de><it><![CDATA[]]></it><es><![CDATA[]]></es><ar><![CDATA[]]></ar></text><description><en><![CDATA[]]></en><fr><![CDATA[]]></fr><de><![CDATA[]]></de><it><![CDATA[]]></it><es><![CDATA[]]></es><ar><![CDATA[]]></ar></description><content_text><en><![CDATA[]]></en><fr><![CDATA[]]></fr><de><![CDATA[]]></de><it><![CDATA[]]></it><es><![CDATA[]]></es><ar><![CDATA[]]></ar></content_text><submenu_catids><![CDATA[]]></submenu_catids></field>
+  <field><id>68</id><id_group>7</id_group><image><![CDATA[]]></image><id_parent>0</id_parent><is_group>0</is_group><width><![CDATA[]]></width><submenu_width><![CDATA[]]></submenu_width><submenu_colum_width><![CDATA[]]></submenu_colum_width><item><![CDATA[8]]></item><item_parameter><![CDATA[]]></item_parameter><colums>1</colums><type><![CDATA[category]]></type><is_content>0</is_content><show_title>1</show_title><is_cattree>1</is_cattree><level_depth>1</level_depth><active>1</active><position>2</position><show_sub>0</show_sub><url><en><![CDATA[]]></en><fr><![CDATA[]]></fr><de><![CDATA[]]></de><it><![CDATA[]]></it><es><![CDATA[]]></es><ar><![CDATA[]]></ar></url><target><![CDATA[_self]]></target><privacy>0</privacy><position_type><![CDATA[]]></position_type><menu_class><![CDATA[]]></menu_class><icon_class><![CDATA[]]></icon_class><content><![CDATA[]]></content><submenu_content><![CDATA[]]></submenu_content><level>0</level><left>0</left><right>0</right><date_add><![CDATA[2017-04-21 05:38:48]]></date_add><date_upd><![CDATA[2017-04-21 05:38:48]]></date_upd><sub_with><![CDATA[widget]]></sub_with><groupBox><![CDATA[all]]></groupBox><params_widget><![CDATA[eyJzdWJ3aXRoIjoid2lkZ2V0Iiwic3VibWVudSI6IjEiLCJncm91cCI6MCwic3Vid2lkdGgiOjc2OSwiYWxpZ24iOiJhbGlnbmVkLWZ1bGx3aWR0aCIsImNvbHMiOjMsInJvd3MiOlt7ImNvbHMiOlt7ImNvbHdpZHRoIjoiNCIsIndpZGdldHMiOiJ3aWQtMTQ4MTA0MDQ0MCJ9LHsiY29sd2lkdGgiOiI0Iiwid2lkZ2V0cyI6IndpZC0xNDgxMDM5ODA5In0seyJjb2x3aWR0aCI6IjQiLCJ3aWRnZXRzIjoid2lkLTE0ODEwNDA0NDAifV19XX0=]]></params_widget><title><en><![CDATA[Collection]]></en><fr><![CDATA[Collecte]]></fr><de><![CDATA[Kollektion]]></de><it><![CDATA[Collezione]]></it><es><![CDATA[Colección]]></es><ar><![CDATA[جمع]]></ar></title><text><en><![CDATA[]]></en><fr><![CDATA[]]></fr><de><![CDATA[]]></de><it><![CDATA[]]></it><es><![CDATA[]]></es><ar><![CDATA[]]></ar></text><description><en><![CDATA[]]></en><fr><![CDATA[]]></fr><de><![CDATA[]]></de><it><![CDATA[]]></it><es><![CDATA[]]></es><ar><![CDATA[]]></ar></description><content_text><en><![CDATA[]]></en><fr><![CDATA[]]></fr><de><![CDATA[]]></de><it><![CDATA[]]></it><es><![CDATA[]]></es><ar><![CDATA[]]></ar></content_text><submenu_catids><![CDATA[]]></submenu_catids></field>
+  <field><id>72</id><id_group>7</id_group><image><![CDATA[]]></image><id_parent>0</id_parent><is_group>0</is_group><width><![CDATA[]]></width><submenu_width><![CDATA[]]></submenu_width><submenu_colum_width><![CDATA[]]></submenu_colum_width><item><![CDATA[]]></item><item_parameter><![CDATA[]]></item_parameter><colums>1</colums><type><![CDATA[url]]></type><is_content>0</is_content><show_title>1</show_title><is_cattree>1</is_cattree><level_depth>1</level_depth><active>1</active><position>3</position><show_sub>0</show_sub><url><en><![CDATA[blog.html]]></en><fr><![CDATA[blog.html]]></fr><de><![CDATA[blog.html]]></de><it><![CDATA[blog.html]]></it><es><![CDATA[blog.html]]></es><ar><![CDATA[blog.html]]></ar></url><target><![CDATA[_self]]></target><privacy>0</privacy><position_type><![CDATA[]]></position_type><menu_class><![CDATA[]]></menu_class><icon_class><![CDATA[]]></icon_class><content><![CDATA[]]></content><submenu_content><![CDATA[]]></submenu_content><level>0</level><left>0</left><right>0</right><date_add><![CDATA[2017-04-21 05:38:49]]></date_add><date_upd><![CDATA[2017-04-21 05:38:49]]></date_upd><sub_with><![CDATA[none]]></sub_with><groupBox><![CDATA[all]]></groupBox><params_widget><![CDATA[]]></params_widget><title><en><![CDATA[Blogs]]></en><fr><![CDATA[Blogs]]></fr><de><![CDATA[Blogs]]></de><it><![CDATA[Blogs]]></it><es><![CDATA[Blogs]]></es><ar><![CDATA[بلوق]]></ar></title><text><en><![CDATA[]]></en><fr><![CDATA[]]></fr><de><![CDATA[]]></de><it><![CDATA[]]></it><es><![CDATA[]]></es><ar><![CDATA[]]></ar></text><description><en><![CDATA[]]></en><fr><![CDATA[]]></fr><de><![CDATA[]]></de><it><![CDATA[]]></it><es><![CDATA[]]></es><ar><![CDATA[]]></ar></description><content_text><en><![CDATA[]]></en><fr><![CDATA[]]></fr><de><![CDATA[]]></de><it><![CDATA[]]></it><es><![CDATA[]]></es><ar><![CDATA[]]></ar></content_text><submenu_catids><![CDATA[]]></submenu_catids></field>
+  <field><id>75</id><id_group>7</id_group><image><![CDATA[]]></image><id_parent>0</id_parent><is_group>0</is_group><width><![CDATA[]]></width><submenu_width><![CDATA[]]></submenu_width><submenu_colum_width><![CDATA[]]></submenu_colum_width><item><![CDATA[]]></item><item_parameter><![CDATA[]]></item_parameter><colums>1</colums><type><![CDATA[url]]></type><is_content>0</is_content><show_title>1</show_title><is_cattree>1</is_cattree><level_depth>1</level_depth><active>1</active><position>4</position><show_sub>0</show_sub><url><en><![CDATA[contact-us]]></en><fr><![CDATA[contact-us]]></fr><de><![CDATA[contact-us]]></de><it><![CDATA[contact-us]]></it><es><![CDATA[contact-us]]></es><ar><![CDATA[contact-us]]></ar></url><target><![CDATA[_self]]></target><privacy>0</privacy><position_type><![CDATA[]]></position_type><menu_class><![CDATA[]]></menu_class><icon_class><![CDATA[]]></icon_class><content><![CDATA[]]></content><submenu_content><![CDATA[]]></submenu_content><level>0</level><left>0</left><right>0</right><date_add><![CDATA[2017-04-21 05:38:50]]></date_add><date_upd><![CDATA[2017-04-21 05:38:50]]></date_upd><sub_with><![CDATA[none]]></sub_with><groupBox><![CDATA[all]]></groupBox><params_widget><![CDATA[]]></params_widget><title><en><![CDATA[Contact]]></en><fr><![CDATA[Contactez]]></fr><de><![CDATA[Kontakt]]></de><it><![CDATA[Contatto]]></it><es><![CDATA[Contacto]]></es><ar><![CDATA[اتصال]]></ar></title><text><en><![CDATA[]]></en><fr><![CDATA[]]></fr><de><![CDATA[]]></de><it><![CDATA[]]></it><es><![CDATA[]]></es><ar><![CDATA[]]></ar></text><description><en><![CDATA[]]></en><fr><![CDATA[]]></fr><de><![CDATA[]]></de><it><![CDATA[]]></it><es><![CDATA[]]></es><ar><![CDATA[]]></ar></description><content_text><en><![CDATA[]]></en><fr><![CDATA[]]></fr><de><![CDATA[]]></de><it><![CDATA[]]></it><es><![CDATA[]]></es><ar><![CDATA[]]></ar></content_text><submenu_catids><![CDATA[]]></submenu_catids></field>
+  </fields></field>
+</fields>
+<fields objectName="LeoWidget" objectFile="widget.php" searchField="id_shop">
+  <field><id>29</id><name><![CDATA[Megamenu-products]]></name><type><![CDATA[product_list]]></type><params><![CDATA[eyJhZGRidG1lZ2FtZW51X3dpZGdldHMiOiIxIiwiaWRfYnRtZWdhbWVudV93aWRnZXRzIjoiMSIsIndpZGdldF9uYW1lIjoiTWVnYW1lbnUtcHJvZHVjdHMiLCJ3aWRnZXRfdHlwZSI6InByb2R1Y3RfbGlzdCIsInNhdmVhbmRzdGF5bGVvd2lkZ2V0IjoiIiwic291cmNlIjoicHR5cGUiLCJjYXRlZ29yaWVzIjpbIjgiXSwicHR5cGUiOiJmZWF0dXJlZCIsInBwcm9kdWN0aWRzIjoiIiwibGltaXQiOiIzIiwib3JkZXJieSI6ImRhdGVfYWRkIiwib3JkZXJ3YXkiOiJBU0MiLCJ3aWRnZXRfdGl0bGVfZW4iOiJQcm9kdWN0cyBGZWF0dXJlIiwid2lkZ2V0X3RpdGxlX2ZyIjoiQ2FyYWN0XHUwMGU5cmlzdGlxdWUgcHJvZHVpdHMiLCJ3aWRnZXRfdGl0bGVfZGUiOiJQcm9kdWt0ZSB6ZWljaG5lbiIsIndpZGdldF90aXRsZV9pdCI6IkNhcmF0dGVyaXN0aWNhIHByb2RvdHRpIiwid2lkZ2V0X3RpdGxlX2VzIjoiQ2FyYWN0ZXJcdTAwZWRzdGljYSBwcm9kdWN0b3MiLCJ3aWRnZXRfdGl0bGVfYXIiOiJcdTA2NDVcdTA2NGFcdTA2MzJcdTA2MjkgXHUwNjI3XHUwNjQ0XHUwNjQ1XHUwNjQ2XHUwNjJhXHUwNjJjXHUwNjI3XHUwNjJhIn0=]]></params><key_widget>1481039809</key_widget></field>
+  <field><id>33</id><name><![CDATA[Megamenu-products-bestseller]]></name><type><![CDATA[product_list]]></type><params><![CDATA[eyJhZGRidG1lZ2FtZW51X3dpZGdldHMiOiIxIiwiaWRfYnRtZWdhbWVudV93aWRnZXRzIjoiMiIsIndpZGdldF9uYW1lIjoiTWVnYW1lbnUtcHJvZHVjdHMtYmVzdHNlbGxlciIsIndpZGdldF90eXBlIjoicHJvZHVjdF9saXN0Iiwic2F2ZWFuZHN0YXlsZW93aWRnZXQiOiIiLCJzb3VyY2UiOiJwdHlwZSIsImNhdGVnb3JpZXMiOiIiLCJwdHlwZSI6ImJlc3RzZWxsZXIiLCJwcHJvZHVjdGlkcyI6IiIsImxpbWl0IjoiMyIsIm9yZGVyYnkiOiJuYW1lIiwib3JkZXJ3YXkiOiJBU0MiLCJ3aWRnZXRfdGl0bGVfZW4iOiJCZXN0IFNlbGxlciIsIndpZGdldF90aXRsZV9mciI6IkJlc3QgU2VsbGVyIiwid2lkZ2V0X3RpdGxlX2RlIjoiQmVzdCBTZWxsZXIiLCJ3aWRnZXRfdGl0bGVfaXQiOiJCZXN0IFNlbGxlciIsIndpZGdldF90aXRsZV9lcyI6Ik1lam9yIHZlbmRlZG9yIiwid2lkZ2V0X3RpdGxlX2FyIjoiXHUwNjIzXHUwNjQxXHUwNjM2XHUwNjQ0IFx1MDYyN1x1MDY0NFx1MDYyOFx1MDYyN1x1MDYyNlx1MDYzOSJ9]]></params><key_widget>1481039909</key_widget></field>
+  <field><id>39</id><name><![CDATA[Megamenu-category]]></name><type><![CDATA[sub_categories]]></type><params><![CDATA[eyJhZGRidG1lZ2FtZW51X3dpZGdldHMiOiIxIiwiaWRfYnRtZWdhbWVudV93aWRnZXRzIjoiIiwid2lkZ2V0X25hbWUiOiJNZWdhbWVudS1jYXRlZ29yeSIsIndpZGdldF90eXBlIjoic3ViX2NhdGVnb3JpZXMiLCJzYXZlYW5kc3RheWxlb3dpZGdldCI6IiIsImNhdGVnb3J5X2lkIjoiOCIsIndpZGdldF90aXRsZV9lbiI6IiIsIndpZGdldF90aXRsZV9mciI6IiIsIndpZGdldF90aXRsZV9kZSI6IiIsIndpZGdldF90aXRsZV9pdCI6IiIsIndpZGdldF90aXRsZV9lcyI6IiIsIndpZGdldF90aXRsZV9hciI6IiJ9]]></params><key_widget>1481040023</key_widget></field>
+  <field><id>43</id><name><![CDATA[Megamenu-subcategory]]></name><type><![CDATA[sub_categories]]></type><params><![CDATA[eyJhZGRidG1lZ2FtZW51X3dpZGdldHMiOiIxIiwiaWRfYnRtZWdhbWVudV93aWRnZXRzIjoiIiwid2lkZ2V0X25hbWUiOiJNZWdhbWVudS1zdWJjYXRlZ29yeSIsIndpZGdldF90eXBlIjoic3ViX2NhdGVnb3JpZXMiLCJzYXZlYW5kc3RheWxlb3dpZGdldCI6IiIsImNhdGVnb3J5X2lkIjoiNCIsIndpZGdldF90aXRsZV9lbiI6IiIsIndpZGdldF90aXRsZV9mciI6IiIsIndpZGdldF90aXRsZV9kZSI6IiIsIndpZGdldF90aXRsZV9pdCI6IiIsIndpZGdldF90aXRsZV9lcyI6IiIsIndpZGdldF90aXRsZV9hciI6IiJ9]]></params><key_widget>1481040064</key_widget></field>
+  <field><id>45</id><name><![CDATA[Megamenu-List Product]]></name><type><![CDATA[product_list]]></type><params><![CDATA[eyJhZGRidG1lZ2FtZW51X3dpZGdldHMiOiIxIiwiaWRfYnRtZWdhbWVudV93aWRnZXRzIjoiNSIsIndpZGdldF9uYW1lIjoiTWVnYW1lbnUtTGlzdCBQcm9kdWN0Iiwid2lkZ2V0X3R5cGUiOiJwcm9kdWN0X2xpc3QiLCJzYXZlYW5kc3RheWxlb3dpZGdldCI6IiIsInNvdXJjZSI6InB0eXBlIiwiY2F0ZWdvcmllcyI6IiIsInB0eXBlIjoic3BlY2lhbCIsInBwcm9kdWN0aWRzIjoiIiwibGltaXQiOiIzIiwib3JkZXJieSI6InByaWNlIiwib3JkZXJ3YXkiOiJBU0MiLCJ3aWRnZXRfdGl0bGVfZW4iOiJQcm9kdWN0cyBTcGVjaWFsIiwid2lkZ2V0X3RpdGxlX2ZyIjoiUHJvZHVpdHMgc3BcdTAwZTljaWF1eCIsIndpZGdldF90aXRsZV9kZSI6IlByb2R1a3RlLVNwZWNpYWwiLCJ3aWRnZXRfdGl0bGVfaXQiOiJQcm9kb3R0aSBzcGVjaWFsaSIsIndpZGdldF90aXRsZV9lcyI6IlByb2R1Y3RvcyBlc3BlY2lhbGVzIiwid2lkZ2V0X3RpdGxlX2FyIjoiXHUwNjI3XHUwNjQ0XHUwNjQ1XHUwNjQ2XHUwNjJhXHUwNjJjXHUwNjI3XHUwNjJhIFx1MDYyN1x1MDY0NFx1MDYyZVx1MDYyN1x1MDYzNVx1MDYyOSJ9]]></params><key_widget>1481040440</key_widget></field>
+</fields>
+<sql>
+<![CDATA[CREATE TABLE IF NOT EXISTS `PREFIX_btmegamenu` (
+  `id_btmegamenu` int(11) NOT NULL AUTO_INCREMENT,
+  `id_group` int(11) NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `id_parent` int(11) NOT NULL,
+  `sub_with` varchar(255) NOT NULL,
+  `is_group` tinyint(1) NOT NULL,
+  `width` varchar(255) DEFAULT NULL,
+  `submenu_width` varchar(255) DEFAULT NULL,
+  `submenu_colum_width` varchar(255) DEFAULT NULL,
+  `item` varchar(255) DEFAULT NULL,
+  `item_parameter` varchar(255) DEFAULT NULL,
+  `colums` varchar(255) DEFAULT NULL,
+  `type` varchar(255) NOT NULL,
+  `is_content` tinyint(1) NOT NULL,
+  `show_title` tinyint(1) NOT NULL,
+  `level_depth` smallint(6) NOT NULL,
+  `active` tinyint(1) NOT NULL,
+  `position` int(11) NOT NULL,
+  `submenu_content` text NOT NULL,
+  `show_sub` tinyint(1) NOT NULL,
+  `target` varchar(25) DEFAULT NULL,
+  `privacy` smallint(6) DEFAULT NULL,
+  `position_type` varchar(25) DEFAULT NULL,
+  `menu_class` varchar(25) DEFAULT NULL,
+  `content` text,
+  `icon_class` varchar(255) DEFAULT NULL,
+  `level` int(11) NOT NULL,
+  `left` int(11) NOT NULL,
+  `right` int(11) NOT NULL,
+  `submenu_catids` text,
+  `is_cattree` tinyint(1) DEFAULT '1',
+  `date_add` datetime DEFAULT NULL,
+  `date_upd` datetime DEFAULT NULL,
+  `groupBox` varchar(255) DEFAULT 'all',
+  `params_widget` longtext,
+  PRIMARY KEY (`id_btmegamenu`)
+) ENGINE=ENGINE_TYPE AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `PREFIX_btmegamenu_group` (
+  `id_btmegamenu_group` int(11) NOT NULL AUTO_INCREMENT,
+  `id_shop` int(10) unsigned NOT NULL,
+  `hook` varchar(64) DEFAULT NULL,
+  `position` int(11) NOT NULL,
+  `active` tinyint(1) unsigned NOT NULL DEFAULT '1',
+  `params` text NOT NULL,
+  `active_ap` tinyint(1) DEFAULT NULL,
+  `randkey` varchar(255) DEFAULT NULL,
+  `form_id` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id_btmegamenu_group`,`id_shop`)
+) ENGINE=ENGINE_TYPE AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `PREFIX_btmegamenu_group_lang` (
+  `id_btmegamenu_group` int(11) NOT NULL,
+  `id_lang` int(11) NOT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `title_fo` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id_btmegamenu_group`,`id_lang`)
+) ENGINE=ENGINE_TYPE DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `PREFIX_btmegamenu_lang` (
+  `id_btmegamenu` int(11) NOT NULL,
+  `id_lang` int(11) NOT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `text` varchar(255) DEFAULT NULL,
+  `url` varchar(255) DEFAULT NULL,
+  `description` text,
+  `content_text` text,
+  `submenu_content_text` text,
+  PRIMARY KEY (`id_btmegamenu`,`id_lang`)
+) ENGINE=ENGINE_TYPE DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `PREFIX_btmegamenu_shop` (
+  `id_btmegamenu` int(11) NOT NULL DEFAULT '0',
+  `id_shop` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id_btmegamenu`,`id_shop`)
+) ENGINE=ENGINE_TYPE DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `PREFIX_btmegamenu_widgets` (
+  `id_btmegamenu_widgets` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(250) NOT NULL,
+  `type` varchar(250) NOT NULL,
+  `params` longtext,
+  `id_shop` int(11) unsigned NOT NULL,
+  `key_widget` int(11) NOT NULL,
+  PRIMARY KEY (`id_btmegamenu_widgets`,`id_shop`)
+) ENGINE=ENGINE_TYPE AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+]]></sql>
+
+  <hooks>
+    <hook module="leobootstrapmenu" hook="displayRightColumn" position="2" exceptions=""/>
+    <hook module="leobootstrapmenu" hook="displayLeftColumn" position="4" exceptions=""/>
+    <hook module="leobootstrapmenu" hook="displayHome" position="2" exceptions=""/>
+    <hook module="leobootstrapmenu" hook="Header" position="5" exceptions=""/>
+    <hook module="leobootstrapmenu" hook="displayTop" position="3" exceptions=""/>
+    <hook module="leobootstrapmenu" hook="displayNavFullWidth" position="2" exceptions=""/>
+    <hook module="leobootstrapmenu" hook="displayRightColumnProduct" position="2" exceptions=""/>
+    <hook module="leobootstrapmenu" hook="displayFooterProduct" position="3" exceptions=""/>
+    <hook module="leobootstrapmenu" hook="displayFooter" position="2" exceptions=""/>
+    <hook module="leobootstrapmenu" hook="displayProductAdditionalInfo" position="3" exceptions=""/>
+    <hook module="leobootstrapmenu" hook="displayLeftColumnProduct" position="2" exceptions=""/>
+    <hook module="leobootstrapmenu" hook="displayNav1" position="2" exceptions=""/>
+    <hook module="leobootstrapmenu" hook="displayFooterBefore" position="2" exceptions=""/>
+    <hook module="leobootstrapmenu" hook="displayNav2" position="2" exceptions=""/>
+    <hook module="leobootstrapmenu" hook="displayReassurance" position="3" exceptions=""/>
+    <hook module="leobootstrapmenu" hook="displayFooterAfter" position="2" exceptions=""/>
+    <hook module="leobootstrapmenu" hook="actionAdminShopControllerSaveAfter" position="3" exceptions=""/>
+  </hooks>
+</dataSample>

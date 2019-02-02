@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<themeeditor>
+	<version value="1.4">
+	<ccc available="true" />
+	<guest_checkout available="true" />
+	<one_page_checkout available="true" />
+	<store_locator available="true" />
+	</version>
+	<author>leotheme</author>
+<name>Live Theme Editor</name>	
+<selectors>
+	<items>
+		<header>Body Content</header>
+		<match>body</match>
+		<item>
+			<type>image</type>
+			<label>Body Bg Image</label>
+			<selector>body, body:before</selector>
+			<attrs>background-image</attrs>
+		</item> 
+		<item>
+			<type>text</type>
+			<label>Background Content</label>
+			<selector>body</selector>
+			<attrs>background-color</attrs>
+		</item> 
+		<item>
+			<type>image</type>
+			<label>Container Bg Image</label>
+			<selector>.container</selector>
+			<attrs>background-image</attrs>
+		</item> 
+		<item>
+			<type>text</type>
+			<label>Container Background</label>
+			<selector>.container</selector>
+			<attrs>background-color</attrs>
+		</item> 
+	 	<item>
+			<type>fontsize</type>
+			<label>Font-Size</label>
+			<selector>body</selector>
+			<attrs>font-size</attrs>
+		</item>
+	 	<item>
+			<type>fontfamily</type>
+			<label>Font-Family</label>
+			<selector>.wrapper .container .title_block</selector>
+			<attrs>font-family</attrs>
+		</item>
+		<item>
+			<type>text</type>
+			<label>Color Text</label>
+			<selector>body,p,.footer-about,.group-nav .ApRawHtml.block,.language-selector span,.currency-selector span,.leo-more-cdown ul li b,.leo-more-cdown ul li span,.ApCountdown ul li b,.ApCountdown ul li span,.footer-link span,.box-info-support .block p,.product-flags .product-flag,.page-home .box-info-support .block p,#cart-block .cart-preview .cart-quantity,.footer-copyright span,#leo_block_top .language-selector span, #leo_block_top .currency-selector span,.leo-megamenu .dropdown-menu .menu-title</selector>
+			<attrs>color</attrs>
+		</item> 
+		<item>
+			<type>text</type>
+			<label>Link Color</label>
+			<selector>a,.block_newsletter form .btn,.widget-category_image .cate_content .title-cate,.popup-over .popup-content a,.widget-category_image .cate_content .title-cate span,.latest-blogs .blog-container .blog-title a,.home-newsletter-block .block_newsletter form .btn,.tabs-top .nav-tabs li > a.active,.leo-megamenu .dropdown-menu a .menu-title,.leo-megamenu .dropdown-menu .leo-widget a,.leo-megamenu .navbar-nav > li > a,.footer-container .block ul li a,.footer-container .block .title_block a,.userinfo-selector.popup-over .popup-title,#leo_block_top.popup-over .popup-title</selector>
+			<attrs>color</attrs>
+		</item>
+		<item>
+			<type>text</type>
+			<label>Link Hover Color</label>
+			<selector>a:hover,.widget-category_image .cate_content .title-cate:hover,.widget-category_image .cate_content .title-cate:hover span,.latest-blogs .blog-container .blog-title a:hover,.home-newsletter-block .block_newsletter form .btn:hover,.tabs-top .nav-tabs li > a:hover,.tabs-top .nav-tabs li > a.active:hover,.leo-megamenu .dropdown-menu a .menu-title:hover,.popup-over .popup-content a:hover,.leo-megamenu .dropdown-menu .leo-widget a:hover,.leo-megamenu .navbar-nav > li > a:hover,.footer-container .block ul li a:hover,.footer-container .block .title_block a:hover,.userinfo-selector.popup-over .popup-title:hover,#leo_block_top.popup-over .popup-title:hover</selector>
+			<attrs>color</attrs>
+		</item>
+		<item>
+			<type>text</type>
+			<label>Headings Color</label>
+			<selector>h1, h2, h3, h4, h5, h6,.leo-megamenu .dropdown-menu .widget-products .menu-title,.page-home .box-info-support .block h4,.box-testi .ApImage h4</selector>
+			<attrs>color</attrs>
+		</item>
+	</items>
+	
+	<items>
+		<header>Header Main</header>
+		<match>header-main</match>
+		<item>
+			<type>text</type>
+			<label>Bg Outside Color</label>
+			<selector>#header,.header-top</selector>
+			<attrs>background-color</attrs>
+		</item> 
+		<item>
+			<type>text</type>
+			<label>Bg Color</label>
+			<selector>.header-top .container,.header-top .inner .box-header</selector>
+			<attrs>background-color</attrs>
+		</item> 
+	 	<item>
+			<type>text</type>
+			<label>Color Text</label>
+			<selector>.header-top .container,#header #cart-block .cart-preview .cart-quantity,#header .leo-megamenu .dropdown-menu .menu-title</selector>
+			<attrs>color</attrs>
+		</item> 
+	 	<item>
+			<type>text</type>
+			<label>Color Link</label>
+			<selector>#header .header-top a,#header .popup-over .popup-title,#header .popup-over .popup-content a,#header .leo-megamenu .dropdown-menu a .menu-title,#header #search_widget .form-search .search-button </selector>
+			<attrs>color</attrs>
+		</item> 
+		<item>
+			<type>text</type>
+			<label>Color Link Hover</label>
+			<selector>#header .header-top a:hover, #header .popup-over .popup-title:hover, #header .popup-over .popup-content a:hover,#header .leo-megamenu .dropdown-menu a .menu-title:hover</selector>
+			<attrs>color</attrs>
+		</item> 
+		<item>
+			<type>subtitle</type>
+			<content>Search</content>
+		</item>
+		<item>
+			<type>text</type>
+			<label>Background Color</label>
+			<selector>#header .search-widget form input[type=text]</selector>
+			<attrs>background-color</attrs>
+		</item> 
+		<item>
+			<type>text</type>
+			<label>Background Color(focus)</label>
+			<selector>#header .search-widget form input[type=text]:focus</selector>
+			<attrs>background-color</attrs>
+		</item> 
+		<item>
+			<type>text</type>
+			<label>Input Border Color</label>
+			<selector>#header #search_widget .form-search .search_query</selector>
+			<attrs>border-color</attrs>
+		</item> 
+		<item>
+			<type>text</type>
+			<label>Input Border Color(focus)</label>
+			<selector>#header #search_widget .form-search .search_query:focus</selector>
+			<attrs>border-color</attrs>
+		</item> 
+		<item>
+			<type>text</type>
+			<label>Text Color</label>
+			<selector>#header .search-widget form input[type=text]</selector>
+			<attrs>color</attrs>
+		</item>
+		<item>
+			<type>text</type>
+			<label>Text Color(focus)</label>
+			<selector>#header .search-widget form input[type=text]:focus</selector>
+			<attrs>color</attrs>
+		</item>  
+		<item>
+			<type>text</type>
+			<label>Button Bg Color</label>
+			<selector>#header #search_widget .form-search .search-button</selector>
+			<attrs>background-color</attrs>
+		</item> 
+		<item>
+			<type>text</type>
+			<label>Button Bg Color(hover)</label>
+			<selector>#header #search_widget .form-search .search-button:hover</selector>
+			<attrs>background-color</attrs>
+		</item> 
+		<item>
+			<type>text</type>
+			<label>Button Text Color</label>
+			<selector>#header #search_widget .form-search .search-button</selector>
+			<attrs>color</attrs>
+		</item> 
+		<item>
+			<type>text</type>
+			<label>Button Text Color(hover)</label>
+			<selector>#header #search_widget .form-search .search-button:hover</selector>
+			<attrs>color</attrs>
+		</item>
+		<item>
+			<type>subtitle</type>
+			<content>Cart</content>
+		</item>
+		<item>
+			<type>text</type>
+			<label>Icon Color</label>
+			<selector>#cart-block .cart-preview .shopping-cart</selector>
+			<attrs>color</attrs>
+		</item> 
+		<item>
+			<type>text</type>
+			<label>Icon Background</label>
+			<selector>#cart-block .cart-preview .shopping-cart</selector>
+			<attrs>background</attrs>
+		</item> 
+		<item>
+			<type>text</type>
+			<label>Text Color</label>
+			<selector>#cart-block,#cart-block .cart-preview .cart-quantity</selector>
+			<attrs>color</attrs>
+		</item>
+		<item>
+			<type>text</type>
+			<label>Text Color(hover)</label>
+			<selector>#cart-block .cart-preview.active a:hover</selector>
+			<attrs>color</attrs>
+		</item>
+	</items>
+	<items>
+		<header>Megamenu</header>
+		<match>magemenu</match>
+		<item>
+			<type>text</type>
+			<label>Bg Color</label>
+			<selector>.leo-megamenu</selector>
+			<attrs>background-color</attrs>
+		</item> 
+		<item>
+			<type>text</type>
+			<label>Text Color</label>
+			<selector>.leo-megamenu, .leo-megamenu .dropdown-menu .leo-widget .menu-title, .leo-megamenu p,.leo-megamenu .dropdown-menu .leo-widget .thumbnail-container .product-price-and-shipping .price</selector>
+			<attrs>color</attrs>
+		</item> 
+		<item>
+			<type>text</type>
+			<label>Link Color</label>
+			<selector>#header .leo-megamenu .navbar-nav > li > a, #header .leo-megamenu .navbar-nav > li > a > .menu-title, #header .leo-megamenu .dropdown-menu li a, #header .leo-megamenu .dropdown-menu a > .menu-title, #header .leo-megamenu .dropdown-menu .menu-title a, #header .leo-widget .product-block .name a,#header .leo-widget .thumbnail-container .product-title a,#header .leo-megamenu .navbar-nav > li > .caret,#header .leo-megamenu .dropdown-menu a > .menu-title</selector>
+			<attrs>color</attrs>
+		</item> 
+		<item>
+			<type>text</type>
+			<label>Link Hover Color</label>
+			<selector>#header .leo-megamenu .navbar-nav > li > a:hover, #header .leo-megamenu .navbar-nav > li > a:hover > .menu-title, #header .leo-megamenu .dropdown-menu li a:hover, #header .leo-megamenu .dropdown-menu a:hover > .menu-title, #header .leo-megamenu .dropdown-menu .menu-title a:hover, #header .leo-widget .product-block .name a:hover,#header .leo-widget .thumbnail-container .product-title a:hover,#header .leo-megamenu .dropdown-menu a > .menu-title:hover</selector>
+			<attrs>color</attrs>
+		</item> 	
+	</items>
+	<items>
+		<header>Footer</header>
+		<match>footer</match>
+		<item>
+			<type>text</type>
+			<label>Bg Outside Color</label>
+			<selector>#footer</selector>
+			<attrs>background-color</attrs>
+		</item> 
+		<item>
+			<type>text</type>
+			<label>Bg Color</label>
+			<selector>#footer .container</selector>
+			<attrs>background-color</attrs>
+		</item> 
+		<item>
+			<type>text</type>
+			<label>Color Text</label>
+			<selector>#footer .container,#footer .box-info-support .block p, #footer .footer-about,#footer .footer-link span,#footer .footer-copyright span,#footer .footer-left .ApRawHtml.block p,#footer .footer-about .block.ApRawHtml</selector>
+			<attrs>color</attrs>
+		</item> 
+		<item>
+			<type>text</type>
+			<label>Color Link</label>
+			<selector>#footer a, #footer ul li a,#footer .footer-container .block .title_block a</selector>
+			<attrs>color</attrs>
+		</item> 
+		<item>
+			<type>text</type>
+			<label>Color Link Hover</label>
+			<selector>#footer a:hover, #footer ul li a:hover,#footer .footer-container .block .title_block a:hover</selector>
+			<attrs>color</attrs>
+		</item> 
+		<item>
+			<type>text</type>
+			<label>Title Block</label>
+			<selector>#footer .block .title_block, #footer h4</selector>
+			<attrs>color</attrs>
+		</item>
+		<item>
+			<type>image</type>
+			<label>Background Image</label>
+			<selector>#footer </selector>
+			<attrs>background-image</attrs>
+		</item>
+		
+	</items> 
+</selectors>
+
+<elements>
+	<items>
+		<header>Products</header>
+		<match>product</match>
+		<item>
+			<type>text</type>
+			<label>Text Color</label>
+			<selector>.page-product section#main p,#block-reassurance li .block-reassurance-item span,.page-product .product-information, .social-sharing span,.product-features > dl.data-sheet,#product-details span</selector>
+			<attrs>color</attrs>
+		</item> 
+		<item>
+			<type>text</type>
+			<label>Headings Color</label>
+			<selector>.page-product h3,.products-section-title,#product-details .label</selector>
+			<attrs>color</attrs>
+		</item>
+		<item>
+			<type>text</type>
+			<label>Color Name Product</label>
+			<selector>.page-product .product-detail-name</selector>
+			<attrs>color</attrs>
+		</item> 
+		<item>
+			<type>text</type>
+			<label>Color Price</label>
+			<selector>.product-prices .product-price</selector>
+			<attrs>color</attrs>
+		</item> 
+ 		<item>
+			<type>text</type>
+			<label>Color Price Old</label>
+			<selector>.product-discount .regular-price</selector>
+			<attrs>color</attrs>
+		</item> 
+		<item>
+			<type>text</type>
+			<label>BgColor Cart</label>
+			<selector>.product-actions .add-to-cart</selector>
+			<attrs>background-color</attrs>
+		</item>
+		<item>
+			<type>text</type>
+			<label>BgColor Cart(hover)</label>
+			<selector>.product-actions .add-to-cart:hover</selector>
+			<attrs>background-color</attrs>
+		</item>
+		<item>
+			<type>text</type>
+			<label>Color Cart</label>
+			<selector>.product-actions .add-to-cart</selector>
+			<attrs>color</attrs>
+		</item> 
+	</items>
+	<items>
+		<header>Modules default in Sidebar</header>
+		<match>modules</match>
+			<item>
+				<type>text</type>
+				<label>Heading Background</label>
+				<selector>.sidebar .block .title_block</selector>
+				<attrs>background-color</attrs>
+			</item> 
+			<item>
+				<type>text</type>
+				<label>Heading Color</label>
+				<selector>.sidebar .block .title_block a, .sidebar .block .title_block</selector>
+				<attrs>color</attrs>
+			</item> 
+			<item>
+				<type>text</type>
+				<label>Content Background</label>
+				<selector>.sidebar .block .block_content</selector>
+				<attrs>background-color</attrs>
+			</item>  
+			<item>
+				<type>text</type>
+				<label>Content Color</label>
+				<selector>.sidebar .block .block_content,#search_filters .facet .facet-title,#search_filters .facet .facet-label a span</selector>
+				<attrs>color</attrs>
+			</item> 
+			<item>
+				<type>text</type>
+				<label>Link Color</label>
+				<selector>.sidebar .block .block_content a</selector>
+				<attrs>color</attrs>
+			</item> 
+			<item>
+				<type>text</type>
+				<label>Link Hover Color</label>
+				<selector>.sidebar .block .block_content a:hover</selector>
+				<attrs>color</attrs>
+			</item> 
+			<item>
+				<type>text</type>
+				<label>Border Color</label>
+				<selector>.sidebar .block .block_content, .sidebar .block_content li </selector>
+				<attrs>border-color</attrs>
+			</item> 
+	</items>
+
+	<items>
+		<header>Modules highlighted  in Sidebar</header>
+		<match>highlighted-modules</match>
+			<item>
+				<type>text</type>
+				<label>Heading Background</label>
+				<selector>.sidebar .block-highlighted .title_block</selector>
+				<attrs>background-color</attrs>
+			</item> 
+			<item>
+				<type>text</type>
+				<label>Heading Color</label>
+				<selector>.sidebar .block-highlighted .title_block, .sidebar .block-highlighted .title_block a </selector>
+				<attrs>color</attrs>
+			</item> 
+			<item>
+				<type>text</type>
+				<label>Content Background</label>
+				<selector>.sidebar .block-highlighted .block_content</selector>
+				<attrs>background-color</attrs>
+			</item>  
+
+			<item>
+				<type>text</type>
+				<label>Content Color</label>
+				<selector>.sidebar .block-highlighted .block_content</selector>
+				<attrs>color</attrs>
+			</item>
+			<item>
+				<type>text</type>
+				<label>Link Color</label>
+				<selector>.sidebar .block-highlighted .block_content a</selector>
+				<attrs>color</attrs>
+			</item>
+			<item>
+				<type>text</type>
+				<label>Link Hover Color</label>
+				<selector>.sidebar .block-highlighted .block_content a:hover</selector>
+				<attrs>color</attrs>
+			</item>
+			<item>
+				<type>text</type>
+				<label>Border Color</label>
+				<selector>.sidebar .block-highlighted .block_content li,.sidebar .block-highlighted .block_content li a, .sidebar .block-highlighted .block_content </selector>
+				<attrs>border-color</attrs>
+			</item> 
+	</items>
+
+</elements>
+</themeeditor>

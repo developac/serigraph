@@ -107,18 +107,23 @@ $( document ).ready(function() {
         e.preventDefault();
         e.stopPropagation();
 
+
+
         $("div").find(`[data-attr='generate']`).find("div").css("display","block");
 
         if (!groups.length) {
             $('.group:checked').each(function() {
-                groups.push(this.id);
+                groups.push(this.value);
             }) ;
 
-            console.log(groups);
+
         }
 
+        //console.log(groups);
 
-        let url = ajax_link+"&method=generate&product="+$("input[name=\'product\']").val();
+        //return false;
+
+        let url = ajax_link+"&method=generate&product="+$("input[name='product']").val();
         $.ajax({
             type: 'POST',
             url: url,

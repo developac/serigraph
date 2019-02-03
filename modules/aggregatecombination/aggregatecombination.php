@@ -120,6 +120,7 @@ class AggregateCombination extends Module{
 
         if (Validate::isLoadedObject($product = new Product((int)$params['id_product']))) {// && !$product->hasAttributes()) {
 
+            $this->context->controller->addCSS(_PS_MODULE_DIR_.$this->name.'/views/css/main.css');
             // validate module
             //unset($product);
 
@@ -316,7 +317,7 @@ class AggregateCombination extends Module{
                 }
             }
 
-            Tools::dieObject($outValueRule, false);
+            //Tools::dieObject($outValueRule, false);
             //Tools::dieObject($valueRule);
 
             $this->context->smarty->assign(array(
@@ -493,6 +494,8 @@ class AggregateCombination extends Module{
         ));
 
         $this->context->controller->addJS(_PS_MODULE_DIR_.$this->name.'/views/js/main.js');
+
+
 
     }
 

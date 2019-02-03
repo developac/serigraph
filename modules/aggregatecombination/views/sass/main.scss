@@ -1,0 +1,11 @@
+#module_aggregatecombination {
+  .nav-tabs {
+    li {
+      &.active {
+        a {
+          background: #f5f5f5;
+        }
+      }
+    }
+  }
+}

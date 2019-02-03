@@ -6,12 +6,12 @@
  * Time: 10:54
  */
 
-require_once _PS_MODULE_DIR_."aggregatecombination/classes/AggregateCombinationGroup.php";
-require_once _PS_MODULE_DIR_ ."aggregatecombination/classes/AggregateCombinationGroupAttributes.php";
-require_once _PS_MODULE_DIR_."aggregatecombination/classes/AggregateCombinationGroupProducts.php";
-require_once _PS_MODULE_DIR_."aggregatecombination/classes/AggregateCombinationGroupProductsRule.php";
-require_once _PS_MODULE_DIR_."aggregatecombination/classes/AggregateCombinationGroupProductsRuleAttribute.php";
-require_once _PS_MODULE_DIR_."aggregatecombination/classes/AgAttributeTemp.php";
+require_once _PS_MODULE_DIR_ . "aggregatecombination/classes/AggregateCombinationGroup.php";
+require_once _PS_MODULE_DIR_ . "aggregatecombination/classes/AggregateCombinationGroupAttributes.php";
+require_once _PS_MODULE_DIR_ . "aggregatecombination/classes/AggregateCombinationGroupProducts.php";
+require_once _PS_MODULE_DIR_ . "aggregatecombination/classes/AggregateCombinationGroupProductsRule.php";
+require_once _PS_MODULE_DIR_ . "aggregatecombination/classes/AggregateCombinationGroupProductsRuleAttribute.php";
+require_once _PS_MODULE_DIR_ . "aggregatecombination/classes/AgAttributeTemp.php";
 
 class AggregatecombinationAjaxModuleFrontController extends ModuleFrontController
 {
@@ -27,101 +27,104 @@ class AggregatecombinationAjaxModuleFrontController extends ModuleFrontControlle
 
         $method = Tools::getValue("method");
 
-        switch($method){
-            case 'save' :{
+        switch ($method) {
+            case 'save' :
+                {
 
-                $idProduct = Tools::getValue('product', 0);
-                $nome =  Tools::getValue('group', $this->trans("Empty Group"));
-                $arrayCombination = Tools::getValue('element', []);
-                $id_ag_group = Tools::getValue('id_ag_group', []);
+                    $idProduct = Tools::getValue('product', 0);
+                    $nome = Tools::getValue('group', $this->trans("Empty Group"));
+                    $arrayCombination = Tools::getValue('element', []);
+                    $id_ag_group = Tools::getValue('id_ag_group', []);
 
 
-                //Tools::dieObject(Tools::getAllValues());
+                    //Tools::dieObject(Tools::getAllValues());
 
-                if ($id_ag_group) {
+                    if ($id_ag_group) {
 
-                    $outArrayCombination = [];
-                    foreach($arrayCombination as $key => $arr){
-                        if(is_array($arr)){
-                            $outArrayCombination[$key] = $arr;
+                        $outArrayCombination = [];
+                        foreach ($arrayCombination as $key => $arr) {
+                            if (is_array($arr)) {
+                                $outArrayCombination[$key] = $arr;
+                            }
                         }
+
+                        foreach ($outArrayCombination as $id_attribue => $attributes) {
+                            //Tools::dieObject($id_attribue, false);
+                            foreach ($attributes as $id_value) {
+                                $acGA = new AggregateCombinationGroupAttributes();
+                                $acGA->id_ag_group = $id_ag_group;
+                                $acGA->id_attribute = $id_attribue;
+                                $acGA->id_value = $id_value;
+                                $acGA->save();
+                            }
+                        }
+                        //Tools::dieObject($outArrayCombination);
+
+
+                        //AgGroup::createAttributes($id_ag_group,$outArrayCombination);
+
+                        die(json_encode(array('id_ag_group' => $id_ag_group, 'nome' => $nome)));
+
                     }
 
-                    foreach ($outArrayCombination as $id_attribue => $attributes) {
-                        //Tools::dieObject($id_attribue, false);
-                        foreach ($attributes as $id_value) {
-                            $acGA = new AggregateCombinationGroupAttributes();
-                            $acGA->id_ag_group = $id_ag_group;
-                            $acGA->id_attribute = $id_attribue;
-                            $acGA->id_value = $id_value;
-                            $acGA->save();
-                        }
-                    }
-                    //Tools::dieObject($outArrayCombination);
-
-
-                    //AgGroup::createAttributes($id_ag_group,$outArrayCombination);
-
-                    die(json_encode(array('id_ag_group' => $id_ag_group,'nome' => $nome)));
-
-                }
-
-                break;
-            }
-            case 'generate' :{
-
-                $idProduct = Tools::getValue('product', 0);
-                $arrayGroup = Tools::getValue('group', []);
-
-                $query = "SELECT * FROM " . _DB_PREFIX_ . "ag_group_attribute where id_ag_group IN (" . implode($arrayGroup, ',') . ")";
-                $results = Db::getInstance()->executeS($query);
-
-                //Tools::dieObject($query, false);
-                //Tools::dieObject($results);
-
-                $combination = [];
-                $outCombination = [];
-                while ($results) {
-                    foreach ($results as $res) {
-                        if (!isset($combination[$res["id_attribute"]])) {
-                            $combination[$res["id_attribute"]] = [];
-                        }
-                        $combination[$res["id_attribute"]][] = $res["id_value"];
-                    }
-                    $index = 1;
-                    $k = 1;
-                    foreach ($combination as $key => $arr) {
-                        $outCombination[$index] = [];
-                        foreach ($arr as $value) {
-                            $outCombination[$index][$k] = $value;
-                            $k++;
-                        }
-                        $index++;
-                    }
                     break;
                 }
+            case 'generate' :
+                {
 
-                //Tools::dieObject($outCombination);
+                    $idProduct = Tools::getValue('product', 0);
+                    $arrayGroup = Tools::getValue('group', []);
 
-                $outCombination = $this->get_combinations($outCombination);
-                if ($this->createCombination($idProduct, $outCombination)) {
-                    foreach ($arrayGroup as $group) {
-                        //AggregateCombinationGroupProducts::linkProduct($group, $idProduct);
-                        $acGP = new AggregateCombinationGroupProducts();
-                        $acGP->id_ag_group = $group;
-                        $acGP->id_product = $idProduct;
-                        $acGP->save();
+                    $query = "SELECT * FROM " . _DB_PREFIX_ . "ag_group_attribute where id_ag_group IN (" . implode($arrayGroup, ',') . ")";
+                    $results = Db::getInstance()->executeS($query);
+
+                    //Tools::dieObject($query, false);
+                    //Tools::dieObject($results);
+
+                    $combination = [];
+                    $outCombination = [];
+                    while ($results) {
+                        foreach ($results as $res) {
+                            if (!isset($combination[$res["id_attribute"]])) {
+                                $combination[$res["id_attribute"]] = [];
+                            }
+                            $combination[$res["id_attribute"]][] = $res["id_value"];
+                        }
+                        $index = 1;
+                        $k = 1;
+                        foreach ($combination as $key => $arr) {
+                            $outCombination[$index] = [];
+                            foreach ($arr as $value) {
+                                $outCombination[$index][$k] = $value;
+                                $k++;
+                            }
+                            $index++;
+                        }
+                        break;
                     }
+
+                    //Tools::dieObject($outCombination);
+
+                    $outCombination = $this->get_combinations($outCombination);
+                    if ($this->createCombination($idProduct, $outCombination)) {
+                        foreach ($arrayGroup as $group) {
+                            //AggregateCombinationGroupProducts::linkProduct($group, $idProduct);
+                            $acGP = new AggregateCombinationGroupProducts();
+                            $acGP->id_ag_group = $group;
+                            $acGP->id_product = $idProduct;
+                            $acGP->save();
+                        }
+                    }
+
+                    die(Tools::jsonEncode(array('result' => "generate")));
+                    break;
                 }
+            case 'export' :
+                {
 
-                die(Tools::jsonEncode(array('result' => "generate")));
-                break;
-            }
-            case 'export' :{
+                    $idProduct = Tools::getValue('product', 0);
 
-                $idProduct = Tools::getValue('product', 0);
-
-                $query = '
+                    $query = '
                         SELECT pa.id_product_attribute as \'Id_Attributo\',p.active \'Attivo\', m.name AS \'Marca\', p.id_product AS \'ID\', p.reference AS \'Rif.\', pl.name AS \'Nome\', GROUP_CONCAT(DISTINCT(al.name) SEPARATOR ", ") AS \'Combinazione\', s.quantity AS \'Quantità\', COALESCE(pa.price,p.price) AS \'Prezzo\', IF(pr.reduction_type=\'amount\',pr.reduction,\'\') AS \'Sconto valuta\', IF(pr.reduction_type=\'percentage\',pr.reduction,\'\') AS \'Sconto percento\', pr.from AS \'Sconto da (yyyy-mm-dd)\', pr.to AS \'Sconto a (yyyy-mm-dd)\', p.weight AS \'Peso\', GROUP_CONCAT(DISTINCT(cl.name) SEPARATOR ",") AS \'Categorie\', pl.description_short AS \'Desc. breve\', pl.description AS \'Desc. lunga\'
                         FROM ps_product p
                         LEFT JOIN ps_product_lang pl ON (p.id_product = pl.id_product)
@@ -139,97 +142,96 @@ class AggregatecombinationAjaxModuleFrontController extends ModuleFrontControlle
                         AND cl.id_lang = 1
                         AND p.id_shop_default = 1
                         AND c.id_shop_default = 1
-                        AND p.id_product = '.$idProduct.'
+                        AND p.id_product = ' . $idProduct . '
                         GROUP BY pac.id_product_attribute
                     ';
 
-                $results = Db::getInstance()->executeS($query);
+                    $results = Db::getInstance()->executeS($query);
 
-                if(!empty($results)) {
+                    if (!empty($results)) {
 
-                    $delimiter = ";";
+                        $delimiter = ";";
 
-                    $filename = "exports_" . date('Y-m-d') . ".csv";
+                        $filename = "exports_" . date('Y-m-d') . ".csv";
 
-                    header("Content-Type: text/csv");
-                    header("Content-Disposition: attachment; filename=$filename");
-                    header("Cache-Control: no-cache, no-store, must-revalidate");
-                    header("Pragma: no-cache");
-                    header("Expires: 0");
+                        header("Content-Type: text/csv");
+                        header("Content-Disposition: attachment; filename=$filename");
+                        header("Cache-Control: no-cache, no-store, must-revalidate");
+                        header("Pragma: no-cache");
+                        header("Expires: 0");
 
-                    //create a file pointer
-                    $f = fopen("php://output", "w");
+                        //create a file pointer
+                        $f = fopen("php://output", "w");
 
-                    //set column headers
-                    $fields = array('Id_Attributo', 'Attivo', 'Marca', 'ID', 'Rif.', 'Nome', 'Combinazione', 'Quantità', 'Prezzo');
-                    fputcsv($f, $fields, $delimiter);
+                        //set column headers
+                        $fields = array('Id_Attributo', 'Attivo', 'Marca', 'ID', 'Rif.', 'Nome', 'Combinazione', 'Quantità', 'Prezzo');
+                        fputcsv($f, $fields, $delimiter);
 
-                    //output each row of the data, format line as csv and write to file pointer
-                    foreach ($results as $row) {
-                        $row["Prezzo"] = number_format($row["Prezzo"], 3);
-                        $lineData = array($row['Id_Attributo'], $row['Attivo'], $row['Marca'], $row['ID'], $row['Rif.'], $row['Nome'], $row['Combinazione'], $row['Quantità'], $row['Prezzo']);
-                        fputcsv($f, $lineData, $delimiter);
-                    }
-
-                    //move back to beginning of file
-                    fclose($f);
-                    break;
-
-                }
-                else{
-                    die(Tools::jsonEncode(array('error' => "impossibile esportare")));
-                }
-
-            }
-
-            case 'import' : {
-
-                $idProduct = Tools::getValue('product', 0);
-
-                $product = new Product($idProduct);
-
-                if($product->hasAttributes()) {
-                    $tmpName = $_FILES['file']['tmp_name'];
-
-                    $csvData = file_get_contents($tmpName);
-                    $lines = explode(PHP_EOL, $csvData);
-                    $array = array();
-                    foreach ($lines as $line) {
-                        $array[] = str_getcsv($line, ";");
-                    }
-
-                    $header = $array[0];
-                    $outArray = [];
-                    unset($array[0]);
-
-                    foreach ($array as $k => $arr) {
-                        $outArray[$k] = [];
-                        foreach ($arr as $key => $item) {
-                            $outArray[$k][$header[$key]] = $item;
+                        //output each row of the data, format line as csv and write to file pointer
+                        foreach ($results as $row) {
+                            $row["Prezzo"] = number_format($row["Prezzo"], 3);
+                            $lineData = array($row['Id_Attributo'], $row['Attivo'], $row['Marca'], $row['ID'], $row['Rif.'], $row['Nome'], $row['Combinazione'], $row['Quantità'], $row['Prezzo']);
+                            fputcsv($f, $lineData, $delimiter);
                         }
-                        //check if id_product
+
+                        //move back to beginning of file
+                        fclose($f);
+                        break;
+
+                    } else {
+                        die(Tools::jsonEncode(array('error' => "impossibile esportare")));
+                    }
+
+                }
+
+            case 'import' :
+                {
+
+                    $idProduct = Tools::getValue('product', 0);
+
+                    $product = new Product($idProduct);
+
+                    if ($product->hasAttributes()) {
+                        $tmpName = $_FILES['file']['tmp_name'];
+
+                        $csvData = file_get_contents($tmpName);
+                        $lines = explode(PHP_EOL, $csvData);
+                        $array = array();
+                        foreach ($lines as $line) {
+                            $array[] = str_getcsv($line, ";");
+                        }
+
+                        $header = $array[0];
+                        $outArray = [];
+                        unset($array[0]);
+
+                        foreach ($array as $k => $arr) {
+                            $outArray[$k] = [];
+                            foreach ($arr as $key => $item) {
+                                $outArray[$k][$header[$key]] = $item;
+                            }
+                            //check if id_product
 //                    if($outArray[$k]['ID'] != $idProduct){
 //                        die(Tools::jsonEncode(array('message' => "Errore, file import non valido per questo prodotto")));
 //                    }
-                    }
-
-                    //TODO PER IL MOMENTO AGGIORNO SOLO IL PREZZO
-                    foreach ($outArray as $item) {
-
-                        if ((int)$item['Id_Attributo'] > 0) {
-                            $combination = new combination ((int)$item['Id_Attributo']);
-                            $combination->price = (double)$item['Prezzo'];
-                            $combination->update();
                         }
-                    }
-                    die(Tools::jsonEncode(array('message' => "Import avvenuto correttamente")));
-                }
-                else{
-                    die(Tools::jsonEncode(array('error' => "Impossibile importare. Combinazioni non esistenti per questo prodotto")));
-                }
-                break;
 
-            }
+                        //TODO PER IL MOMENTO AGGIORNO SOLO IL PREZZO
+                        foreach ($outArray as $item) {
+
+                            if ((int)$item['Id_Attributo'] > 0) {
+                                $combination = new combination ((int)$item['Id_Attributo']);
+                                $combination->price = (double)$item['Prezzo'];
+                                $combination->update();
+                            }
+                        }
+                        die(Tools::jsonEncode(array('message' => "Import avvenuto correttamente")));
+                    } else {
+                        die(Tools::jsonEncode(array('error' => "Impossibile importare. Combinazioni non esistenti per questo prodotto")));
+                    }
+                    break;
+
+                }
 
             case 'saveTemp' :
                 {
@@ -238,55 +240,53 @@ class AggregatecombinationAjaxModuleFrontController extends ModuleFrontControlle
                     $attributeTemp = Tools::getValue('attributeTemp', []);
                     $array = [];
 
-                    if(!empty($attributeTemp)){
-                        foreach($attributeTemp as $attribute){
+                    if (!empty($attributeTemp)) {
+                        foreach ($attributeTemp as $attribute) {
 
                             $attributeTemp = new Attribute($attribute["id_attribute_temp"]);
                             $attributeTemp->name[1] = substr($attributeTemp->name[1], 1);
                             $date = new DateTime('now');
-                            $date->add(new DateInterval( $attributeTemp->name[1]));
-                            $attributeTemp->name[1] =  $date->format('d/m/Y');
+                            $date->add(new DateInterval($attributeTemp->name[1]));
+                            $attributeTemp->name[1] = $date->format('d/m/Y');
 
-                            if(!empty($combinationAttributeTemp)){
+                            if (!empty($combinationAttributeTemp)) {
                                 $array[$attribute["id_attribute_temp"]] = [];
-                                foreach($combinationAttributeTemp as $combination){
+                                foreach ($combinationAttributeTemp as $combination) {
 
-                                    AgAttributeTemp::create($idProduct,$attribute["id_attribute_temp"],$combination,$attribute['value'],$attribute['type']);
+                                    AgAttributeTemp::create($idProduct, $attribute["id_attribute_temp"], $combination, $attribute['value'], $attribute['type']);
 
                                     $attr = new Attribute($combination);
                                     $groupAttribute = new AttributeGroup($attr->id_attribute_group);
-                                    $name = $groupAttribute->name[1]." : ".$attr->name[1];
+                                    $name = $groupAttribute->name[1] . " : " . $attr->name[1];
 
                                     $array[$attribute["id_attribute_temp"]]["id"] = $attribute["id_attribute_temp"];
-                                    $array[$attribute["id_attribute_temp"]]["temp"] =  $attributeTemp->name[1];
-                                    $array[$attribute["id_attribute_temp"]]["comb"] = !isset($array[$attribute["id_attribute_temp"]]["comb"]) ? $name." ;"  : $array[$attribute["id_attribute_temp"]]["comb"].$name." ; ";
-                                    $array[$attribute["id_attribute_temp"]]["value"] = $attribute['value']."".$attribute['type'];
-                                    $array[$attribute["id_attribute_temp"]]["query"] = !isset($array[$attribute["id_attribute_temp"]]["query"]) ? ",".$combination : $array[$attribute["id_attribute_temp"]]["query"].",".$combination;
+                                    $array[$attribute["id_attribute_temp"]]["temp"] = $attributeTemp->name[1];
+                                    $array[$attribute["id_attribute_temp"]]["comb"] = !isset($array[$attribute["id_attribute_temp"]]["comb"]) ? $name . " ;" : $array[$attribute["id_attribute_temp"]]["comb"] . $name . " ; ";
+                                    $array[$attribute["id_attribute_temp"]]["value"] = $attribute['value'] . "" . $attribute['type'];
+                                    $array[$attribute["id_attribute_temp"]]["query"] = !isset($array[$attribute["id_attribute_temp"]]["query"]) ? "," . $combination : $array[$attribute["id_attribute_temp"]]["query"] . "," . $combination;
 
                                 }
-                            }
-                            else{
+                            } else {
 
-                                AgAttributeTemp::create($idProduct,$attribute["id_attribute_temp"],'*',$attribute['value'],$attribute['type']);
+                                AgAttributeTemp::create($idProduct, $attribute["id_attribute_temp"], '*', $attribute['value'], $attribute['type']);
 
                                 $array[$attribute["id_attribute_temp"]] = [];
                                 $array[$attribute["id_attribute_temp"]]["id"] = $attribute["id_attribute_temp"];
-                                $array[$attribute["id_attribute_temp"]]["temp"] =  $attributeTemp->name[1];
+                                $array[$attribute["id_attribute_temp"]]["temp"] = $attributeTemp->name[1];
                                 $array[$attribute["id_attribute_temp"]]["comb"] = "Tutti";
-                                $array[$attribute["id_attribute_temp"]]["value"] = $attribute['value']."".$attribute['type'];
+                                $array[$attribute["id_attribute_temp"]]["value"] = $attribute['value'] . "" . $attribute['type'];
                                 $array[$attribute["id_attribute_temp"]]["query"] = '*';
 
                             }
 
                         }
                         die(Tools::jsonEncode(array('array' => $array)));
-                    }
-                    else{
+                    } else {
                         die(Tools::jsonEncode(array('message' => "Nessun valore temporale impostato")));
                     }
 
                     break;
-            }
+                }
 
             case 'deleteTemp' :
                 {
@@ -296,7 +296,7 @@ class AggregatecombinationAjaxModuleFrontController extends ModuleFrontControlle
 
                     $idsAttribute = $idsAttribute == '*' ? "'*'" : ltrim($idsAttribute, ',');
 
-                    AgAttributeTemp::delete($idProduct,$idAttributeTemp,$idsAttribute);
+                    AgAttributeTemp::delete($idProduct, $idAttributeTemp, $idsAttribute);
 
                     die(Tools::jsonEncode(array('message' => "Valore cancellato correttamente")));
 
@@ -321,6 +321,7 @@ class AggregatecombinationAjaxModuleFrontController extends ModuleFrontControlle
             case 'saveRule' :
                 {
 
+                    die("SAVE RULE");
                     /*
                      * TODO: fix salvataggio, non salva le regole separate per lo stesso gruppo
                      */
@@ -329,19 +330,22 @@ class AggregatecombinationAjaxModuleFrontController extends ModuleFrontControlle
                     $rules = Tools::getValue('rule', []);
                     $array = [];
 
-                    Tools::dieObject(Tools::getAllValues(), false);
+                    //Tools::dieObject(Tools::getAllValues(), false);
+                    $this->jsonLog($rules);
 
-                    if(!empty($rules)){
-                        foreach($rules as $rule){
+                    return false;
+
+                    if (!empty($rules)) {
+                        foreach ($rules as $rule) {
 
                             //$ruleProduct = AgGroup::getLinkProduct($rule["id_group"],$idProduct);
-                            $ruleProduct = AggregateCombinationGroupProducts::getByGroupIdAndProductId($rule["id_group"],$idProduct);
+                            $ruleProduct = AggregateCombinationGroupProducts::getByGroupIdAndProductId($rule["id_group"], $idProduct);
 
                             $agPR = new AggregateCombinationGroupProductsRule();
                             $agPR->id_ag_group_products = $ruleProduct[0]['id_ag_group_products'];
                             $agPR->name = $rule["rule"];
 
-                            if($agPR->save()){
+                            if ($agPR->save()) {
 
                                 $idRule = Db::getInstance()->Insert_ID();
 
@@ -349,17 +353,17 @@ class AggregatecombinationAjaxModuleFrontController extends ModuleFrontControlle
 
                                 //continue;
 
-                                if(!empty($combinationAttributeRules)){
+                                if (!empty($combinationAttributeRules)) {
 
                                     $array[$idRule] = [];
-                                    foreach($combinationAttributeRules as $combination){
+                                    foreach ($combinationAttributeRules as $combination) {
 
                                         //continue;
 
                                         $attr = new Attribute($combination);
                                         $groupAttribute = new AttributeGroup($attr->id_attribute_group);
 
-                                        Tools::dieObject($groupAttribute, false);
+                                        //Tools::dieObject($groupAttribute, false);
 
                                         $agPRA = new AggregateCombinationGroupProductsRuleAttribute();
                                         $agPRA->id_ag_group_products_rule = $idRule;
@@ -371,7 +375,7 @@ class AggregatecombinationAjaxModuleFrontController extends ModuleFrontControlle
 
                                         //AgGroup::linkRuleAttributes($idRule,$attr->id_attribute_group,$combination,$rule["value"],$rule["type"]);
 
-                                        $name = $groupAttribute->name[1]." : ".$attr->name[1];
+                                        $name = $groupAttribute->name[1] . " : " . $attr->name[1];
 
                                         //$array[$idRule]["id"] = $attribute["id_attribute_temp"];
                                         //$array[$idRule]["temp"] =  $attributeTemp->name[1];
@@ -380,8 +384,7 @@ class AggregatecombinationAjaxModuleFrontController extends ModuleFrontControlle
                                         //$array[$idRule]["query"] = !isset($array[$attribute["id_attribute_temp"]]["query"]) ? ",".$combination : $array[$attribute["id_attribute_temp"]]["query"].",".$combination;
 
                                     }
-                                }
-                                else{
+                                } else {
 
                                     $agPRA = new AggregateCombinationGroupProductsRuleAttribute();
                                     $agPRA->id_ag_group_products_rule = $idRule;
@@ -408,8 +411,7 @@ class AggregatecombinationAjaxModuleFrontController extends ModuleFrontControlle
 
 
                         die(json_encode(array('array' => $array, 'id_rule' => $idRule)));
-                    }
-                    else{
+                    } else {
                         die(json_encode((array('message' => "Nessun valore temporale impostato"))));
                     }
 
@@ -425,12 +427,12 @@ class AggregatecombinationAjaxModuleFrontController extends ModuleFrontControlle
                     $columnHeaderGroup = [];
                     $attributeOptionGroup = [];
 
-                    if(empty($columnHeaderGroup)) {
+                    if (empty($columnHeaderGroup)) {
 
                         //$attributesGroup = AgGroup::getAttributes($idGroup);
                         $attributesGroup = AggregateCombinationGroupAttributes::getByGroupId($idGroup);
 
-                        foreach ($attributesGroup as  $attribute) {
+                        foreach ($attributesGroup as $attribute) {
 
                             $ag = new AttributeGroup($attribute["id_attribute"]);
                             $av = new Attribute($attribute["id_value"]);
@@ -441,7 +443,7 @@ class AggregatecombinationAjaxModuleFrontController extends ModuleFrontControlle
                                 $attributeOptionGroup[$attribute["id_attribute"]] = [];
                             }
 
-                            $attributeOptionGroup[$attribute["id_attribute"]][$attribute["id_value"]] =  $av->name[1];
+                            $attributeOptionGroup[$attribute["id_attribute"]][$attribute["id_value"]] = $av->name[1];
 
                         }
 
@@ -474,13 +476,12 @@ class AggregatecombinationAjaxModuleFrontController extends ModuleFrontControlle
                     //delete rule
                     $acGPR = new AggregateCombinationGroupProductsRule($idRule);
                     if ($acGPR->delete())
-                        die(json_encode(array("status" => true, "message"=>"ok")));
+                        die(json_encode(array("status" => true, "message" => "ok")));
                     else
-                        die(json_encode(array("status" => false, "message"=>"ok")));
+                        die(json_encode(array("status" => false, "message" => "ok")));
                     //Tools::dieObject($rules_attributes);
 
                     //AgGroup::deleteRule($idRule);
-
 
 
                     break;
@@ -489,7 +490,8 @@ class AggregatecombinationAjaxModuleFrontController extends ModuleFrontControlle
 
     }
 
-    private function get_combinations($arrays) {
+    private function get_combinations($arrays)
+    {
         $result = array(array());
         foreach ($arrays as $property => $property_values) {
             $tmp = array();
@@ -504,21 +506,31 @@ class AggregatecombinationAjaxModuleFrontController extends ModuleFrontControlle
     }
 
 
-    private function createCombination($idProduct,$outArrayCombination) {
+    private function createCombination($idProduct, $outArrayCombination)
+    {
 
-        if($idProduct){
+
+        //return false;
+
+        if ($idProduct) {
 
             $product = new Product($idProduct, true, 1);
 
-            ini_set("memory_limit", "512M");
+            //ini_set("memory_limit", "512M");
 
-            foreach($outArrayCombination as $combinations) {
+            foreach ($outArrayCombination as $combinations) {
 
 
                 if (!count($combinations))
                     continue;
 
+
                 //Tools::dieObject($combinations, false);
+                $this->jsonLog($combinations);
+
+
+                //continue;
+
 
                 if (!$product->productAttributeExists($combinations)) {
                     $price = 1;
@@ -544,4 +556,23 @@ class AggregatecombinationAjaxModuleFrontController extends ModuleFrontControlle
     }
 
 
+    function jsonLog($object, $die = false)
+    {
+        echo json_encode(array('object' => $object));
+        if ($die)
+            die("END");
+    }
+
+    public function jsLog($object)
+    {
+        $output = "<script>";
+        if (is_array($object))
+            foreach ($object as $item) {
+                $output .= "console.log(" . json_encode($item) . ");";
+            }
+        else
+            $output .= "console.log(" . json_encode($object) . ");";
+
+        echo $output . "</script>";
+    }
 }

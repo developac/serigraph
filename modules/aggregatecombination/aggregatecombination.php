@@ -120,7 +120,6 @@ class AggregateCombination extends Module{
 
         if (Validate::isLoadedObject($product = new Product((int)$params['id_product']))) {// && !$product->hasAttributes()) {
 
-            $this->context->controller->addCSS(_PS_MODULE_DIR_.$this->name.'/views/css/main.css');
             // validate module
             //unset($product);
 
@@ -489,12 +488,15 @@ class AggregateCombination extends Module{
         $parameters = array("action" => "action_name");
         $ajax_link = $link->getModuleLink('aggregatecombination','ajax', $parameters);
 
+
         Media::addJsDef(array(
-            "ajax_link" => $ajax_link
+            "ajax_link" => $ajax_link,
+            'ag_admin_url' => $this->context->link->getAdminLink('AdminAggregateCombination'),
         ));
 
-        $this->context->controller->addJS(_PS_MODULE_DIR_.$this->name.'/views/js/main.js');
-
+        $this->context->controller->addJS(_PS_MODULE_DIR_.$this->name.'/views/js/aggregatecombintion.js');
+        //$this->context->controller->addJS(_PS_MODULE_DIR_.$this->name.'/views/js/main.js');
+        $this->context->controller->addCSS(_PS_MODULE_DIR_.$this->name.'/views/css/main.css');
 
 
     }

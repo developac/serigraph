@@ -34,6 +34,8 @@ $( document ).ready(function() {
     });
 
 
+
+
     $('.checkGroup .group').on('change',function() {
 
         let id = parseInt($(this).val());
@@ -51,6 +53,25 @@ $( document ).ready(function() {
         //console.log(combinationAttributes);
         //$(".group").val($(this).is(':checked').val());
 
+        console.log(ag_admin_url);
+
+        $.ajax({
+            type: 'POST',
+            url: ag_admin_url + '&ajax&action=DoSomeAction',
+            headers: {"cache-control": "no-cache"},
+            dataType: 'json',
+            async: false,
+            data: {},
+            error: function (response) {
+                //errorFunction(response, sendData, elem);
+                console.log(response);
+            },
+            success: function (response) {
+                successFunction(response, sendData, elem);
+                //console.log(response);
+                return response;
+            }
+        });
 
 
     });

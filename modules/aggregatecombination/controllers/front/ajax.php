@@ -22,6 +22,9 @@ class AggregatecombinationAjaxModuleFrontController extends ModuleFrontControlle
         parent::initContent();
     }
 
+
+
+
     public function displayAjax()
     {
 
@@ -78,8 +81,8 @@ class AggregatecombinationAjaxModuleFrontController extends ModuleFrontControlle
                     $query = "SELECT * FROM " . _DB_PREFIX_ . "ag_group_attribute where id_ag_group IN (" . implode($arrayGroup, ',') . ")";
                     $results = Db::getInstance()->executeS($query);
 
-                    //Tools::dieObject($query, false);
-                    //Tools::dieObject($results);
+                    $this->jsonLog($query);
+                    $this->jsonLog($results, false);
 
                     $combination = [];
                     $outCombination = [];
@@ -321,7 +324,7 @@ class AggregatecombinationAjaxModuleFrontController extends ModuleFrontControlle
             case 'saveRule' :
                 {
 
-                    die("SAVE RULE");
+                    //die("SAVE RULE");
                     /*
                      * TODO: fix salvataggio, non salva le regole separate per lo stesso gruppo
                      */
@@ -331,9 +334,9 @@ class AggregatecombinationAjaxModuleFrontController extends ModuleFrontControlle
                     $array = [];
 
                     //Tools::dieObject(Tools::getAllValues(), false);
-                    $this->jsonLog($rules);
+                    //$this->jsLog($rules);
 
-                    return false;
+                    //return false;
 
                     if (!empty($rules)) {
                         foreach ($rules as $rule) {
@@ -349,15 +352,18 @@ class AggregatecombinationAjaxModuleFrontController extends ModuleFrontControlle
 
                                 $idRule = Db::getInstance()->Insert_ID();
 
-                                //Tools::dieObject($idRule, false);
 
-                                //continue;
+
+                                continue;
 
                                 if (!empty($combinationAttributeRules)) {
 
+
+
+
                                     $array[$idRule] = [];
                                     foreach ($combinationAttributeRules as $combination) {
-
+                                        $this->jsonLog($combination);
                                         //continue;
 
                                         $attr = new Attribute($combination);
@@ -517,6 +523,9 @@ class AggregatecombinationAjaxModuleFrontController extends ModuleFrontControlle
             $product = new Product($idProduct, true, 1);
 
             //ini_set("memory_limit", "512M");
+            //$this->jsonLog($outArrayCombination);
+
+            //return false;
 
             foreach ($outArrayCombination as $combinations) {
 
@@ -525,17 +534,21 @@ class AggregatecombinationAjaxModuleFrontController extends ModuleFrontControlle
                     continue;
 
 
-                //Tools::dieObject($combinations, false);
+                $this->jsonLog(count($combinations));
+                $this->jsonLog($combinations, true);
                 $this->jsonLog($combinations);
 
 
                 //continue;
 
 
-                if (!$product->productAttributeExists($combinations)) {
-                    $price = 1;
-                    $weight = 1;
-                    $ecotax = 1;
+                if (!$exists = $product->productAttributeExists($combinations)) {
+
+                    Tools::dieObject($exists);
+
+                    $price = 0;
+                    $weight = 0;
+                    $ecotax = 0;
                     $unit_price_impact = "";
                     $quantity = 1;
                     $reference = "";
@@ -548,7 +561,7 @@ class AggregatecombinationAjaxModuleFrontController extends ModuleFrontControlle
                 }
             }
 
-            ini_set("memory_limit", "128M");
+            //ini_set("memory_limit", "128M");
 
         }
 
@@ -558,7 +571,7 @@ class AggregatecombinationAjaxModuleFrontController extends ModuleFrontControlle
 
     function jsonLog($object, $die = false)
     {
-        echo json_encode(array('object' => $object));
+        echo json_encode(array('object' => $object))."<br>";
         if ($die)
             die("END");
     }

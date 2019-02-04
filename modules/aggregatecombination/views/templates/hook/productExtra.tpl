@@ -75,7 +75,7 @@
                         </div>
                     </div>
                     <div style="display:flex">
-                        <button id="save" style="margin-top: 15px;margin-bottom: 15px;margin-right: 5px">Salva</button>
+                        <button id="saveGroup" style="margin-top: 15px;margin-bottom: 15px;margin-right: 5px">Salva</button>
                         <div data-attr="save">
                             <div class="js-spinner spinner hide btn-primary-reverse onclick mr-1 btn"></div>
                         </div>

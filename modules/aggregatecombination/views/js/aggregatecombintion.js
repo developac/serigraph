@@ -14,11 +14,12 @@ var ag = {
             successFunction = successFunction || function (response) {
             };
 
-            console.log(ag_admin_url);
+            sendData.ajax = true;
+            //sendData.controller = 'AdminAggregateCombination';
 
             $.ajax({
                 type: 'POST',
-                url: ag_admin_url + '&ajax&action=' + sendData.action,
+                url: ag_admin_url+"&ajax&action="+sendData.action,
                 headers: {"cache-control": "no-cache"},
                 dataType: 'json',
                 async: true,
@@ -97,7 +98,7 @@ var ag = {
             $("div").find(`[data-attr='save']`).find("div").css("display","block");
 
             data = {
-                action : 'saveGroup',
+                action : 'SaveGroup',
                 product : $("input[name='product']").val(),
                 group : $("label[for='group_"+$('.checkGroup input:checked').val()+"']").text().trim(),
                 element : ag.combinationAttributes,
@@ -105,51 +106,31 @@ var ag = {
             };
 
             ag.ajax._request(data, ag.callbaks.saveSuccess, ag.callbaks.saveError, null);
+        },
+        generateCombinations: function() {
+            $("div").find(`[data-attr='generate']`).find("div").css("display","block");
 
-            return false;
+            if (!groups.length) {
+                $('.group:checked').each(function() {
+                    groups.push(this.value);
+                }) ;
+            }
+            data = {
+                method : 'GenerateCombinations',
+                ajax: true,
+                product : $("input[name='product']").val(),
+                group : groups,
+                id_ag_group: $('input.group:checked').val(),
+            };
 
-            //let url = ajax_link;
-            $.ajax({
-                type: 'POST',
-                url: url,
-                cache: false,
-                data: {
-                    method : 'saveGroup',
-                    ajax: true,
-                    product : $("input[name='product']").val(),
-                    group : $("label[for='group_"+$('.checkGroup input:checked').val()+"']").text().trim(),
-                    element : combinationAttributes,
-                    id_ag_group: $('input.group:checked').val()
-                },
-                success: function (result) {
-
-                    result = JSON.parse(result);
-
-                    let checkGroup = "<div class=\"form-check\">\n" +
-                        "                                <input class=\"form-check-input group\" type=\"checkbox\" id=\""+result.id+"\">\n" +
-                        "                                <label class=\"form-check-label\" for=\"\">\n" +
-                        "                                    "+result.nome+"\n" +
-                        "                                </label>\n" +
-                        "                            </div>";
-
-                    $("div").find(`[data-attr='save']`).find("div").css("display","none");
-                    $("#container").html("");
-                    $('.option').prop('checked',false);
-                    //$('.checkGroup').append(checkGroup);
-                    combinationAttributes = new Array();
-                    groups = new Array();
-                    alert("Gruppo di combinazioni creato correttamente");
-                },
-                error:function (result){
-                    $("div").find(`[data-attr='save']`).find("div").css("display","none");
-                }
-            });
+            ag.ajax._request(data, ag.callbaks.generateSuccess, ag.callbaks.generateError, null);
 
         },
         init: function () {
             ag.events.doChange('.option', this.changeOption);
             ag.events.doChange('.checkGroup .group', this.changeGroup);
             ag.events.doClick('#saveGroup', this.saveNewGroup);
+            ag.events.doClick('#generateCombinations', this.generateCombinations);
         }
     },
     callbaks: {
@@ -173,6 +154,12 @@ var ag = {
         },
         saveError: function () {
             $("div").find(`[data-attr='save']`).find("div").css("display","none");
+        },
+        generateSuccess: function () {
+            
+        },
+        generateError: function () {
+            
         }
     },
     init: function() {

@@ -40,7 +40,7 @@
                             {/foreach}
                         </div>
                         <div style="display:flex">
-                            <button id="generate"style="margin-top: 15px;margin-bottom: 15px;margin-right: 5px">Genera</button>
+                            <button id="generateCombinations"style="margin-top: 15px;margin-bottom: 15px;margin-right: 5px">Genera</button>
                             <button id="export" style="margin-top: 15px;margin-bottom: 15px;margin-right: 5px">Esporta</button>
                             <div data-attr="generate">
                                 <div class="js-spinner spinner hide btn-primary-reverse onclick mr-1 btn"></div>

@@ -136,8 +136,6 @@ $( document ).ready(function() {
             $('.group:checked').each(function() {
                 groups.push(this.value);
             }) ;
-
-
         }
 
         //console.log(groups);

@@ -201,6 +201,6 @@ class AdminAggregateCombinationController extends ModuleAdminController
 
     public function ajaxProcessGenerateCombinations()
     {
-
+        die(json_encode(array('status' => 'ciao')));
     }
 }

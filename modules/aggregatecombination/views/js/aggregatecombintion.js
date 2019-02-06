@@ -110,16 +110,16 @@ var ag = {
         generateCombinations: function() {
             $("div").find(`[data-attr='generate']`).find("div").css("display","block");
 
-            if (!groups.length) {
+            if (!ag.groups.length) {
                 $('.group:checked').each(function() {
-                    groups.push(this.value);
+                    ag.groups.push(this.value);
                 }) ;
             }
             data = {
-                method : 'GenerateCombinations',
+                action : 'GenerateCombinations',
                 ajax: true,
                 product : $("input[name='product']").val(),
-                group : groups,
+                group : ag.groups,
                 id_ag_group: $('input.group:checked').val(),
             };
 
@@ -156,10 +156,11 @@ var ag = {
             $("div").find(`[data-attr='save']`).find("div").css("display","none");
         },
         generateSuccess: function () {
-            
+            $("div").find(`[data-attr='generate']`).find("div").css("display","none");
+            alert("Generazione avvenuta con successo");
         },
         generateError: function () {
-            
+            $("div").find(`[data-attr='generate']`).find("div").css("display","none");
         }
     },
     init: function() {

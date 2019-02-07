@@ -7,6 +7,9 @@ $( document ).ready(function() {
 
     $('.option').change(function() {
 
+        if (!$(this).attr('data-attribute-group'))
+            return false;
+
         if (typeof combinationAttributes[$(this).attr('data-attribute-group')] === "undefined"){
             combinationAttributes[$(this).attr('data-attribute-group')] = new Array();
         }

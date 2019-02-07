@@ -3,8 +3,8 @@ $(document).ready(function() {
 })
 
 var ag = {
-    combinationAttributes: Array(),
-    groups: Array(),
+    combinationAttributes: [],
+    groups: [],
     ajax: {
         _request: function (sendData, successFunction, errorFunction, elem) {
 
@@ -29,11 +29,11 @@ var ag = {
                 },
                 error: function (response) {
                     console.log('error', response);
-                    //errorFunction(response, sendData, elem);
+                    errorFunction(response, elem);
                 },
                 success: function (response) {
                     console.log('success', response);
-                    //successFunction(response, sendData, elem);
+                    successFunction(response, elem);
                     //return response;
                 },
                 complete: function (response) {
@@ -56,29 +56,35 @@ var ag = {
             })
         },
         changeOption: function (e) {
-            if (typeof ag.combinationAttributes[$(this).attr('data-attribute-group')] === "undefined"){
-                ag.combinationAttributes[$(this).attr('data-attribute-group')] = new Array();
+
+
+            if (typeof ag.combinationAttributes[$(e).attr('data-attribute-group')] === "undefined"){
+                ag.combinationAttributes[$(e).attr('data-attribute-group')] = new Array();
             }
 
-            let element = "<div style='width:15%;margin:10px' class='card col-sm-offset-1' id=card_"+$(this).attr('id')+">\n" +
+            let element = "<div style='width:15%;margin:10px' class='card col-sm-offset-1' id=card_"+$(e).attr('id')+">\n" +
                 "  <div class=\"card-body\">\n" +
-                "   "+$(this).attr('data-name')+"\n" +
+                "   "+$(e).attr('data-name')+"\n" +
                 "  </div>\n" +
                 "</div>";
 
-            if($(this).is(":checked")) {
+            if($(e).is(":checked")) {
                 $("#container").append(element);
-                ag.combinationAttributes[$(this).attr('data-attribute-group')].push($(this).attr('id'));
+                ag.combinationAttributes[$(e).attr('data-attribute-group')].push($(e).attr('id'));
             }
             else{
-                $('#card_'+$(this).attr('id')+'').remove();
-                let index = ag.combinationAttributes[$(this).attr('data-attribute-group')].indexOf($(this).attr('id'));
+                $('#card_'+$(e).attr('id')+'').remove();
+                let index = ag.combinationAttributes[$(e).attr('data-attribute-group')].indexOf($(e).attr('id'));
                 if (index > -1) {
-                    ag.combinationAttributes[$(this).attr('data-attribute-group')].splice(index, 1);
+                    ag.combinationAttributes[$(e).attr('data-attribute-group')].splice(index, 1);
                 }
             }
-            //console.log(combinationAttributes);
-            $(".option").val($(this).is(':checked'));
+
+            ag.combinationAttributes = ag.combinationAttributes.filter(function(x){
+                return (x !== (undefined || null || ''));
+            });
+
+            //$(".option").val($(e).is(':checked'));
         },
         changeGroup: function (e) {
             let id = parseInt($(this).val());
@@ -96,6 +102,8 @@ var ag = {
         },
         saveNewGroup: function () {
             $("div").find(`[data-attr='save']`).find("div").css("display","block");
+
+            console.log(ag.combinationAttributes);
 
             data = {
                 action : 'SaveGroup',
@@ -126,15 +134,35 @@ var ag = {
             ag.ajax._request(data, ag.callbaks.generateSuccess, ag.callbaks.generateError, null);
 
         },
+        deleteGroup: function(element) {
+            if (confirm("Sei sicuro di voler proseguire con l'eliminazione?")) {
+                let me = $(element);
+                data = {
+                    action : 'DeleteGroup',
+                    ajax: true,
+                    product : $("input[name='product']").val(),
+                    idGroup : me.attr("data-attribute"),
+                };
+
+                ag.ajax._request(data, ag.callbaks.deleteSucces, ag.callbaks.deleteError, null);
+            }
+        },
         init: function () {
+
+            ag.combinationAttributes = [];
+            ag.groups = [];
+
             ag.events.doChange('.option', this.changeOption);
             ag.events.doChange('.checkGroup .group', this.changeGroup);
             ag.events.doClick('#saveGroup', this.saveNewGroup);
             ag.events.doClick('#generateCombinations', this.generateCombinations);
+            ag.events.doClick('.table-group .delete_group', this.deleteGroup);
+
+
         }
     },
     callbaks: {
-        saveSuccess: function () {
+        saveSuccess: function (result, element) {
             result = JSON.parse(result);
 
             let checkGroup = "<div class=\"form-check\">\n" +
@@ -161,6 +189,18 @@ var ag = {
         },
         generateError: function () {
             $("div").find(`[data-attr='generate']`).find("div").css("display","none");
+        },
+        deleteSucces: function (response, element) {
+            var $tr = $(element).closest('tr');
+
+            if (response.status == true) {
+
+                console.log($tr);
+
+            }
+        },
+        deleteError: function () {
+
         }
     },
     init: function() {

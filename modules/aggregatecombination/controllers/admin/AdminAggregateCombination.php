@@ -8,6 +8,7 @@
 
 
 require_once _PS_MODULE_DIR_."aggregatecombination/classes/AggregateCombinationGroup.php";
+require_once _PS_MODULE_DIR_."aggregatecombination/classes/AggregateCombinationGroupAttributes.php";
 
 class AdminAggregateCombinationController extends ModuleAdminController
 {
@@ -169,10 +170,8 @@ class AdminAggregateCombinationController extends ModuleAdminController
         $id_ag_group = Tools::getValue('id_ag_group', []);
 
 
-        //Tools::dieObject(Tools::getAllValues());
 
         if ($id_ag_group) {
-
             $outArrayCombination = [];
             foreach ($arrayCombination as $key => $arr) {
                 if (is_array($arr)) {
@@ -180,27 +179,183 @@ class AdminAggregateCombinationController extends ModuleAdminController
                 }
             }
 
+            $errors = 0;
             foreach ($outArrayCombination as $id_attribue => $attributes) {
                 foreach ($attributes as $id_value) {
                     $acGA = new AggregateCombinationGroupAttributes();
                     $acGA->id_ag_group = $id_ag_group;
                     $acGA->id_attribute = $id_attribue;
                     $acGA->id_value = $id_value;
-                    $acGA->save();
+                    if (!$acGA->save())
+                        $errors++;
                 }
             }
-            //Tools::dieObject($outArrayCombination);
 
-
-            //AgGroup::createAttributes($id_ag_group,$outArrayCombination);
-
-            die(json_encode(array('id_ag_group' => $id_ag_group, 'nome' => $nome)));
-
+            if (!$errors)
+                die(json_encode(array('status' => true, 'message' => "Group saved successfully", 'id_ag_group' => $id_ag_group, 'nome' => $nome)));
+            else
+                die(json_encode(array('status' => false, 'message' => "An error occourred during group saving")));
         }
     }
 
     public function ajaxProcessGenerateCombinations()
     {
-        die(json_encode(array('status' => 'ciao')));
+
+        //Tools::dieObject(Tools::getValue('group', []));
+
+        $idProduct = Tools::getValue('product', 0);
+        $arrayGroup = Tools::getValue('group', []);
+
+        $query = "SELECT * FROM " . _DB_PREFIX_ . "ag_group_attribute where id_ag_group IN (" . implode($arrayGroup, ',') . ")";
+        $results = Db::getInstance()->executeS($query);
+
+        //$this->jsonLog($query);
+        //$this->jsonLog($results, false);
+
+        //die();
+
+        $combination = [];
+        $outCombination = [];
+        while ($results) {
+            foreach ($results as $res) {
+                if (!isset($combination[$res["id_attribute"]])) {
+                    $combination[$res["id_attribute"]] = [];
+                }
+                $combination[$res["id_attribute"]][] = $res["id_value"];
+            }
+            $index = 1;
+            $k = 1;
+            foreach ($combination as $key => $arr) {
+                $outCombination[$index] = [];
+                foreach ($arr as $value) {
+                    $outCombination[$index][$k] = $value;
+                    $k++;
+                }
+                $index++;
+            }
+            break;
+        }
+
+        $outCombination = $this->get_combinations($outCombination);
+        $errors = 0;
+        if ($this->createCombination($idProduct, $outCombination)) {
+            foreach ($arrayGroup as $group) {
+                //AggregateCombinationGroupProducts::linkProduct($group, $idProduct);
+                $acGP = new AggregateCombinationGroupProducts();
+                $acGP->id_ag_group = $group;
+                $acGP->id_product = $idProduct;
+                if ($acGP->save())
+                    $errors++;
+            }
+        }
+
+        if (!$errors)
+            die(json_encode(array('status' => true, 'message' => $this->l('Combinations generated successfully'), 'query' => $query)));
+        else
+            die(json_encode(array('status' => false, 'message' => $this->l('An error occourred during combinations generation'), 'query' => $query)));
+    }
+
+    public function ajaxProcessDeleteGroup()
+    {
+
+        $idProduct = Tools::getValue('product', 0);
+        $idGroup = Tools::getValue('idGroup', 0);
+
+        if (AggregateCombinationGroupProducts::deleteByGroupIdAndProductId($idGroup, $idProduct))
+            die(json_encode(array('status' => true, 'message' => "Valore cancellato correttamente")));
+        else
+            die(json_encode(array('status' => false, 'message' => "Si è verificato un errore dutante la cancellazione del gruppo")));
+    }
+
+    private function get_combinations($arrays)
+    {
+        $result = array(array());
+        foreach ($arrays as $property => $property_values) {
+            $tmp = array();
+            foreach ($result as $result_item) {
+                foreach ($property_values as $property_key => $property_value) {
+                    $tmp[] = $result_item + array($property_key => $property_value);
+                }
+            }
+            $result = $tmp;
+        }
+        return $result;
+    }
+
+
+    private function createCombination($idProduct, $outArrayCombination)
+    {
+
+
+        //return false;
+
+        if ($idProduct) {
+
+            $product = new Product($idProduct, true, 1);
+
+            //ini_set("memory_limit", "512M");
+            //$this->jsonLog($outArrayCombination);
+
+            //return false;
+
+            foreach ($outArrayCombination as $combinations) {
+
+
+                if (!count($combinations))
+                    continue;
+
+
+                //$this->jsonLog(count($combinations));
+                //$this->jsonLog($combinations, true);
+                //$this->jsonLog($combinations);
+
+
+                //continue;
+
+
+                if (!$exists = $product->productAttributeExists($combinations)) {
+
+                    Tools::dieObject($exists);
+
+                    $price = 0;
+                    $weight = 0;
+                    $ecotax = 0;
+                    $unit_price_impact = "";
+                    $quantity = 1;
+                    $reference = "";
+                    $supplier_reference = "";
+                    $ean13 = "";
+                    $default = false;
+
+                    $idProductAttribute = $product->addProductAttribute((float)$price, (float)$weight, $unit_price_impact, (float)$ecotax, (int)$quantity, "", strval($reference), strval($supplier_reference), strval($ean13), $default, NULL, NULL, NULL, NULL);
+                    $product->addAttributeCombinaison($idProductAttribute, $combinations);
+                }
+            }
+
+            //ini_set("memory_limit", "128M");
+
+        }
+
+        return true;
+    }
+
+    function jsonLog($object, $die = false)
+    {
+        echo json_encode(array('object' => $object))."<br>";
+        if ($die)
+            die("END");
+    }
+
+    public function jsLog($object)
+    {
+        $output = "<script>";
+        if (is_array($object))
+            foreach ($object as $item) {
+                $output .= "console.log(" . json_encode($item) . ");";
+            }
+        else
+            $output .= "console.log(" . json_encode($object) . ");";
+
+        echo $output . "</script>";
     }
 }

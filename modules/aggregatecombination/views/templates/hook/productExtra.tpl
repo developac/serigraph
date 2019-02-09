@@ -259,8 +259,8 @@
                                     <option value="{$value["id_ag_group"]}">{$value["name"]}</option>
                                 {/if}
                             {/foreach}
-                            <input type="hidden" name="id_ag_group" value="0">
                         </select>
+                        <input type="hidden" name="id_ag_group_edit" value="0">
                     </div>
                     </br>
                     <div class="form-check">
@@ -309,7 +309,10 @@
                                 <td>{$row["group"]}</td>
                                 <td>{$row["attribute"]}</td>
                                 <td>{$row["valore"]}</td>
-                                <td><button class="delete_attribute_rule" data-attribute-id="{$idRule}">Elimina</button></td>
+                                <td>
+                                    <button class="edit_attribute_rule" data-attribute-id="{$idRule}">Modifica</button>
+                                    <button class="delete_attribute_rule" data-attribute-id="{$idRule}">Elimina</button>
+                                </td>
                             </tr>
                         {/foreach}
                     {/foreach}

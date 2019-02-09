@@ -10,6 +10,8 @@ class AggregateCombinationGroupProductsRule extends ObjectModel
 {
     public $id_ag_group_products;
     public $name;
+    public $value;
+    public $type;
 
     public static $definition = array(
         'table' => 'ag_group_products_rule',
@@ -18,6 +20,8 @@ class AggregateCombinationGroupProductsRule extends ObjectModel
         'fields' => array(
             'id_ag_group_products' => array('type' => self::TYPE_INT),
             'name' => array('type' => self::TYPE_STRING),
+            'value' => array('type' => self::TYPE_FLOAT),
+            'type' => array('type' => self::TYPE_STRING),
 
         )
     );

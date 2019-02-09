@@ -209,6 +209,47 @@ var ag = {
 
             ag.ajax._request(data, ag.callbaks.saveRuleSuccess, ag.callbaks.saveRuleError, null);
         },
+        editRule: function(e) {
+
+        },
+        deleteRule: function(e) {
+            if (confirm('Sei sicuro di voler proseguire con l\'eliminazione?')) {
+                let me = $(e);
+                data = {
+                    action: 'DeleteRule',
+                    ajax: true,
+                    product : $("input[name='product']").val(),
+                    idRule : me.attr("data-attribute-id")
+                };
+
+                ag.ajax._request(data, ag.callbaks.deleteRuleSuccess, ag.callbaks.deleteRuleError, null);
+            }
+        },
+        editRule: function(e) {
+            //if (confirm('Sei sicuro di voler proseguire con l\'eliminazione?')) {
+                let me = $(e);
+                data = {
+                    action: 'EditRule',
+                    ajax: true,
+                    product : $("input[name='product']").val(),
+                    idRule : me.attr("data-attribute-id")
+                };
+
+                ag.ajax._request(data, ag.callbaks.editRuleSuccess, ag.callbaks.editRuleError, null);
+            //}
+        },
+        reloadGrupAttributes: function(element) {
+            let me = $(element);
+
+            data = {
+                action: 'GetAttributeGroup',
+                ajax: true,
+                product : $("input[name='product']").val(),
+                group : me.val()
+            };
+
+            ag.ajax._request(data, ag.callbaks.reloadGrupAttributesSuccess, ag.callbaks.reloadGrupAttributesError, null);
+        },
         init: function () {
 
             ag.combinationAttributes = [];
@@ -222,6 +263,9 @@ var ag = {
             ag.events.doClick('#addRule', this.addRule);
             ag.events.doChange('#accordionModify .option3', this.changeRulesOption);
             ag.events.doClick('#saveRule', this.saveRule);
+            ag.events.doClick('.table-rule .edit_attribute_rule', this.editRule);
+            ag.events.doClick('.table-rule .delete_attribute_rule', this.deleteRule);
+            ag.events.doChange('select[name="select-group"]', this.reloadGrupAttributes);
 
 
         }
@@ -295,6 +339,43 @@ var ag = {
         saveRuleError: function () {
             $("div").find(`[data-attr='saveTemp']`).find("div").css("display","none");
         },
+        deleteRuleSuccess: function (response, element) {
+            let me = $(element);
+            me.closest("tr").remove();
+            alert("Operazione eseguita con successo");
+        },
+        deleteRuleError: function (response, element) {
+            
+        },
+        editRuleSuccess: function (response, element) {
+
+            let rule = response.rule;
+
+            $('select[name="select-group"]').val(rule.id_rule).change();
+            $('select[name="type_value_rule"]').val(rule.type).change();
+            $('input[name="text_rule"]').val(rule.name);
+            $('input[name="text_value_rule"]').val(rule.value);
+            $('input[name="id_ag_group_edit"]').val(rule.id_rule);
+
+            console.log(response);
+            //let me = $(element);
+            //console.log(me);
+        },
+        editRuleError: function (response, element) {
+            
+        },
+        reloadGrupAttributesSuccess: function (response, element) {
+            if (response.status) {
+
+                $("#accordionModify").html(response.html);
+
+                $("#container-3").html("");
+                $('.option3').prop('checked',false);
+            }
+        },
+        reloadGrupAttributesError: function (response, element) {
+
+        }
     },
     init: function() {
         this.events.init();

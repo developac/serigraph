@@ -5,8 +5,11 @@ $(document).ready(function() {
 var ag = {
     combinationAttributes: [],
     groups: [],
+    rules: [],
+    combinationAttributesRule: [],
+    combinationAttributesTemp: [],
     ajax: {
-        _request: function (sendData, successFunction, errorFunction, elem) {
+        _request: function (sendData, successFunction, errorFunction, elem, callback) {
 
             elem = elem || null;
             errorFunction = errorFunction || function (response) {
@@ -34,6 +37,10 @@ var ag = {
                 success: function (response) {
                     console.log('success', response);
                     successFunction(response, elem);
+
+                    if(typeof callback == 'function') {
+                        callback(data);
+                    }
                     //return response;
                 },
                 complete: function (response) {
@@ -80,11 +87,7 @@ var ag = {
                 }
             }
 
-            ag.combinationAttributes = ag.combinationAttributes.filter(function(x){
-                return (x !== (undefined || null || ''));
-            });
-
-            //$(".option").val($(e).is(':checked'));
+            $(".option").val($(e).is(':checked'));
         },
         changeGroup: function (e) {
             let id = parseInt($(this).val());
@@ -101,7 +104,7 @@ var ag = {
             }
         },
         saveNewGroup: function () {
-            $("div").find(`[data-attr='save']`).find("div").css("display","block");
+            $("div").find(`[data-attr='save']`).find("div").show();
 
             console.log(ag.combinationAttributes);
 
@@ -113,7 +116,9 @@ var ag = {
                 id_ag_group: $('input.group:checked').val()
             };
 
-            ag.ajax._request(data, ag.callbaks.saveSuccess, ag.callbaks.saveError, null);
+            ag.ajax._request(data, ag.callbaks.saveSuccess, ag.callbaks.saveError, null, function () {
+                $("div").find(`[data-attr='save']`).find("div").hide();
+            });
         },
         generateCombinations: function() {
             $("div").find(`[data-attr='generate']`).find("div").css("display","block");
@@ -134,9 +139,9 @@ var ag = {
             ag.ajax._request(data, ag.callbaks.generateSuccess, ag.callbaks.generateError, null);
 
         },
-        deleteGroup: function(element) {
+        deleteGroup: function(e) {
             if (confirm("Sei sicuro di voler proseguire con l'eliminazione?")) {
-                let me = $(element);
+                let me = $(e);
                 data = {
                     action : 'DeleteGroup',
                     ajax: true,
@@ -146,6 +151,63 @@ var ag = {
 
                 ag.ajax._request(data, ag.callbaks.deleteSucces, ag.callbaks.deleteError, null);
             }
+        },
+        addRule: function() {
+            let element = "<div style='width:auto;margin:10px' class='card col-sm-offset-1' id=card2_"+$('select[name=select-group]').val()+">\n" +
+                "  <div class=\"card-body\">\n" +
+                "   "+$('input[name=text_rule]').val()+" - "+$('select[name=select-group] option:selected').text()+" - "+$('input[name=text_value_rule]').val()+""+$('select[name=type_value_rule] option:selected').val()+"\n" +
+                "  </div>\n" +
+                "</div>";
+
+            $("#container-3").append(element);
+
+            let object = {
+                'id_group' : $('select[name="select-group"] :selected').val(),
+                'value' : $('input[name=text_value_rule]').val(),
+                'type' : $('select[name=type_value_rule] option:selected').val(),
+                'rule' : $('input[name=text_rule]').val()
+            }
+
+            console.log(object);
+
+            ag.rules.push(object);
+        },
+        changeRulesOption: function(e) {
+            console.log("ERER");
+            let element = "<div style='width:15%;margin:10px' class='card col-sm-offset-1' id=card_"+$(e).attr('id')+">\n" +
+                "  <div class=\"card-body\">\n" +
+                "   "+$(e).attr('data-name')+"\n" +
+                "  </div>\n" +
+                "</div>";
+
+            if($(e).is(":checked")) {
+                $("#container-3").append(element);
+                ag.combinationAttributesRule.push($(e).attr('id'));
+            }
+            else{
+                $('#card_'+$(e).attr('id')+'').remove();
+                let index = ag.combinationAttributesTemp.indexOf($(e).attr('id'));
+                if (index > -1) {
+                    ag.combinationAttributesRule.splice(index, 1);
+                }
+            }
+            //console.log(combinationAttributes);
+            $(".option3").val($(e).is(':checked'));
+
+            //console.log(combinationAttributesTemp);
+        },
+        saveRule: function(e) {
+            $("div").find(`[data-attr='saveRule']`).find("div").css("display","block");
+
+            data = {
+                action : 'SaveRule',
+                ajax: true,
+                product : $("input[name='product']").val(),
+                rule : ag.rules,
+                element : ag.combinationAttributesRule,
+            };
+
+            ag.ajax._request(data, ag.callbaks.saveRuleSuccess, ag.callbaks.saveRuleError, null);
         },
         init: function () {
 
@@ -157,6 +219,9 @@ var ag = {
             ag.events.doClick('#saveGroup', this.saveNewGroup);
             ag.events.doClick('#generateCombinations', this.generateCombinations);
             ag.events.doClick('.table-group .delete_group', this.deleteGroup);
+            ag.events.doClick('#addRule', this.addRule);
+            ag.events.doChange('#accordionModify .option3', this.changeRulesOption);
+            ag.events.doClick('#saveRule', this.saveRule);
 
 
         }
@@ -201,7 +266,35 @@ var ag = {
         },
         deleteError: function () {
 
-        }
+        },
+        saveRuleSuccess: function (response, element) {
+            result = JSON.parse(response);
+
+            // Object.keys(result.array).forEach(function(key){
+            //
+            //     let item = result.array[key];
+            //
+            //     let tr = "<tr>\n" +
+            //         "<td>"+item.temp+"</td>\n" +
+            //         "<td>"+item.comb+"</td>\n" +
+            //         "<td>"+item.value+"</td>\n" +
+            //         "<td><button class=\"delete_attribute_temp\" data-attribute-temp=\""+item.id+"\" data-attribute=\""+item.query+"\">Elimina</button></td>\n" +
+            //         "</tr>";
+            //
+            //     $(".table-temp tbody").append(tr);
+            //
+            // });
+
+            $("#container-3").html("");
+            $('.option3').prop('checked',false);
+            rules = new Array();
+            combinationAttributesRule = new Array();
+            $("div").find(`[data-attr='saveRule']`).find("div").css("display","none");
+            alert("Operazione eseguita con successo");
+        },
+        saveRuleError: function () {
+            $("div").find(`[data-attr='saveTemp']`).find("div").css("display","none");
+        },
     },
     init: function() {
         this.events.init();

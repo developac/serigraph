@@ -8,6 +8,7 @@
 
 
 require_once _PS_MODULE_DIR_."aggregatecombination/classes/AggregateCombinationGroup.php";
+require_once _PS_MODULE_DIR_."aggregatecombination/classes/AggregateCombinationGroupProductsRule.php";
 require_once _PS_MODULE_DIR_."aggregatecombination/classes/AggregateCombinationGroupAttributes.php";
 
 class AdminAggregateCombinationController extends ModuleAdminController
@@ -171,6 +172,7 @@ class AdminAggregateCombinationController extends ModuleAdminController
 
 
 
+
         if ($id_ag_group) {
             $outArrayCombination = [];
             foreach ($arrayCombination as $key => $arr) {
@@ -192,7 +194,7 @@ class AdminAggregateCombinationController extends ModuleAdminController
             }
 
             if (!$errors)
-                die(json_encode(array('status' => true, 'message' => "Group saved successfully", 'id_ag_group' => $id_ag_group, 'nome' => $nome)));
+                die(json_encode(array('status' => true, 'message' => "Group saved successfully", 'id_ag_group' => $id_ag_group, 'nome' => $nome, 'combinations' => $outArrayCombination)));
             else
                 die(json_encode(array('status' => false, 'message' => "An error occourred during group saving")));
         }
@@ -238,7 +240,7 @@ class AdminAggregateCombinationController extends ModuleAdminController
 
         $outCombination = $this->get_combinations($outCombination);
         $errors = 0;
-        if ($this->createCombination($idProduct, $outCombination)) {
+        if ($this->createCombination($idProduct, $outCombination, $arrayGroup)) {
             foreach ($arrayGroup as $group) {
                 //AggregateCombinationGroupProducts::linkProduct($group, $idProduct);
                 $acGP = new AggregateCombinationGroupProducts();
@@ -260,6 +262,10 @@ class AdminAggregateCombinationController extends ModuleAdminController
 
         $idProduct = Tools::getValue('product', 0);
         $idGroup = Tools::getValue('idGroup', 0);
+
+        /*
+         * TODO: elminare le relative combinazioni (?)
+         */
 
         if (AggregateCombinationGroupProducts::deleteByGroupIdAndProductId($idGroup, $idProduct))
             die(json_encode(array('status' => true, 'message' => "Valore cancellato correttamente")));
@@ -283,39 +289,24 @@ class AdminAggregateCombinationController extends ModuleAdminController
     }
 
 
-    private function createCombination($idProduct, $outArrayCombination)
+    private function createCombination($idProduct, $outArrayCombination, $group)
     {
-
-
-        //return false;
-
         if ($idProduct) {
 
             $product = new Product($idProduct, true, 1);
 
             //ini_set("memory_limit", "512M");
-            //$this->jsonLog($outArrayCombination);
 
-            //return false;
-
-            foreach ($outArrayCombination as $combinations) {
+            foreach ($outArrayCombination as &$combinations) {
 
 
                 if (!count($combinations))
                     continue;
 
-
-                //$this->jsonLog(count($combinations));
-                //$this->jsonLog($combinations, true);
-                //$this->jsonLog($combinations);
+                if (!$product->productAttributeExists($combinations)) {
 
 
-                //continue;
-
-
-                if (!$exists = $product->productAttributeExists($combinations)) {
-
-                    Tools::dieObject($exists);
+                    //continue;
 
                     $price = 0;
                     $weight = 0;
@@ -329,14 +320,182 @@ class AdminAggregateCombinationController extends ModuleAdminController
 
                     $idProductAttribute = $product->addProductAttribute((float)$price, (float)$weight, $unit_price_impact, (float)$ecotax, (int)$quantity, "", strval($reference), strval($supplier_reference), strval($ean13), $default, NULL, NULL, NULL, NULL);
                     $product->addAttributeCombinaison($idProductAttribute, $combinations);
+
+                    $di = DB::getInstance()->executeS("SELECT MAX(id_product_attribute) FROM `"._DB_PREFIX_."product_attribute`");
+
+                    echo json_encode(array('combinations' => $combinations, 'exists' => 'not exists', 'id_attr_comb' => $di))."\n";
+                    /*
+                     * TODO: slvare anche l'id della combinazione in modo da poterlo usare nelle regole
+                     */
+                } else {
+
+                    //get combination id and store it into group_attribute table
+                    foreach ($combinations as $combination) {
+                        $query = "SELECT pa.id_product_attribute FROM `"._DB_PREFIX_."product_attribute_combination` pac
+                        LEFT JOIN `"._DB_PREFIX_."product_attribute` pa ON pa.id_product_attribute = pac.id_product_attribute
+                        WHERE pa.id_product = {$idProduct} AND pac.id_attribute = {$combination}";
+
+                        $id_product_attribute = DB::getInstance()->getValue($query);
+
+                        $query = "UPDATE `"._DB_PREFIX_."ag_group_attribute` SET id_product_attribute={$id_product_attribute} WHERE id_ag_group IN (".implode(",", $group).") AND id_value={$combination}";
+                        DB::getInstance()->execute($query);
+
+
+                        echo json_encode(array('combinations' => $combination, 'exists' => 'already exists', 'test' => $id_product_attribute))."\n";
+                    }
+
+
+
+
+                    //echo json_encode(array('combinations' => $combinations, 'exists' => 'already exists', 'test' => $res))."\n";
                 }
+
             }
+
 
             //ini_set("memory_limit", "128M");
 
         }
 
         return true;
+    }
+
+
+    public function ajaxProcessSaveRule()
+    {
+        /*
+         * TODO: fix salvataggio, non salva le regole separate per lo stesso gruppo
+         */
+        $idProduct = Tools::getValue('product', 0);
+        $combinationAttributeRules = Tools::getValue('element', []);
+        $rules = Tools::getValue('rule', []);
+        $array = [];
+
+        if (!empty($rules)) {
+            foreach ($rules as $rule) {
+
+                $id_group = $rule['id_group'];
+
+                //$ruleProduct = AgGroup::getLinkProduct($rule["id_group"],$idProduct);
+                $ruleProduct = AggregateCombinationGroupProducts::getByGroupIdAndProductId($id_group, $idProduct);
+
+                //echo json_encode(array('rule' => $ruleProduct));
+
+                //continue;
+
+                $agPR = new AggregateCombinationGroupProductsRule();
+                $agPR->id_ag_group_products = $ruleProduct[0]['id_ag_group_products'];
+                $agPR->name = $rule["rule"];
+
+                if ($agPR->save()) {
+
+                    //$idRule = Db::getInstance()->Insert_ID();
+
+                    $idRule = $agPR->id;
+
+
+
+                    //continue;
+
+                    if (!empty($combinationAttributeRules)) {
+
+
+
+
+                        $array[$idRule] = [];
+                        foreach ($combinationAttributeRules as $combination) {
+                            //$this->jsonLog($combination);
+                            //continue;
+
+                            echo json_encode(array('combination' => $combination))."\n";
+
+                            $this->getIdProductAttributeByAttributeId($combination);
+
+
+                            //get product_attribute
+                            $query = "SELECT id_product_attribute FROM `"._DB_PREFIX_."ag_group_attribute` WHERE id_ag_group={$id_group} AND id_value={$combination}";
+                            $id_product_attribute = DB::getInstance()->getValue($query);
+
+                            $product = new Product($idProduct);
+
+                            print_r($product);
+
+
+                            die();
+
+
+                            continue;
+
+                            $attr = new Attribute($combination);
+                            $groupAttribute = new AttributeGroup($attr->id_attribute_group);
+
+                            //Tools::dieObject($groupAttribute, false);
+
+                            $agPRA = new AggregateCombinationGroupProductsRuleAttribute();
+                            $agPRA->id_ag_group_products_rule = $idRule;
+                            $agPRA->id_attribute = $attr->id_attribute_group;
+                            $agPRA->id_attribute_value = $combination;
+                            $agPRA->valore = $rule['value'];
+                            $agPRA->tipologia = $rule['type'];
+                            if (!$agPRA->save())
+                                return false;
+
+                            $price = $product->price;
+
+                            $additional_price = ($price * $rule['value']) / 100;
+
+                            $comb = new CombinationCore($id_product_attribute);
+
+                            $comb->price = $price;
+
+                            //AgGroup::linkRuleAttributes($idRule,$attr->id_attribute_group,$combination,$rule["value"],$rule["type"]);
+
+                            $name = $groupAttribute->name[1] . " : " . $attr->name[1];
+
+                            //$array[$idRule]["id"] = $attribute["id_attribute_temp"];
+                            //$array[$idRule]["temp"] =  $attributeTemp->name[1];
+                            //$array[$idRule]["comb"] = !isset($array[$attribute["id_attribute_temp"]]["comb"]) ? $name." ;"  : $array[$attribute["id_attribute_temp"]]["comb"].$name." ; ";
+                            //$array[$idRule]["value"] = $attribute['value']."".$attribute['type'];
+                            //$array[$idRule]["query"] = !isset($array[$attribute["id_attribute_temp"]]["query"]) ? ",".$combination : $array[$attribute["id_attribute_temp"]]["query"].",".$combination;
+
+                        }
+                    } else {
+
+                        $agPRA = new AggregateCombinationGroupProductsRuleAttribute();
+                        $agPRA->id_ag_group_products_rule = $idRule;
+                        $agPRA->id_attribute = '*';
+                        $agPRA->id_attribute_value = '*';
+                        $agPRA->valore = $rule['value'];
+                        $agPRA->tipologia = $rule['type'];
+                        $agPRA->save();
+
+                        //AgGroup::linkRuleAttributes($idRule,'*','*',$rule["value"],$rule["type"]);
+
+//                                    $array[$attribute["id_attribute_temp"]] = [];
+//                                    $array[$attribute["id_attribute_temp"]]["id"] = $attribute["id_attribute_temp"];
+//                                    $array[$attribute["id_attribute_temp"]]["temp"] =  $attributeTemp->name[1];
+//                                    $array[$attribute["id_attribute_temp"]]["comb"] = "Tutti";
+//                                    $array[$attribute["id_attribute_temp"]]["value"] = $attribute['value']."".$attribute['type'];
+//                                    $array[$attribute["id_attribute_temp"]]["query"] = '*';
+
+                    }
+
+                }
+
+            }
+
+
+            die(json_encode(array('array' => $array, 'id_rule' => $idRule)));
+        } else {
+            die(json_encode((array('message' => "Nessun valore temporale impostato"))));
+        }
+    }
+
+    function getIdProductAttributeByAttributeId($id_attribute)
+    {
+        $query = "SELECT id_product_attribute FROM `"._DB_PREFIX_."product_attribute_combination` WHERE id_attribute={$id_attribute}";
+        echo json_encode(array('query' => $query));
+        //$res = DB::getInstance()->executeS($query);
     }
 
     function jsonLog($object, $die = false)

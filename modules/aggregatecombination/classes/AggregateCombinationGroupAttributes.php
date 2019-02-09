@@ -11,6 +11,7 @@ class AggregateCombinationGroupAttributes extends ObjectModel
     public $id_ag_group;
     public $id_attribute;
     public $id_value;
+    public $id_product_attribute;
 
     public static $definition = array(
         'table' => 'ag_group_attribute',
@@ -20,6 +21,7 @@ class AggregateCombinationGroupAttributes extends ObjectModel
             'id_ag_group' => array('type' => self::TYPE_INT),
             'id_attribute' => array('type' => self::TYPE_INT),
             'id_value' => array('type' => self::TYPE_INT),
+            'id_product_attribute' => array('type' => self::TYPE_INT, 'required' => false),
 
         )
     );

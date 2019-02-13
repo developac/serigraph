@@ -22,8 +22,10 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
+{block name="product-variants2"}
 <div class="product-variants">
   {foreach from=$groups key=id_attribute_group item=group}
+
   {if !empty($group.attributes)}
     <div class="clearfix product-variants-item">
       <span class="control-label">{$group.name}</span>
@@ -67,3 +69,4 @@
     {/if}
   {/foreach}
 </div>
+{/block}

@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb2ba47c-d412-44f1-826e-db8f5008ba94" name="Default Changelist" comment="commit">
+      <change afterPath="$PROJECT_DIR$/admin-ac/autoupgrade/download/prestashop.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin-ac/autoupgrade/download/prestashop_1.7.4.4.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/aggregatecombination/views/templates/front/aggregatecombination.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/aggregatecombination/views/templates/front/product.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/override/modules/appagebuilder/appagebuilder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/aggregatecombination/controllers/admin/AdminAggregateCombination.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/aggregatecombination/controllers/admin/AdminAggregateCombination.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/aggregatecombination/aggregatecombination.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/aggregatecombination/aggregatecombination.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/aggregatecombination/views/js/aggregatecombintion.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/aggregatecombination/views/js/aggregatecombintion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/aggregatecombination/views/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/aggregatecombination/views/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/leo_floral_turban/templates/catalog/_partials/product-variants.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/leo_floral_turban/templates/catalog/_partials/product-variants.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/leo_floral_turban/templates/catalog/product.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/leo_floral_turban/templates/catalog/product.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/leo_floral_turban/templates/page.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/leo_floral_turban/templates/page.tpl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,77 +23,46 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/aggregatecombination/views/js/main.js">
+        <entry file="file://$PROJECT_DIR$/modules/aggregatecombination/views/templates/front/aggregatecombination.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="10" selection-end-column="25" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/aggregatecombination/views/js/aggregatecombintion.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-90">
-              <caret line="82" column="63" selection-start-line="82" selection-start-column="63" selection-end-line="82" selection-end-column="63" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="18">
+              <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/classes/Product.php">
+        <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/modules/appagebuilder/views/templates/front/details/detail1535455803.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="1372" column="42" selection-start-line="1372" selection-start-column="20" selection-end-line="1372" selection-end-column="42" />
+            <state relative-caret-position="-375">
+              <caret line="98" column="6" selection-start-line="98" selection-start-column="6" selection-end-line="98" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/aggregatecombination/views/templates/hook/productExtra.tpl">
+        <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/templates/catalog/product.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="42" column="60" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="60" />
+            <state relative-caret-position="378">
+              <caret line="51" selection-start-line="51" selection-end-line="51" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/aggregatecombination/controllers/admin/AdminAggregateCombination.php">
+        <entry file="file://$PROJECT_DIR$/modules/aggregatecombination/aggregatecombination.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="315" column="63" selection-start-line="315" selection-start-column="41" selection-end-line="315" selection-end-column="63" />
-              <folding>
-                <element signature="n#ajaxProcesDeleteGroup#0;n#AdminAggregateCombinationController#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="386">
+              <caret line="773" lean-forward="true" selection-start-line="773" selection-end-line="773" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/aggregatecombination/classes/AggregateCombinationGroupAttributes.php">
+        <entry file="file://$PROJECT_DIR$/override/modules/appagebuilder/appagebuilder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3">
-              <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/aggregatecombination/controllers/front/ajax.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="68" column="92" lean-forward="true" selection-start-line="68" selection-start-column="46" selection-end-line="68" selection-end-column="92" />
+            <state relative-caret-position="346">
+              <caret line="66" selection-start-line="66" selection-end-line="66" />
             </state>
           </provider>
         </entry>
@@ -95,40 +71,50 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>css</find>
-      <find>&quot;Merriweather&quot;</find>
-      <find>-5</find>
-      <find>} elseif ($cartRule-&gt;reduction_product == 0) {</find>
-      <find>Tools::die</find>
-      <find>addjs</find>
-      <find>main.</find>
-      <find>Tools::dieO</find>
-      <find>jsonlo</find>
-      <find>jsonLog</find>
-      <find>jslog</find>
-      <find>productextr</find>
-      <find>addRule</find>
-      <find>addAttributeCombinaison</find>
-      <find>jsl</find>
-      <find>createCombination</find>
-      <find>id=&quot;save&quot;</find>
+      <find>seo_ava</find>
+      <find>price_amoun</find>
+      <find>ean13</find>
+      <find>getIdProductAttributeByIdAttributes</find>
+      <find>if (!empty($groups)) {</find>
+      <find>Select\n</find>
+      <find>cd\s</find>
+      <find>shouldEnableAddToCartButton</find>
+      <find>6768</find>
+      <find>$updateQuery = 'UPDATE `' . _DB_PREFIX_ . 'customization_field` cf</find>
       <find>ajax</find>
-      <find>.group</find>
-      <find>generate</find>
-      <find>s</find>
-      <find>delete</find>
-      <find>get_c</find>
-      <find>saveg</find>
-      <find>delete_group</find>
-      <find>json_enc</find>
-      <find>productAttributeExists</find>
+      <find>id_customization</find>
+      <find>getvalue('group'</find>
+      <find>getIdProductAttribute</find>
+      <find>'change'</find>
+      <find>combination</find>
+      <find>safeOutput(</find>
+      <find>getIdProductAttributesByIdAttributes</find>
+      <find>'product' =&gt;</find>
+      <find>on safeOutput(</find>
+      <find>amount</find>
+      <find>updatedProductCombination</find>
+      <find>on render(</find>
+      <find>render</find>
+      <find>product-varia</find>
+      <find>variants</find>
+      <find>front/details</find>
+      <find>DisplayLeoProfileProduct</find>
+      <find>ciao</find>
+      <find>varia</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;Montserrat&quot;</replace>
     </replaceStrings>
     <dirStrings>
-      <dir>$PROJECT_DIR$</dir>
       <dir>$PROJECT_DIR$/modules/aggregatecombination</dir>
+      <dir>$PROJECT_DIR$/modules/aggregatecombination/views/templates</dir>
+      <dir>$PROJECT_DIR$/themes/leo_floral_turban/templates</dir>
+      <dir>$PROJECT_DIR$/themes/leo_floral_turban</dir>
+      <dir>$PROJECT_DIR$/config</dir>
+      <dir>$PROJECT_DIR$/modules/appagebuilder/classes</dir>
+      <dir>$PROJECT_DIR$/modules/appagebuilder</dir>
+      <dir>$PROJECT_DIR$/themes/leo_floral_turban/templates/catalog</dir>
+      <dir>$PROJECT_DIR$</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -145,13 +131,39 @@
         <option value="$PROJECT_DIR$/modules/aggregatecombination/views/config.rb" />
         <option value="$PROJECT_DIR$/modules/aggregatecombination/views/sass/main.scss" />
         <option value="$PROJECT_DIR$/config/defines.inc.php" />
-        <option value="$PROJECT_DIR$/classes/Product.php" />
-        <option value="$PROJECT_DIR$/modules/aggregatecombination/controllers/front/ajax.php" />
-        <option value="$PROJECT_DIR$/modules/aggregatecombination/aggregatecombination.php" />
-        <option value="$PROJECT_DIR$/modules/aggregatecombination/views/templates/hook/productExtra.tpl" />
         <option value="$PROJECT_DIR$/modules/aggregatecombination/views/js/main.js" />
-        <option value="$PROJECT_DIR$/modules/aggregatecombination/views/js/aggregatecombintion.js" />
+        <option value="$PROJECT_DIR$/modules/aggregatecombination/classes/AggregateCombinationGroupAttributes.php" />
+        <option value="$PROJECT_DIR$/modules/aggregatecombination/classes/AggregateCombinationGroupProductsRuleAttribute.php" />
+        <option value="$PROJECT_DIR$/modules/aggregatecombination/classes/AggregateCombinationGroupProductsRule.php" />
+        <option value="$PROJECT_DIR$/modules/aggregatecombination/views/templates/hook/productExtra.tpl" />
         <option value="$PROJECT_DIR$/modules/aggregatecombination/controllers/admin/AdminAggregateCombination.php" />
+        <option value="$PROJECT_DIR$/themes/leo_floral_turban/templates/catalog/_partials/facets.tpl" />
+        <option value="$PROJECT_DIR$/modules/aggregatecombination/views/js/aggregatecombintion.js" />
+        <option value="$PROJECT_DIR$/themes/leo_floral_turban/templates/catalog/_partials/product-customization.tpl" />
+        <option value="$PROJECT_DIR$/modules/aggregatecombination/controllers/front/ajax.php" />
+        <option value="$PROJECT_DIR$/vendor/smarty/smarty/libs/Smarty.class.php" />
+        <option value="$PROJECT_DIR$/modules/aggregatecombination/views/templates/hook/product-variants.tpl" />
+        <option value="$PROJECT_DIR$/themes/leo_floral_turban/templates/catalog/_partials/product-variants.tpl" />
+        <option value="$PROJECT_DIR$/classes/Validate.php" />
+        <option value="$PROJECT_DIR$/modules/appagebuilder/views/templates/front/product-item/product-item.tpl" />
+        <option value="$PROJECT_DIR$/themes/leo_floral_turban/templates/catalog/_partials/miniatures/product.tpl" />
+        <option value="&lt;c55461ff-3d75-42d5-b46b-ee25b6323eeb&gt;/controllers/front/ProductController.php" />
+        <option value="&lt;c55461ff-3d75-42d5-b46b-ee25b6323eeb&gt;/controllers/front/CartController.php" />
+        <option value="$PROJECT_DIR$/modules/leofeature/leofeature.php" />
+        <option value="$PROJECT_DIR$/classes/Product.php" />
+        <option value="$PROJECT_DIR$/classes/Tools.php" />
+        <option value="$PROJECT_DIR$/themes/leo_floral_turban/templates/catalog/_partials/product-prices.tpl" />
+        <option value="$PROJECT_DIR$/themes/core.js" />
+        <option value="$PROJECT_DIR$/classes/controller/FrontController.php" />
+        <option value="$PROJECT_DIR$/controllers/front/ProductController.php" />
+        <option value="$PROJECT_DIR$/themes/leo_floral_turban/templates/page.tpl" />
+        <option value="$PROJECT_DIR$/modules/aggregatecombination/views/templates/front/product.tpl" />
+        <option value="$PROJECT_DIR$/themes/leo_floral_turban/templates/catalog/product.tpl" />
+        <option value="$PROJECT_DIR$/modules/aggregatecombination/views/templates/front/product-variants.tpl" />
+        <option value="$PROJECT_DIR$/modules/aggregatecombination/aggregatecombination.php" />
+        <option value="$PROJECT_DIR$/modules/appagebuilder/appagebuilder.php" />
+        <option value="$PROJECT_DIR$/override/modules/appagebuilder/appagebuilder.php" />
+        <option value="$PROJECT_DIR$/modules/aggregatecombination/views/templates/front/aggregatecombination.tpl" />
       </list>
     </option>
   </component>
@@ -195,22 +207,6 @@
             <path>
               <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
               <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
-              <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
-              <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
-              <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -224,28 +220,43 @@
               <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="aggregatecombination" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
               <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="aggregatecombination" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
+              <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="aggregatecombination" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
+              <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="appagebuilder" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
+              <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="appagebuilder" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
               <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="aggregatecombination" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
-              <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="aggregatecombination" type="462c0819:PsiDirectoryNode" />
+              <item name="appagebuilder" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
               <item name="front" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -253,44 +264,21 @@
               <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
               <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="aggregatecombination" type="462c0819:PsiDirectoryNode" />
-              <item name="library" type="462c0819:PsiDirectoryNode" />
+              <item name="appagebuilder" type="462c0819:PsiDirectoryNode" />
+              <item name="override" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
               <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="aggregatecombination" type="462c0819:PsiDirectoryNode" />
-              <item name="library" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
-              <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="aggregatecombination" type="462c0819:PsiDirectoryNode" />
-              <item name="sql" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
-              <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="aggregatecombination" type="462c0819:PsiDirectoryNode" />
+              <item name="appagebuilder" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
               <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="aggregatecombination" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
-              <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="aggregatecombination" type="462c0819:PsiDirectoryNode" />
+              <item name="appagebuilder" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -298,10 +286,28 @@
               <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
               <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="aggregatecombination" type="462c0819:PsiDirectoryNode" />
+              <item name="appagebuilder" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="hook" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
+              <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
+              <item name="override" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
+              <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
+              <item name="override" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
+              <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
+              <item name="override" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="appagebuilder" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
@@ -319,15 +325,72 @@
               <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
               <item name="themes" type="462c0819:PsiDirectoryNode" />
               <item name="leo_floral_turban" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
               <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
               <item name="themes" type="462c0819:PsiDirectoryNode" />
               <item name="leo_floral_turban" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="appagebuilder" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
+              <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="leo_floral_turban" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="appagebuilder" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
+              <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="leo_floral_turban" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="appagebuilder" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
+              <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="leo_floral_turban" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="appagebuilder" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
+              <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="leo_floral_turban" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="appagebuilder" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="details" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
+              <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="leo_floral_turban" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="serigraph95.it" type="b2602c69:ProjectViewProjectNode" />
+              <item name="serigraph95.it" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="leo_floral_turban" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="catalog" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -350,6 +413,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/override/modules/appagebuilder" />
+      <recent name="$PROJECT_DIR$/admin-ac/autoupgrade/download" />
       <recent name="$PROJECT_DIR$/modules" />
     </key>
   </component>
@@ -385,7 +450,11 @@
       <workItem from="1547915301795" duration="971000" />
       <workItem from="1548011288135" duration="3076000" />
       <workItem from="1549124243684" duration="15852000" />
-      <workItem from="1549314752820" duration="32761000" />
+      <workItem from="1549314752820" duration="45800000" />
+      <workItem from="1549661908970" duration="10764000" />
+      <workItem from="1549721592935" duration="26023000" />
+      <workItem from="1549828520460" duration="20289000" />
+      <workItem from="1550090400106" duration="8319000" />
     </task>
     <task id="LOCAL-00001" summary="aggiunto modulo aggregatecombination">
       <created>1549124481869</created>
@@ -429,27 +498,58 @@
       <option name="project" value="LOCAL" />
       <updated>1549414825695</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="commit">
+      <created>1549574238995</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1549574238996</updated>
+    </task>
+    <task id="LOCAL-00008" summary="commit">
+      <created>1549673187456</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1549673187457</updated>
+    </task>
+    <task id="LOCAL-00009" summary="commit">
+      <created>1549730279514</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1549730279514</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73222000" />
+    <option name="totallyTimeSpent" value="151656000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="990" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20010673" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2614728" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329849" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.329849" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.329849" />
+      <window_info anchor="bottom" id="Version Control" order="8" visible="true" weight="0.32868758" />
       <window_info anchor="bottom" id="NativeScript" order="9" />
       <window_info anchor="bottom" id="File Transfer" order="10" weight="0.32868758" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
@@ -458,7 +558,7 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Remote Host" order="3" weight="0.27481323" />
+      <window_info anchor="right" id="Remote Host" order="3" visible="true" weight="0.19797225" />
       <window_info anchor="right" id="Nativescript Palette" order="4" />
       <window_info anchor="right" id="Database" order="5" />
     </layout>
@@ -472,179 +572,315 @@
     <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/config.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+    <entry file="file://$PROJECT_DIR$/modules/aggregatecombination/views/templates/hook/partialAttributeGroup.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="109" column="2" selection-start-line="109" selection-start-column="2" selection-end-line="109" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/config.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/assets/scss/custom.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3654">
-          <caret line="203" column="18" selection-start-line="203" selection-start-column="18" selection-end-line="203" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/assets/css/custom.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/config/theme.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/aggregatecombination/sql/stamperia.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/module/Module.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="1294" selection-start-line="1294" selection-end-line="1294" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/assets/css/theme.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="1013" column="26" selection-start-line="1013" selection-start-column="26" selection-end-line="1013" selection-end-column="26" />
-          <folding>
-            <element signature="e#12916#13161#2" expanded="true" />
-            <element signature="e#13682#14000#2" expanded="true" />
-            <element signature="e#14511#14798#2" expanded="true" />
-            <element signature="e#45221#45419#2" expanded="true" />
-            <element signature="e#45555#45702#2" expanded="true" />
-            <element signature="e#45867#46011#2" expanded="true" />
-            <element signature="e#46406#46567#1" expanded="true" />
-            <element signature="e#185709#185898#1" expanded="true" />
-            <element signature="e#236478#236721#2" expanded="true" />
-            <element signature="e#236733#236976#2" expanded="true" />
-            <element signature="e#237396#237597#2" expanded="true" />
-            <element signature="e#237609#237810#2" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/aggregatecombination/views/config.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/aggregatecombination/views/css/main.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/aggregatecombination/classes/AggregateCombinationGroupProducts.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/aggregatecombination/views/sass/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="33" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/aggregatecombination/classes/AggregateCombinationGroupProductsRule.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-50" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/aggregatecombination/controllers/front/default.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/defines.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/controller/AdminController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="2717" column="33" selection-start-line="2717" selection-start-column="29" selection-end-line="2717" selection-end-column="33" />
+        <state relative-caret-position="216">
+          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/aggregatecombination/views/templates/hook/productExtra.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="42" column="60" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="60" />
+          <caret line="255" column="52" lean-forward="true" selection-start-line="255" selection-start-column="52" selection-end-line="255" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/aggregatecombination/aggregatecombination.php">
+    <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/templates/catalog/_partials/facets.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="493" column="94" selection-start-line="493" selection-start-column="94" selection-end-line="493" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/aggregatecombination/classes/AggregateCombinationGroupAttributes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3">
-          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/aggregatecombination/controllers/front/ajax.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="68" column="92" lean-forward="true" selection-start-line="68" selection-start-column="46" selection-end-line="68" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/aggregatecombination/views/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="10" selection-end-column="25" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="288">
+          <caret line="52" column="74" selection-start-line="52" selection-start-column="74" selection-end-line="52" selection-end-column="74" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/aggregatecombination/views/js/aggregatecombintion.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
-          <caret line="82" column="63" selection-start-line="82" selection-start-column="63" selection-end-line="82" selection-end-column="63" />
+        <state relative-caret-position="309">
+          <caret line="130" column="35" selection-start-line="130" selection-start-column="35" selection-end-line="130" selection-end-column="35" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#8707#9615#0" />
+            <element signature="e#9648#9742#0" />
+            <element signature="e#9781#9935#0" />
+            <element signature="e#9972#10070#0" />
+            <element signature="e#10123#10276#0" />
+            <element signature="e#10311#10323#0" />
+            <element signature="e#10379#11391#0" />
+            <element signature="e#11428#11526#0" />
+            <element signature="e#12244#12268#0" />
+            <element signature="e#13059#13083#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/templates/catalog/_partials/product-activation.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-104" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/templates/catalog/_partials/product-additional-info.tpl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/templates/catalog/_partials/product-discounts.tpl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/templates/catalog/_partials/product-images-modal.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-486" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/templates/catalog/_partials/product-customization.tpl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/aggregatecombination/controllers/front/ajax.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/templates/catalog/_partials/quickview.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="54" column="51" selection-start-line="54" selection-start-column="51" selection-end-line="54" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/templates/catalog/_partials/product-add-to-cart.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-518" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/aggregatecombination/config_it.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1818">
+          <caret line="133" column="26" selection-start-line="133" selection-start-column="26" selection-end-line="133" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/smarty/smarty/libs/Smarty.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="1058" column="9" selection-start-line="1058" selection-start-column="9" selection-end-line="1058" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/defines.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="33" column="24" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/aggregatecombination/views/templates/hook/product-variants.tpl" />
+    <entry file="file://$PROJECT_DIR$/modules/appagebuilder/views/templates/front/details/div.tpl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/appagebuilder/views/templates/hook/ProductItem.tpl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/appagebuilder/views/templates/hook/product.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-118" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/appagebuilder/controllers/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/appagebuilder/controllers/front/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/appagebuilder/libs/Helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="1184" column="36" selection-start-line="1184" selection-start-column="23" selection-end-line="1184" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/Validate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="795" column="24" selection-start-line="795" selection-start-column="24" selection-end-line="795" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/templates/checkout/_partials/cart-detailed-product-line.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/appagebuilder/views/templates/front/product-item/product-item.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="46" column="40" lean-forward="true" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/aggregatecombination/controllers/admin/AdminAggregateCombination.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="315" column="63" selection-start-line="315" selection-start-column="41" selection-end-line="315" selection-end-column="63" />
+        <state relative-caret-position="273">
+          <caret line="318" column="26" selection-start-line="318" selection-start-column="21" selection-end-line="318" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/leofeature/leofeature.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="1307" lean-forward="true" selection-start-line="1307" selection-end-line="1307" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/front/CartController.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="6153" selection-start-line="6153" selection-end-line="6153" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/appagebuilder/classes/ApPageBuilderProfilesModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/Tools.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="931" column="9" lean-forward="true" selection-start-line="931" selection-start-column="9" selection-end-line="931" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/preview.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/core.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47178">
+          <caret line="2621" column="31" selection-start-line="2621" selection-start-column="31" selection-end-line="2621" selection-end-column="31" />
           <folding>
-            <element signature="n#ajaxProcesDeleteGroup#0;n#AdminAggregateCombinationController#0;n#!!top" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/Product.php">
+    <entry file="file://$PROJECT_DIR$/classes/controller/FrontController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="1372" column="42" selection-start-line="1372" selection-start-column="20" selection-end-line="1372" selection-end-column="42" />
+        <state relative-caret-position="31896">
+          <caret line="1803" selection-start-line="1803" selection-end-line="1803" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/front/ProductController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13782">
+          <caret line="402" column="41" selection-start-line="402" selection-start-column="41" selection-end-line="402" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/templates/catalog/listing/product-list.tpl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/templates/catalog/_partials/product-variants.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="27" lean-forward="true" selection-end-line="71" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/templates/catalog/_partials/product-prices.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/templates/catalog/_partials/miniatures/product.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1512">
+          <caret line="96" column="22" selection-start-line="96" selection-start-column="22" selection-end-line="96" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/templates/index.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="24" selection-start-line="24" selection-end-line="24" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/appagebuilder/override/controllers/front/ProductController.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/appagebuilder/controllers/front/appagebuilderhome.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/templates/page.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="32" column="36" lean-forward="true" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/aggregatecombination/views/templates/front/product.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/aggregatecombination/aggregatecombination.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="773" lean-forward="true" selection-start-line="773" selection-end-line="773" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/appagebuilder/appagebuilder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="2122" column="8" selection-start-line="2122" selection-start-column="8" selection-end-line="2123" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/override/modules/appagebuilder/appagebuilder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/templates/catalog/product.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/aggregatecombination/views/templates/front/aggregatecombination.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/leo_floral_turban/modules/appagebuilder/views/templates/front/details/detail1535455803.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-375">
+          <caret line="98" column="6" selection-start-line="98" selection-start-column="6" selection-end-line="98" selection-end-column="37" />
         </state>
       </provider>
     </entry>

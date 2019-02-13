@@ -128,6 +128,7 @@ var ag = {
                     ag.groups.push(this.value);
                 }) ;
             }
+            console.log(ag.groups);
             data = {
                 action : 'GenerateCombinations',
                 ajax: true,
@@ -210,7 +211,17 @@ var ag = {
             ag.ajax._request(data, ag.callbaks.saveRuleSuccess, ag.callbaks.saveRuleError, null);
         },
         editRule: function(e) {
+            //if (confirm('Sei sicuro di voler proseguire con l\'eliminazione?')) {
+            let me = $(e);
+            data = {
+                action: 'EditRule',
+                ajax: true,
+                product : $("input[name='product']").val(),
+                idRule : me.attr("data-attribute-id")
+            };
 
+            ag.ajax._request(data, ag.callbaks.editRuleSuccess, ag.callbaks.editRuleError, null);
+            //}
         },
         deleteRule: function(e) {
             if (confirm('Sei sicuro di voler proseguire con l\'eliminazione?')) {
@@ -224,19 +235,6 @@ var ag = {
 
                 ag.ajax._request(data, ag.callbaks.deleteRuleSuccess, ag.callbaks.deleteRuleError, null);
             }
-        },
-        editRule: function(e) {
-            //if (confirm('Sei sicuro di voler proseguire con l\'eliminazione?')) {
-                let me = $(e);
-                data = {
-                    action: 'EditRule',
-                    ajax: true,
-                    product : $("input[name='product']").val(),
-                    idRule : me.attr("data-attribute-id")
-                };
-
-                ag.ajax._request(data, ag.callbaks.editRuleSuccess, ag.callbaks.editRuleError, null);
-            //}
         },
         reloadGrupAttributes: function(element) {
             let me = $(element);

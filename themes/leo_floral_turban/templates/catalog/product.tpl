@@ -45,7 +45,7 @@
   {/if}
 {/block}
 
-{block name='content'}  
+{block name='content'}
 
   {if isset($product.productLayout) && $product.productLayout != ''}
     {hook h='displayLeoProfileProduct' product=$product typeProduct='detail'}

@@ -39,7 +39,7 @@ var ag = {
                     successFunction(response, elem);
 
                     if(typeof callback == 'function') {
-                        callback(data);
+                        callback(response);
                     }
                     //return response;
                 },
@@ -63,8 +63,6 @@ var ag = {
             })
         },
         changeOption: function (e) {
-
-
             if (typeof ag.combinationAttributes[$(e).attr('data-attribute-group')] === "undefined"){
                 ag.combinationAttributes[$(e).attr('data-attribute-group')] = new Array();
             }
@@ -90,7 +88,9 @@ var ag = {
             $(".option").val($(e).is(':checked'));
         },
         changeGroup: function (e) {
-            let id = parseInt($(this).val());
+            let id = parseInt($(e).val());
+
+            ag.events.reloadGroupSelectedAttributes(e);
 
             if($(this).is(":checked")) {
                 ag.groups.push(id);
@@ -102,6 +102,7 @@ var ag = {
                     ag.groups.splice(index, 1);
                 }
             }
+
         },
         saveNewGroup: function () {
             $("div").find(`[data-attr='save']`).find("div").show();
@@ -236,7 +237,19 @@ var ag = {
                 ag.ajax._request(data, ag.callbaks.deleteRuleSuccess, ag.callbaks.deleteRuleError, null);
             }
         },
-        reloadGrupAttributes: function(element) {
+        reloadGroupSelectedAttributes: function(element) {
+            let me = $(element);
+
+            data = {
+                action: 'GetGroupSelectedAttributes',
+                ajax: true,
+                product : $("input[name='product']").val(),
+                group : me.val()
+            };
+
+            ag.ajax._request(data, ag.callbaks.reloadGroupSelectedAttributesSuccess, ag.callbaks.reloadGroupSelectedAttributesError, null);
+        },
+        reloadRuleGroupAttributes: function(element) {
             let me = $(element);
 
             data = {
@@ -248,6 +261,10 @@ var ag = {
 
             ag.ajax._request(data, ag.callbaks.reloadGrupAttributesSuccess, ag.callbaks.reloadGrupAttributesError, null);
         },
+        manageAccordion: function(element) {
+            $(element).collapse();
+        },
+
         init: function () {
 
             ag.combinationAttributes = [];
@@ -263,29 +280,20 @@ var ag = {
             ag.events.doClick('#saveRule', this.saveRule);
             ag.events.doClick('.table-rule .edit_attribute_rule', this.editRule);
             ag.events.doClick('.table-rule .delete_attribute_rule', this.deleteRule);
-            ag.events.doChange('select[name="select-group"]', this.reloadGrupAttributes);
+            ag.events.doChange('select[name="select-group"]', this.reloadRuleGroupAttributes);
+            ag.events.doClick('#accordion button', this.manageAccordion);
 
 
         }
     },
     callbaks: {
-        saveSuccess: function (result, element) {
-            result = JSON.parse(result);
+        saveSuccess: function (response, element) {
+            if (response.status == true) {
+                $('#groups-table').append(response.html);
 
-            let checkGroup = "<div class=\"form-check\">\n" +
-                "                                <input class=\"form-check-input group\" type=\"checkbox\" id=\""+result.id+"\">\n" +
-                "                                <label class=\"form-check-label\" for=\"\">\n" +
-                "                                    "+result.nome+"\n" +
-                "                                </label>\n" +
-                "                            </div>";
-
-            $("div").find(`[data-attr='save']`).find("div").css("display","none");
-            $("#container").html("");
-            $('.option').prop('checked',false);
-            //$('.checkGroup').append(checkGroup);
-            combinationAttributes = new Array();
-            groups = new Array();
-            alert("Gruppo di combinazioni creato correttamente");
+            } else {
+                alert(response.message);
+            }
         },
         saveError: function () {
             $("div").find(`[data-attr='save']`).find("div").css("display","none");
@@ -301,9 +309,7 @@ var ag = {
             var $tr = $(element).closest('tr');
 
             if (response.status == true) {
-
-                console.log($tr);
-
+                $tr.remove();
             }
         },
         deleteError: function () {
@@ -373,6 +379,22 @@ var ag = {
         },
         reloadGrupAttributesError: function (response, element) {
 
+        },
+        reloadGroupSelectedAttributesSuccess: function (response, element) {
+            if (response.attributes.length) {
+                attributes = response.attributes;
+
+                $('.btn-link.collapsed').trigger('click');
+
+                $.each(attributes, function (i, item) {
+                    $('.option#'+item.id_value).closest('.card').find('button').trigger('click');
+                    $('.option#'+item.id_value).trigger('click');
+                })
+            }
+
+        },
+        reloadGroupSelectedAttributesError: function (response, element) {
+            
         }
     },
     init: function() {

@@ -14,6 +14,8 @@ require_once _PS_MODULE_DIR_."aggregatecombination/classes/AggregateCombinationG
 
 class AdminAggregateCombinationController extends ModuleAdminController
 {
+    private $tpl_dir;
+
     public function __construct()
     {
         $this->table = 'ag_group';
@@ -28,6 +30,8 @@ class AdminAggregateCombinationController extends ModuleAdminController
 
         $this->bootstrap = true;
         parent::__construct();
+
+        $this->tpl_dir = _PS_MODULE_DIR_."aggregatecombination/views/templates/";
     }
 
     /**
@@ -171,10 +175,12 @@ class AdminAggregateCombinationController extends ModuleAdminController
         $arrayCombination = Tools::getValue('element', []);
         $id_ag_group = Tools::getValue('id_ag_group', []);
 
+        $acGP = new AggregateCombinationGroupProducts();
+        $acGP->id_ag_group = $id_ag_group;
+        $acGP->id_product = $idProduct;
 
 
-
-        if ($id_ag_group) {
+        if ($id_ag_group && $acGP->save()) {
             $outArrayCombination = [];
             foreach ($arrayCombination as $key => $arr) {
                 if (is_array($arr)) {
@@ -189,15 +195,25 @@ class AdminAggregateCombinationController extends ModuleAdminController
                     $acGA->id_ag_group = $id_ag_group;
                     $acGA->id_attribute = $id_attribue;
                     $acGA->id_value = $id_value;
+                    $acGA->id_product_attribute = 0;
+
                     if (!$acGA->save())
                         $errors++;
                 }
             }
 
-            if (!$errors)
-                die(json_encode(array('status' => true, 'message' => "Group saved successfully", 'id_ag_group' => $id_ag_group, 'nome' => $nome, 'combinations' => $outArrayCombination)));
+            if (!$errors) {
+
+                $this->context->smarty->assign(array(
+                    'value' => ['name' => $nome, 'id_ag_group' => $id_ag_group]
+                ));
+
+                $output = $this->context->smarty->fetch($this->tpl_dir."hook/groupRow.tpl");
+
+                die(json_encode(array('status' => true, 'message' => "Group saved successfully", 'id_ag_group' => $id_ag_group, 'nome' => $nome, 'combinations' => $outArrayCombination, 'method' => "SaveGroup", 'html' => $output)));
+            }
             else
-                die(json_encode(array('status' => false, 'message' => "An error occourred during group saving")));
+                die(json_encode(array('status' => false, 'message' => "An error occourred during group saving", 'method' => "SaveGroup")));
         }
     }
 
@@ -243,12 +259,7 @@ class AdminAggregateCombinationController extends ModuleAdminController
         $errors = 0;
         if ($this->createCombination($idProduct, $outCombination, $arrayGroup)) {
             foreach ($arrayGroup as $group) {
-                //AggregateCombinationGroupProducts::linkProduct($group, $idProduct);
-                $acGP = new AggregateCombinationGroupProducts();
-                $acGP->id_ag_group = $group;
-                $acGP->id_product = $idProduct;
-                if ($acGP->save())
-                    $errors++;
+
             }
         }
 
@@ -264,14 +275,10 @@ class AdminAggregateCombinationController extends ModuleAdminController
         $idProduct = Tools::getValue('product', 0);
         $idGroup = Tools::getValue('idGroup', 0);
 
-        /*
-         * TODO: elminare le relative combinazioni (?)
-         */
-
-        if (AggregateCombinationGroupProducts::deleteByGroupIdAndProductId($idGroup, $idProduct))
-            die(json_encode(array('status' => true, 'message' => "Valore cancellato correttamente")));
+        if (AggregateCombinationGroupAttributes::deleteByGroupId($idGroup) && AggregateCombinationGroupProducts::deleteByGroupIdAndProductId($idGroup, $idProduct))
+            die(json_encode(array('status' => true, 'message' => "Valore eliminato correttamente")));
         else
-            die(json_encode(array('status' => false, 'message' => "Si è verificato un errore dutante la cancellazione del gruppo")));
+            die(json_encode(array('status' => false, 'message' => "Si è verificato un errore durante la cancellazione del gruppo")));
     }
 
     private function get_combinations($arrays)
@@ -322,7 +329,7 @@ class AdminAggregateCombinationController extends ModuleAdminController
                     $idProductAttribute = $product->addProductAttribute((float)$price, (float)$weight, $unit_price_impact, (float)$ecotax, (int)$quantity, "", strval($reference), strval($supplier_reference), strval($ean13), $default, NULL, NULL, NULL, NULL);
                     $product->addAttributeCombinaison($idProductAttribute, $combinations);
 
-                    $di = DB::getInstance()->executeS("SELECT MAX(id_product_attribute) FROM `"._DB_PREFIX_."product_attribute`");
+                    $id = DB::getInstance()->executeS("SELECT MAX(id_product_attribute) FROM `"._DB_PREFIX_."product_attribute`");
 
                     //die(json_encode(array('combinations' => $combinations, 'exists' => 'not exists', 'id_attr_comb' => $di))."\n");
                     /*
@@ -539,6 +546,21 @@ class AdminAggregateCombinationController extends ModuleAdminController
             die(json_encode(array("status" => false, "message" => "ok")));
     }
 
+    public function ajaxProcessGetGroupSelectedAttributes()
+    {
+        $idGroup = Tools::getValue("group");
+        $idProduct = Tools::getValue("product");
+
+        if ($attributesGroup = AggregateCombinationGroupAttributes::getByGroupIdAndProductId($idGroup, $idProduct)) {
+            foreach ($attributesGroup as $attribute) {
+
+                //echo json_encode(array('status' => true, 'attribute' => $attribute));
+            }
+
+            die(json_encode(array('status' => true, 'output' => '', 'attributes' => $attributesGroup)));
+        }
+    }
+
     public function ajaxProcessGetAttributeGroup()
     {
         $idGroup = Tools::getValue("group");
@@ -564,9 +586,7 @@ class AdminAggregateCombinationController extends ModuleAdminController
                 }
 
                 $attributeOptionGroup[$attribute["id_attribute"]][$attribute["id_value"]] = $av->name[1];
-
             }
-
         }
 
         $path_to_tpl_folder = str_replace('\\', '/', _PS_MODULE_DIR_) . 'aggregatecombination//views/templates/hook/partialAttributeGroup.tpl';

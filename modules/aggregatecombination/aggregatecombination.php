@@ -761,11 +761,13 @@ class AggregateCombination extends Module{
         //$this->layout = $params['default_layout'];
         if ($params['controller']->php_self == 'product') {
 
-            $this->registerHook('displayLeoProfileProduct');
+            //$this->registerHook('displayLeoProfileProduct');
 
             $this->context->smarty->assign(array(
                 'theme_dir' => _PS_THEME_DIR_,
             ));
+
+
 
             //return $this->local_path."views/templates/front/product-variants.tpl";
         }

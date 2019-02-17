@@ -82,7 +82,7 @@
                     </div>
                     <br>
                     <h3>{l s='Gruppi associati a questo prodotto' mod='aggregatecombination'}</h3>
-                    <table class="table table-group">
+                    <table class="table table-group" id="groups-table">
                         <thead>
                         <tr>
                             <th scope="col">Gruppo</th>
@@ -92,10 +92,7 @@
                         <tbody>
                          {foreach $groups as $key => $value}
                             {if $value["checked"] eq "checked=checked"}
-                            <tr>
-                                <td>{$value["name"]}</td>
-                                <td><button class="delete_group" data-attribute="{$value["id_ag_group"]}">Elimina</button></td>
-                            </tr>
+                                {include file="./groupRow.tpl" value=$value}
                             {/if}
                         {/foreach}
                         </tbody>
@@ -107,13 +104,13 @@
                             <div class="card">
                                 <div class="card-header" id="headingOne">
                                     <h5 class="mb-0">
-                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{$key}" aria-expanded="true" aria-controls="collapseOne">
+                                        <button class="btn btn-link {if $key > 0}collapsed{/if}" data-toggle="collapse" data-target="#collapse{$key}" aria-expanded="{if $key > 0}false{else}true{/if}" aria-controls="collapseOne">
                                             {$value}
                                         </button>
                                     </h5>
                                 </div>
 
-                                <div id="collapse{$key}" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div id="collapse{$key}" class="collapse {if $key == 31}show{/if}" aria-labelledby="headingOne" data-parent="#accordion">
                                     <div class="card-body">
                                         {foreach $attributeOption[$key] as $o => $option}
                                             <div class="form-check">

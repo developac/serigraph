@@ -6,6 +6,7 @@ var ag = {
     combinationAttributes: [],
     groups: [],
     rules: [],
+    attributesToRemove: [],
     combinationAttributesRule: [],
     combinationAttributesTemp: [],
     ajax: {
@@ -54,12 +55,14 @@ var ag = {
             $(document).on('click', selector, function (e) {
                 innerFunction($(this));
                 e.preventDefault();
+                e.stopImmediatePropagation();
             })
         },
         doChange: function (selector, innerFunction) {
             $(document).on('change, click', selector, function (e) {
                 innerFunction($(this));
                 //e.preventDefault();
+                //e.stopPropagation();
             })
         },
         changeOption: function (e) {
@@ -67,15 +70,35 @@ var ag = {
                 ag.combinationAttributes[$(e).attr('data-attribute-group')] = new Array();
             }
 
-            let element = "<div style='width:15%;margin:10px' class='card col-sm-offset-1' id=card_"+$(e).attr('id')+">\n" +
+            if (typeof ag.attributesToRemove[$(e).attr('data-attribute-group')] === "undefined"){
+                ag.attributesToRemove[$(e).attr('data-attribute-group')] = new Array();
+            }
+
+            var pos = $('#sectionA #container .visual-group').length;
+
+            let elementParent = "<div class='visual-group' data-attribute-group='"+$(e).attr('data-attribute-group')+"' data-position='"+pos+"'><div class='handler'><i class='fa fa-arrows'></i></div><div class='group-name'>"+$(e).closest('.card').attr('data-group-name')+" <a href='javascript: void(0);' class='toggler'><i class='fa fa-plus-circle'></i></a></div><div class='content'></div></div>"
+
+
+            let element = "<div style='margin:10px' class='card' id=card_"+$(e).attr('id')+" data-position='0' data-id-attribute='"+$(e).attr('id')+"'>\n" +
                 "  <div class=\"card-body\">\n" +
-                "   "+$(e).attr('data-name')+"\n" +
+                "  <div class=\"handler\"><i class='fa fa-arrows'></i></div>\n" +
+                "  <div class=\"value-name\">"+$(e).attr('data-name')+"</div>\n" +
                 "  </div>\n" +
                 "</div>";
 
             if($(e).is(":checked")) {
-                $("#container").append(element);
+
+                if (!$('.visual-group[data-attribute-group="'+$(e).attr('data-attribute-group')+'"]').length)
+                    $('#container').append(elementParent);
+
+                $('.visual-group[data-attribute-group="'+$(e).attr('data-attribute-group')+'"] .content').append(element);
                 ag.combinationAttributes[$(e).attr('data-attribute-group')].push($(e).attr('id'));
+
+                ag.attributesToRemove[$(e).attr('data-attribute-group')].push($(e).attr('id'));
+                let index = ag.attributesToRemove[$(e).attr('data-attribute-group')].indexOf($(e).attr('id'));
+                if (index > -1) {
+                    ag.attributesToRemove[$(e).attr('data-attribute-group')].splice(index, 1);
+                }
             }
             else{
                 $('#card_'+$(e).attr('id')+'').remove();
@@ -83,16 +106,116 @@ var ag = {
                 if (index > -1) {
                     ag.combinationAttributes[$(e).attr('data-attribute-group')].splice(index, 1);
                 }
+                ag.attributesToRemove[$(e).attr('data-attribute-group')].push($(e).attr('id'));
             }
 
             $(".option").val($(e).is(':checked'));
+
+            $('#sectionA #container').sortable({
+                items: " > .visual-group",
+                connectWith: $(this),
+                handle: '> .handler',
+                cancel: '> .toggler',
+                revert: true,
+                placeholder: 'ui-state-highlight',
+                tolerance: 'intersect',
+                opacity: 0.6,
+                cursor: "pointer",
+                containment: "parent",
+                forcePlaceholderSize: true,
+                start: function(event, ui) {
+                    ui.placeholder.height(ui.helper[0].offsetHeight);
+                    position = Number($(".visual-group > div:not(.ui-sortable-helper)").index(ui.placeholder)+1);
+                },
+                over: function(event, ui) {
+                    position = Number($(".visual-group > div:not(.ui-sortable-helper)").index(ui.placeholder)+1);
+                    //position = ui.placeholder.index();
+                    //if (position < iposition) position++;
+                },
+                stop: function (event, ui) {
+                    $('.visual-group').each(function (i) {
+                        $(this).attr('data-position', i);
+
+                        data = {
+                            action : 'UpdateGroupPosition',
+                            id_product: $("input[name='product']").val(),
+                            group: $('#selected_group').val(),
+                            attribute_group: $(this).data('attribute-group'),
+                            position: i
+                        };
+
+                        ag.ajax._request(data, null, null);
+
+                    });
+                }
+            });
+
+            $('.visual-group .content').sortable({
+                items: " > .card",
+                axis: "y",
+                placeholder: "card-ui-state-highlight",
+                containment: "parent",
+                forcePlaceholderSize: true,
+                opacity: 0.6,
+                start: function(event, ui) {
+                    console.log(ui);
+                    /*
+                    ui.placeholder.height(ui.helper[0].offsetHeight);
+
+                    position = Number($(".visual-group > div:not(.ui-sortable-helper)").index(ui.placeholder)+1);
+                    */
+                },
+                over: function(event, ui) {
+                    //position = Number($(".visual-group > div:not(.ui-sortable-helper)").index(ui.placeholder)+1);
+                    //position = ui.placeholder.index();
+                    //if (position < iposition) position++;
+                },
+                stop: function (event, ui) {
+                    var $item = ui.item;
+                    console.log($item);
+                    var $parent = $item.closest('.content');
+                    $parent.find('.card').each(function (i) {
+                        $card = $(this);
+                        $card.attr('data-position', i);
+
+                        data = {
+                            action : 'UpdateAttributePosition',
+                            id_product: $("input[name='product']").val(),
+                            group: $('#selected_group').val(),
+                            attribute_value: $card.data('id-attribute'),
+                            position: i
+                        };
+
+                        ag.ajax._request(data, null, null);
+                    });
+
+
+
+
+                    /*
+                    $('.visual-group').each(function (i) {
+                        $(this).attr('data-position', i);
+                    });
+                    */
+                }
+            });
+
+            $( "#sectionA #container, .visual-group" ).disableSelection();
+
+            $('a.toggler').bind('click');
+            $('a.toggler').on('click', function (a) {
+                a.preventDefault();
+                a.stopImmediatePropagation();
+
+                //$('.visual-group.open').removeClass('open');
+
+                $(this).closest('.visual-group').toggleClass('open');
+            })
         },
         changeGroup: function (e) {
             let id = parseInt($(e).val());
 
-            ag.events.reloadGroupSelectedAttributes(e);
-
-            if($(this).is(":checked")) {
+            if($(e).is(":checked")) {
                 ag.groups.push(id);
             }
             else{
@@ -104,18 +227,24 @@ var ag = {
             }
 
         },
-        saveNewGroup: function () {
+        saveGroup: function () {
             $("div").find(`[data-attr='save']`).find("div").show();
 
-            console.log(ag.combinationAttributes);
+            console.log(ag.attributesToRemove);
 
             data = {
                 action : 'SaveGroup',
                 product : $("input[name='product']").val(),
                 group : $("label[for='group_"+$('.checkGroup input:checked').val()+"']").text().trim(),
                 element : ag.combinationAttributes,
-                id_ag_group: $('input.group:checked').val()
+                id_ag_group: $('#selected_group').val(),
+                quantity_min: $('#quantity_min').val(),
+                quantity_increment: $('#quantity_increment').val(),
+                to_remove: ag.attributesToRemove
             };
+
+            if ($('input.group:checked[data-id-ag-group-products]').length)
+                data.id_ag_group_product = $('input.group:checked').data('id-ag-group-products');
 
             ag.ajax._request(data, ag.callbaks.saveSuccess, ag.callbaks.saveError, null, function () {
                 $("div").find(`[data-attr='save']`).find("div").hide();
@@ -139,6 +268,27 @@ var ag = {
             };
 
             ag.ajax._request(data, ag.callbaks.generateSuccess, ag.callbaks.generateError, null);
+
+        },
+        editGroup: function(e) {
+            let me = $(e);
+
+            $('#sectionA .card-body#container').html('');
+            $('.option:checked').trigger('click');
+            $('#groups-table tr').removeClass('active');
+
+            data = {
+                action: 'GetGroupSelectedAttributes',
+                ajax: true,
+                product : $("input[name='product']").val(),
+                group : me.data('group')
+            };
+
+            me.closest('tr').addClass('active');
+
+            $('#selected_group').val(me.data('group'));
+
+            ag.ajax._request(data, ag.callbaks.reloadGroupSelectedAttributesSuccess, ag.callbaks.reloadGroupSelectedAttributesError, null);
 
         },
         deleteGroup: function(e) {
@@ -264,7 +414,6 @@ var ag = {
         manageAccordion: function(element) {
             $(element).collapse();
         },
-
         init: function () {
 
             ag.combinationAttributes = [];
@@ -272,8 +421,9 @@ var ag = {
 
             ag.events.doChange('.option', this.changeOption);
             ag.events.doChange('.checkGroup .group', this.changeGroup);
-            ag.events.doClick('#saveGroup', this.saveNewGroup);
+            ag.events.doClick('#saveGroup', this.saveGroup);
             ag.events.doClick('#generateCombinations', this.generateCombinations);
+            ag.events.doClick('.table-group .edit_group', this.editGroup);
             ag.events.doClick('.table-group .delete_group', this.deleteGroup);
             ag.events.doClick('#addRule', this.addRule);
             ag.events.doChange('#accordionModify .option3', this.changeRulesOption);
@@ -284,11 +434,15 @@ var ag = {
             ag.events.doClick('#accordion button', this.manageAccordion);
 
 
+
         }
     },
     callbaks: {
         saveSuccess: function (response, element) {
+            console.log(response, element);
             if (response.status == true) {
+                //if (!$('tr#'))
+                if (!$('#groups-table #'))
                 $('#groups-table').append(response.html);
 
             } else {
@@ -355,6 +509,7 @@ var ag = {
 
             let rule = response.rule;
 
+
             $('select[name="select-group"]').val(rule.id_rule).change();
             $('select[name="type_value_rule"]').val(rule.type).change();
             $('input[name="text_rule"]').val(rule.name);
@@ -381,14 +536,20 @@ var ag = {
 
         },
         reloadGroupSelectedAttributesSuccess: function (response, element) {
-            if (response.attributes.length) {
-                attributes = response.attributes;
+            if (response.attributesGroup.length) {
+                attributesGroup = response.attributesGroup;
 
-                $('.btn-link.collapsed').trigger('click');
-
-                $.each(attributes, function (i, item) {
-                    $('.option#'+item.id_value).closest('.card').find('button').trigger('click');
+                $.each(attributesGroup, function (i, item) {
+                    if ($('.option#'+item.id_value).is(':checked'))
+                        return;
+                    //console.log(item.id_value);
+                    //$('button[data-target="#collapse'+item.id_attribute+'"]').trigger('click');
                     $('.option#'+item.id_value).trigger('click');
+                });
+                attributes = response.attributes;
+                $.each(attributes, function (i, item) {
+                    //console.log(item);
+                    $('#accordion button[data-target="#collapse'+item+'"]').click();
                 })
             }
 

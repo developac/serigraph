@@ -18,6 +18,14 @@ a:hover {
   border-color: #e30613; }
 .leo-megamenu .dropdown-menu .menu-title a:hover {
   color: #004e9e; }
+.leo-megamenu .dropdown-menu li {
+  float: left;
+  padding: 0 15px;
+  margin-bottom: 5px;
+  width: 50%; }
+  .leo-megamenu .dropdown-menu li a {
+    border-bottom: 1px solid #ddd;
+    display: block; }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6,
 div.verticalmenu .navbar-nav > li > a {
@@ -90,10 +98,12 @@ div.verticalmenu .navbar-nav > li > a {
 div.active-hover ul > li:hover > .dropdown-menu {
   left: 95%; }
 
-.leo-verticalmenu {
-  height: 600px; }
-  .leo-verticalmenu h4 {
-    margin-top: 0 !important; }
+.leo-verticalmenu h4 {
+  margin-top: 0 !important; }
+
+#category .leo-verticalmenu {
+  height: auto;
+  margin-bottom: 15px; }
 
 div.verticalmenu .navbar-nav > li {
   border-color: #e8e8e8; }

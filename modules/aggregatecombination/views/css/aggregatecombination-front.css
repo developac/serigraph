@@ -1,0 +1,39 @@
+/* line 2, ../sass/aggregatecombination-front.scss */
+#aggregatecombination .item, #aggregatecombination_buy .item {
+  background: #f5f5f5;
+  padding: 0 15px 15px;
+  border: 1px solid #ddd;
+}
+/* line 7, ../sass/aggregatecombination-front.scss */
+#aggregatecombination .item .item-name, #aggregatecombination_buy .item .item-name {
+  padding: 15px 15px 0;
+  margin: 0 -15px 15px;
+  border-bottom: 1px solid #ddd;
+  background: #eee;
+}
+
+/* line 17, ../sass/aggregatecombination-front.scss */
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* line 26, ../sass/aggregatecombination-front.scss */
+.product-variants-item, .product-quantity {
+  margin-bottom: 15px;
+}
+
+/* line 30, ../sass/aggregatecombination-front.scss */
+.color, .custom-checkbox input[type="checkbox"] + span.color {
+  width: 50px;
+  height: 50px;
+}
+
+/* line 36, ../sass/aggregatecombination-front.scss */
+input::-webkit-inner-spin-button {
+  opacity: 1;
+}

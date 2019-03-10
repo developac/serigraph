@@ -22,10 +22,13 @@ class AggregatecombinationAjaxModuleFrontController extends ModuleFrontControlle
         parent::initContent();
     }
 
-
-
-
     public function displayAjax()
+    {
+
+    }
+
+
+    public function displayAjax2()
     {
 
         $method = Tools::getValue("method");

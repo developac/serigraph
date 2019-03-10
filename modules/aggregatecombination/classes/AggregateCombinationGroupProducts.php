@@ -37,7 +37,11 @@ class AggregateCombinationGroupProducts extends ObjectModel
 
     public static function deleteByGroupIdAndProductId($id_ag_group, $id_product)
     {
-        if (!DB::getInstance()->execute("DELETE FROM `"._DB_PREFIX_."ag_group_products` WHERE id_ag_group={$id_ag_group} AND id_product={$id_product}"))
+        //get id_ag_group_products
+        $sql = "SELECT id_ag_group_products FROM `"._DB_PREFIX_."ag_group_products` WHERE id_ag_group={$id_ag_group} AND id_product={$id_product}";
+        $id_ag_group_products = DB::getInstance()->getValue($sql);
+
+        if (!DB::getInstance()->execute("DELETE FROM `"._DB_PREFIX_."ag_group_products` WHERE id_ag_group={$id_ag_group} AND id_product={$id_product} AND id_ag_group_products={$id_ag_group_products}"))
             return false;
 
         return true;

@@ -1,4 +1,7 @@
 <div class="container">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://use.fontawesome.com/e5ef58dd88.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 <ul class="nav nav-tabs">
 
@@ -32,7 +35,7 @@
                         <div class="checkGroup">
                             {foreach $groups as $key => $value}
                                 <div class="form-check">
-                                    <input class="form-check-input group" type="checkbox" id="group_{$value['id_ag_group']}" value="{$value['id_ag_group']}">
+                                    <input class="form-check-input group" type="checkbox" id="group_{$value['id_ag_group']}" value="{$value['id_ag_group']}" {if $value['id_ag_group_products']}data-id-ag-group-products="{$value['id_ag_group_products']}"{/if}>
                                     <label class="form-check-label" for="group_{$value['id_ag_group']}">
                                         {$value['name']}
                                     </label>
@@ -74,6 +77,18 @@
 
                         </div>
                     </div>
+                    <h3>{l s='Impostazione combinazioni'}</h3>
+                    <div>
+                        <div class="quantita-minima">
+                            <label for="quantity_min">{l s='Quantità minima'}</label>
+                            <input type="number" min="1" id="quantity_min" name="quantity_min" value="{if $quantity_min}{$quantity_min}{else}1{/if}">
+                        </div>
+                        <div class="incremento-quantita">
+                            <label for="quantity_increment">{l s='Incremento quantità'}</label>
+                            <input type="number" min="1" id="quantity_increment" name="quantity_increment" value="{if $quantity_increment}{$quantity_increment}{else}1{/if}">
+                        </div>
+                    </div>
+                    <br>
                     <div style="display:flex">
                         <button id="saveGroup" style="margin-top: 15px;margin-bottom: 15px;margin-right: 5px">Salva</button>
                         <div data-attr="save">
@@ -97,15 +112,16 @@
                         {/foreach}
                         </tbody>
                     </table>
+                    <input type="hidden" id="selected_group" value="">
                 </div>
                 <div class="col-md-3">
                     <div id="accordion">
                         {foreach $columnHeader as $key => $value}
-                            <div class="card">
+                            <div class="card" data-group-name="{$value}">
                                 <div class="card-header" id="headingOne">
                                     <h5 class="mb-0">
                                         <button class="btn btn-link {if $key > 0}collapsed{/if}" data-toggle="collapse" data-target="#collapse{$key}" aria-expanded="{if $key > 0}false{else}true{/if}" aria-controls="collapseOne">
-                                            {$value}
+                                            {$value} - {$key}
                                         </button>
                                     </h5>
                                 </div>
@@ -247,10 +263,8 @@
                     </div>
                     <br>
                     <div class="form-check">
-                        <label class="form-check-label" for="optionTemp">
-                            Seleziona gruppo
-                        </label>
                         <select name="select-group">
+                            <option value="">Seleziona gruppo</option>
                             {foreach $groups as $key => $value}
                                 {if $value["checked"] eq "checked=checked"}
                                     <option value="{$value["id_ag_group"]}">{$value["name"]}</option>

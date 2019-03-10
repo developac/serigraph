@@ -48,6 +48,17 @@ a {
         }
       }
     }
+    li {
+      float: left;
+      padding: 0 15px;
+      margin-bottom: 5px;
+      width: 50%;
+
+      a {
+        border-bottom: 1px solid #ddd;
+        display: block;
+      }
+    }
   }
 }
 
@@ -174,10 +185,17 @@ div.active-hover ul > li:hover > .dropdown-menu {
 }
 
 .leo-verticalmenu {
-  height: 600px;
+  //height: 600px;
 
   h4 {
     margin-top: 0!important;
+  }
+}
+
+#category {
+  .leo-verticalmenu {
+    height: auto;
+    margin-bottom: 15px;
   }
 }
 

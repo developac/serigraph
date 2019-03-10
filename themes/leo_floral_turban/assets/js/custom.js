@@ -817,3 +817,15 @@ $(document).ready(function(){
 
     });
 });
+
+$(document).ajaxComplete(function () {
+	$("#quantity_wanted").TouchSpin({
+		verticalbuttons:!0,
+		verticalupclass:"material-icons touchspin-up",
+		verticaldownclass:"material-icons touchspin-down",
+		buttondown_class:"btn btn-touchspin js-touchspin",
+		buttonup_class:"btn btn-touchspin js-touchspin",
+		min:1,
+		max:1e6
+	});
+});

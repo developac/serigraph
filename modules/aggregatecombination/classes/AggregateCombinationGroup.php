@@ -32,8 +32,13 @@ class AggregateCombinationGroup extends ObjectModel
 
     public static function getByProductId($id_product)
     {
-        $groups = new PrestaShopCollection('AggregateCombinationGroup');
-
+        $sql = "SELECT ag.id_ag_group, agl.name, aga.id_attribute, aga.id_value FROM `"._DB_PREFIX_."ag_group` ag
+        LEFT JOIN `"._DB_PREFIX_."ag_group_lang` agl ON agl.id_ag_group = ag.id_ag_group 
+        LEFT JOIN `"._DB_PREFIX_."ag_group_products` agp ON agp.id_ag_group = ag.id_ag_group
+        LEFT JOIN `"._DB_PREFIX_."ag_group_attribute` aga ON (agp.id_ag_group = aga.id_ag_group AND agp.id_ag_group_products = aga.id_ag_group_products)
+        WHERE agp.id_product = {$id_product} GROUP BY aga.id_attribute
+        ORDER BY aga.group_position ASC";
+        return DB::getInstance()->executeS($sql);
     }
 
 

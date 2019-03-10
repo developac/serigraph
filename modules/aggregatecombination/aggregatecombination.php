@@ -7,6 +7,7 @@ if (!defined('_PS_VERSION_')) {
 //require_once(_PS_MODULE_DIR_ . 'aggregatecombination/classes/AggregateCombinationGroup.php');
 
 require_once _PS_MODULE_DIR_."aggregatecombination/classes/AggregateCombinationGroup.php";
+require_once _PS_MODULE_DIR_."aggregatecombination/classes/AggregateCombinationProductSettings.php";
 require_once _PS_MODULE_DIR_ ."aggregatecombination/classes/AggregateCombinationGroupAttributes.php";
 require_once _PS_MODULE_DIR_."aggregatecombination/classes/AggregateCombinationGroupProducts.php";
 require_once _PS_MODULE_DIR_."aggregatecombination/classes/AgAttributeTemp.php";
@@ -155,10 +156,10 @@ class AggregateCombination extends Module{
             }
 
             $query = "
-                SELECT DISTINCT(gl.name),g.id_ag_group,h.id_product 
+                SELECT DISTINCT(gl.name),g.id_ag_group,h.id_product, h.id_ag_group_products 
                 FROM `"._DB_PREFIX_."ag_group` g 
                 LEFT JOIN (
-                  SELECT a.id_ag_group,al.name,ap.id_product 
+                  SELECT a.id_ag_group,al.name,ap.id_product, ap.id_ag_group_products  
                   FROM `"._DB_PREFIX_."ag_group` a 
                   LEFT JOIN `"._DB_PREFIX_."ag_group_products` ap 
                   ON a.id_ag_group = ap.id_ag_group 
@@ -207,54 +208,54 @@ class AggregateCombination extends Module{
 
             }
 
-            //return false;
-
             //SELECT attribute temp
             $valueTemp = AgAttributeTemp::getAll((int)$params['id_product']);
             //$valueTemp = AgAttributeTemp::getGroupsByProductId((int)$params['id_product']);
 
             $outValueTemp = [];
-            foreach($valueTemp as $value){
+            if ($valueTemp) {
+                foreach($valueTemp as $value){
 
-                if($value["id_attribute"] == ''){
-                    continue;
-                }
-
-                if(!isset($outValueTemp[$value["valore"]][$value["tipologia"]])){
-                    $outValueTemp[$value["valore"]][$value["tipologia"]] = [];
-                }
-
-                $attributeTemp = new Attribute($value["id_attribute_temp"]);
-
-                $attributeTemp->name[1] = substr($attributeTemp->name[1], 1);
-                $date = new DateTime('now');
-                $date->add(new DateInterval( $attributeTemp->name[1]));
-                $attributeTemp->name[1] =  $date->format('d/m/Y');
-
-                if($value["id_attribute"] == '*'){
-                    $outValueTemp[$value["valore"]][$value["tipologia"]]["*"] = [];
-                    $outValueTemp[$value["valore"]][$value["tipologia"]]["*"]["attribute_temp"] =  $attributeTemp->name[1];
-                    $outValueTemp[$value["valore"]][$value["tipologia"]]["*"]["attribute"] = "Tutti";
-                    $outValueTemp[$value["valore"]][$value["tipologia"]]["*"]["valore"] = $value["valore"]."".$value["tipologia"];
-                    $outValueTemp[$value["valore"]][$value["tipologia"]]["*"]["values_temp"] = $value["id_attribute_temp"];
-                    $outValueTemp[$value["valore"]][$value["tipologia"]]["*"]["values_attribute"] = "*";
-                }
-                else {
-
-                    $attribute = new Attribute($value["id_attribute"]);
-                    $groupAttribute = new AttributeGroup($attribute->id_attribute_group);
-
-                    $name = $groupAttribute->name[1]." : ".$attribute->name[1];
-
-                    if(!isset($outValueTemp[$value["valore"]][$value["tipologia"]]["1"])){
-                        $outValueTemp[$value["valore"]][$value["tipologia"]]["1"] = [];
+                    if($value["id_attribute"] == ''){
+                        continue;
                     }
-                    $outValueTemp[$value["valore"]][$value["tipologia"]]["1"]["values_temp"] = $value["id_attribute_temp"];
-                    $outValueTemp[$value["valore"]][$value["tipologia"]]["1"]["attribute_temp"] = $attributeTemp->name[1];
-                    $outValueTemp[$value["valore"]][$value["tipologia"]]["1"]["attribute"] = $outValueTemp[$value["valore"]][$value["tipologia"]]["1"]["attribute"].$name." ; ";
-                    $outValueTemp[$value["valore"]][$value["tipologia"]]["1"]["valore"] = $value["valore"]."".$value["tipologia"];
-                    $outValueTemp[$value["valore"]][$value["tipologia"]]["1"]["values_attribute"] = $outValueTemp[$value["valore"]][$value["tipologia"]]["1"]["values_attribute"].",".$value["id_attribute"];
 
+                    if(!isset($outValueTemp[$value["valore"]][$value["tipologia"]])){
+                        $outValueTemp[$value["valore"]][$value["tipologia"]] = [];
+                    }
+
+                    $attributeTemp = new Attribute($value["id_attribute_temp"]);
+
+                    $attributeTemp->name[1] = substr($attributeTemp->name[1], 1);
+                    $date = new DateTime('now');
+                    $date->add(new DateInterval( $attributeTemp->name[1]));
+                    $attributeTemp->name[1] =  $date->format('d/m/Y');
+
+                    if($value["id_attribute"] == '*'){
+                        $outValueTemp[$value["valore"]][$value["tipologia"]]["*"] = [];
+                        $outValueTemp[$value["valore"]][$value["tipologia"]]["*"]["attribute_temp"] =  $attributeTemp->name[1];
+                        $outValueTemp[$value["valore"]][$value["tipologia"]]["*"]["attribute"] = "Tutti";
+                        $outValueTemp[$value["valore"]][$value["tipologia"]]["*"]["valore"] = $value["valore"]."".$value["tipologia"];
+                        $outValueTemp[$value["valore"]][$value["tipologia"]]["*"]["values_temp"] = $value["id_attribute_temp"];
+                        $outValueTemp[$value["valore"]][$value["tipologia"]]["*"]["values_attribute"] = "*";
+                    }
+                    else {
+
+                        $attribute = new Attribute($value["id_attribute"]);
+                        $groupAttribute = new AttributeGroup($attribute->id_attribute_group);
+
+                        $name = $groupAttribute->name[1]." : ".$attribute->name[1];
+
+                        if(!isset($outValueTemp[$value["valore"]][$value["tipologia"]]["1"])){
+                            $outValueTemp[$value["valore"]][$value["tipologia"]]["1"] = [];
+                        }
+                        $outValueTemp[$value["valore"]][$value["tipologia"]]["1"]["values_temp"] = $value["id_attribute_temp"];
+                        $outValueTemp[$value["valore"]][$value["tipologia"]]["1"]["attribute_temp"] = $attributeTemp->name[1];
+                        $outValueTemp[$value["valore"]][$value["tipologia"]]["1"]["attribute"] = $outValueTemp[$value["valore"]][$value["tipologia"]]["1"]["attribute"].$name." ; ";
+                        $outValueTemp[$value["valore"]][$value["tipologia"]]["1"]["valore"] = $value["valore"]."".$value["tipologia"];
+                        $outValueTemp[$value["valore"]][$value["tipologia"]]["1"]["values_attribute"] = $outValueTemp[$value["valore"]][$value["tipologia"]]["1"]["values_attribute"].",".$value["id_attribute"];
+
+                    }
                 }
             }
 
@@ -318,6 +319,11 @@ class AggregateCombination extends Module{
                 }
             }
 
+            $product_settings = AggregateCombinationProductSettings::getByProductId($params['id_product']);
+            $agPS = new AggregateCombinationProductSettings($product_settings);
+
+
+
             //Tools::dieObject($outValueRule, false);
             //Tools::dieObject($valueRule);
 
@@ -330,7 +336,9 @@ class AggregateCombination extends Module{
                     'tableValueTemp' => $outValueTemp,
                     'columnHeaderGroup' => $columnHeaderGroup,
                     'attributeOptionGroup' => $attributeOptionGroup,
-                    'tableValueRule' => $outValueRule
+                    'tableValueRule' => $outValueRule,
+                    'quantity_min' => $agPS->quantity_min,
+                    'quantity_increment' => $agPS->quantity_increment
                 )
             );
 
@@ -498,6 +506,7 @@ class AggregateCombination extends Module{
             'ag_admin_url' => $this->context->link->getAdminLink('AdminAggregateCombination'),
         ));
 
+        $this->context->controller->addJqueryUI('ui.core');
         $this->context->controller->addJS(_PS_MODULE_DIR_.$this->name.'/views/js/aggregatecombintion.js');
         //$this->context->controller->addJS(_PS_MODULE_DIR_.$this->name.'/views/js/main.js');
         $this->context->controller->addCSS(_PS_MODULE_DIR_.$this->name.'/views/css/main.css');
@@ -517,11 +526,16 @@ class AggregateCombination extends Module{
 
             $product = new Product($id_product);
 
+            $product_settings = AggregateCombinationProductSettings::getByProductId($id_product);
+            $agPS = new AggregateCombinationProductSettings($product_settings);
+
             $this->context->smarty->assign(array(
                 'base_dir' => _PS_THEME_DIR_,
                 'product' => (array)$product,
                 'views_dir' => dirname(__FILE__)."/views/templates/front",
-                'smarty' => $this->context->smarty
+                'smarty' => $this->context->smarty,
+                'quantity_min' => $agPS->quantity_min,
+                'quantity_increment' => $agPS->quantity_increment,
             ));
 
             $this->product = $product;
@@ -767,6 +781,7 @@ class AggregateCombination extends Module{
                 'theme_dir' => _PS_THEME_DIR_,
             ));
 
+            $this->context->controller->addCSS($this->local_path."views/css/aggregatecombination-front.css");
 
 
             //return $this->local_path."views/templates/front/product-variants.tpl";
